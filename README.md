@@ -1,26 +1,32 @@
-# STINC OS — Artist operations concept
+# STINC OS
 
-A free, static, interactive presentation demo for a conversation with EVOL / STINC TEAM. This is an independent concept, not an official STINC TEAM product or endorsement.
+Public artist workspace for Ralfy the Plug / STINC TEAM. GitHub Pages serves this directory. The admin portal stays on the Mac at `127.0.0.1:8790`.
 
 ## Run
 
-Serve this directory using `python3 -m http.server 4173`. Open `http://localhost:4173`. No dependency installation, paid API, or build step is required.
+Serve this directory with `python3 -m http.server 4173` and open `http://localhost:4173`. No install and no build. The page reads `data/live.json` when that file is present and otherwise keeps the sample rows, which are badged Sample.
+
+Refresh the snapshot on the Mac (stdlib only):
+
+```
+python3 ~/Projects/stinc-os-demo/tools/export_live_data.py --platform ~/Projects/stinc-platform --brand ~/Projects/content-engine/brands/ralfy-the-plug
+```
+
+The plan, the privacy rules, and the connector states are in `docs/plans/STINC_OS_PRODUCT.md`.
 
 ## Included
 
-- Label roster and artist context switching
-- Campaign creation, rollout plans, activation and completion
-- Source references and explicitly simulated clip storyboards
-- Editable hooks/captions, platform selection and demo calendar scheduling
-- Separate brand and PR pipelines, editable saved pitch drafts
-- Fan-capture briefs, commerce overview and sample revenue ledger
-- Visible simulated agent history, pause/resume controls and execution preferences
-- Local browser persistence and downloadable JSON workspace export
-- Responsive navigation, keyboard dialog focus management and reduced-motion support
+- Public snapshot on Overview, Content studio, Campaigns, Opportunities, Commerce, and Fans
+- Sample rows kept and badged where a live source does not exist yet (chart, calendar, revenue, agents)
+- Connections shell for streaming, Shopify or a store URL, socials, and clipping. OAuth stays off until client IDs are set on the Mac
+- Campaign drafts, clip scheduling, pitch drafts, roster switching, and local JSON export
+- Responsive navigation, keyboard dialog focus, and reduced-motion support
 
 ## Boundaries
 
-Metrics, finance, scores, prospects, agent activity and content generation are illustrative. No account is connected. The app does not perform AI inference, process videos, send outreach, publish social posts, collect real fan information, collect money or reconcile royalties. Schedules are stored plans and do not run background jobs. The demo is single-browser local storage, without authentication or a shared backend. Do not enter confidential information into a public demo.
+`data/live.json` is a sanitized public snapshot: audience counts, clip candidates, sponsor totals, the merch catalog, and fan-page status. Sponsor names, contact details, deal terms, and legal-hold rows are not in it. Rows still marked Sample (the chart, campaign cards, calendar, revenue ledger, fan totals, agent activity) are not live measurements.
+
+No account is connected. Connectors stay disabled until client IDs exist on the Mac. The site does not send email, post video, collect fan records, or take payment. Do not enter confidential information into this public site.
 
 Only public artist identity and imagery are included. The second roster slot is a fictional workspace, not another real STINC TEAM artist. Images are stored locally to avoid hotlink failures; attribution and research are in `research/market-research.md`.
 
@@ -28,13 +34,13 @@ Only public artist identity and imagery are included. The second roster slot is 
 
 This directory is the complete GitHub Pages publication root. `.nojekyll` disables unnecessary processing. Hash navigation supports deep links and refreshes without server rewrite configuration. No secret or runtime configuration is needed.
 
+## Tests
+
+```
+python3 -m unittest tests.test_export_live_data tests.test_oauth_broker tests.test_live_public
+node tests/qa-runtime.cjs
+```
+
 ## Production path
 
-1. Run a service-led pilot with one artist and one measurable campaign. Agree on account access, baseline data, goals, publishing permissions and outreach review.
-2. Add authenticated multi-tenant workspaces, a database, encrypted credential storage, roles, audit history and backups.
-3. Integrate supported provider APIs and a clipping provider, starting with the sources and destinations the pilot actually uses.
-4. Add a durable job queue, retries, idempotency, rate limits, approval gates and delivery receipts. Replace sample metrics with timestamped provider data.
-5. Add consent-aware fan CRM and Shopify integration, followed by verified opportunity research and reporting/reconciliation imports.
-6. Productize validated workflows with onboarding, plans, billing, limits and support. Keep advanced storefront design and mobile apps for later phases.
-
-The hosting demo is free. Production AI, video processing, messaging, account integrations and backend infrastructure may have operating costs.
+Phase 1 is the sanitized snapshot in this repo. Phase 2 is the local OAuth broker and a real revenue ledger. Details are in `docs/plans/STINC_OS_PRODUCT.md`. Hosting this site is free. Provider APIs, once a client ID is added, may have their own terms.

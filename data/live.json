@@ -1,0 +1,997 @@
+{
+  "schema": "stinc-os.live.v1",
+  "generated_at": "2026-11-20T23:48:08-05:00",
+  "sources": {
+    "platform": true,
+    "tracker": "tracker.sample.csv",
+    "content": "dashboard-snapshot"
+  },
+  "highlights": [
+    {
+      "label": "YouTube subscribers",
+      "value": "164K",
+      "as_of": "As of 2026-11-16",
+      "icon": "play",
+      "sample": false
+    },
+    {
+      "label": "Spotify listeners",
+      "value": "383,111",
+      "as_of": "As of 2026-11-16",
+      "icon": "headphones",
+      "sample": false
+    },
+    {
+      "label": "Instagram followers",
+      "value": "193,835",
+      "as_of": "As of 2026-11-16",
+      "icon": "people",
+      "sample": false
+    },
+    {
+      "label": "Store products",
+      "value": "37",
+      "as_of": "Public rack · 2026-11-20",
+      "icon": "bag",
+      "sample": false
+    }
+  ],
+  "pipeline_highlights": [
+    {
+      "label": "Clip options",
+      "value": "18",
+      "as_of": "Scored, not posted",
+      "icon": "play",
+      "sample": false
+    },
+    {
+      "label": "Clips rendered",
+      "value": "1",
+      "as_of": "Local files only",
+      "icon": "play",
+      "sample": false
+    },
+    {
+      "label": "Sponsors sent",
+      "value": "3",
+      "as_of": "Queued 5 · cap 3/day",
+      "icon": "target",
+      "sample": false
+    },
+    {
+      "label": "Merch email drafts",
+      "value": "14",
+      "as_of": "Drafts, not sending",
+      "icon": "bag",
+      "sample": false
+    }
+  ],
+  "platforms": {
+    "as_of": "2026-11-16",
+    "items": [
+      {
+        "platform": "YouTube",
+        "handle": "@ralfytheplug",
+        "url": "https://www.youtube.com/@ralfytheplug",
+        "stat": "164K subscribers · 109.6M views",
+        "detail": "1.3M views in last 28 days; 878 live VODs, median 3,450 views (last 30)",
+        "date": "2026-11-08 / 2026-11-16",
+        "source": "https://asknaveen.com/channel/@ralfytheplug"
+      },
+      {
+        "platform": "Instagram",
+        "handle": "@theplugbyralfy",
+        "url": "https://www.instagram.com/theplugbyralfy",
+        "stat": "193,835 followers",
+        "detail": "Verified. Second account @ralfytheplug: 50,735",
+        "date": "2026-11-16",
+        "source": "https://ergauge.com/instagram/theplugbyralfy"
+      },
+      {
+        "platform": "Spotify",
+        "handle": "Ralfy the Plug",
+        "url": "https://open.spotify.com/artist/1yI0tX9OnfOx9siPj8KNOO",
+        "stat": "383,111 monthly listeners",
+        "detail": "~99.7K followers; Slime Me Up 28.2M streams",
+        "date": "2026-11-16",
+        "source": "https://open.spotify.com/artist/1yI0tX9OnfOx9siPj8KNOO"
+      },
+      {
+        "platform": "X",
+        "handle": "@RalfytheP",
+        "url": "https://x.com/RalfytheP",
+        "stat": "39,287 followers",
+        "detail": "",
+        "date": "2026-11-16",
+        "source": "https://x.com/RalfytheP"
+      },
+      {
+        "platform": "TikTok",
+        "handle": "@ralfytheplug032",
+        "url": "https://www.tiktok.com/@ralfytheplug032",
+        "stat": "37.8K followers",
+        "detail": "Old figure, not refreshed",
+        "date": "2025-10-21",
+        "source": "https://songstats.com/artist/jne73pdb/ralfy-the-plug"
+      },
+      {
+        "platform": "Kick",
+        "handle": "ralfytheplug032",
+        "url": "https://kick.com/ralfytheplug032",
+        "stat": "1,033 followers",
+        "detail": "Verified; 8–21 avg viewers (Jun–Jul 2026)",
+        "date": "2026-11-16",
+        "source": "https://kickinfo.net/channel/ralfytheplug032"
+      },
+      {
+        "platform": "Twitch",
+        "handle": "ralfytheplug032",
+        "url": "https://www.twitch.tv/ralfytheplug032",
+        "stat": "Followers unknown",
+        "detail": "Affiliate; 6 avg / 9 peak viewers",
+        "date": "2026-11-16",
+        "source": "https://twitchtracker.com/ralfytheplug032"
+      }
+    ]
+  },
+  "videos": [
+    {
+      "title": "Bald Head Jason (feat. MoneySign$uede)",
+      "views": 6011194,
+      "url": "https://www.youtube.com/watch"
+    },
+    {
+      "title": "Slime Me Up",
+      "views": 2824832,
+      "url": "https://www.youtube.com/watch"
+    },
+    {
+      "title": "Fight The Force (feat. Peezy)",
+      "views": 2052427,
+      "url": "https://www.youtube.com/watch"
+    },
+    {
+      "title": "Bruce Lee Kick",
+      "views": 1779692,
+      "url": "https://www.youtube.com/watch"
+    },
+    {
+      "title": "Crash Out (DeenTheGreat & Adrien Broner) · 2026",
+      "views": 1151699,
+      "url": "https://www.youtube.com/watch"
+    }
+  ],
+  "pipeline": {
+    "source_videos": 5,
+    "candidate_files": 5,
+    "clip_options": 18,
+    "clips_ticked": 0,
+    "clips_rendered": 1,
+    "approved": 0,
+    "posted": 0,
+    "ready": 1,
+    "queue": 4,
+    "emails_built": 14
+  },
+  "clips": [
+    {
+      "id": "yt-OOUfkTwGgEw_C2",
+      "title": "Why Your Chat Is Frustrated",
+      "hook": "Why it looks weird, chat? / Hello?",
+      "viral": 8.7,
+      "score": 10.0,
+      "duration_s": 60.1,
+      "kind": "stream",
+      "status": "Needs review",
+      "watch_url": "https://www.youtube.com/watch?v=OOUfkTwGgEw",
+      "source_label": "YouTube · public VOD"
+    },
+    {
+      "id": "yt-gEQumoX0cZ8_C3",
+      "title": "The Pokemon Card Collecting Journey",
+      "hook": "Is it worth something? / Deuces. See you tomorrow.",
+      "viral": 8.6,
+      "score": 10.0,
+      "duration_s": 78.1,
+      "kind": "stream",
+      "status": "Needs review",
+      "watch_url": "https://www.youtube.com/watch?v=gEQumoX0cZ8",
+      "source_label": "YouTube · public VOD"
+    },
+    {
+      "id": "yt-aINQ_DN8GJU_C1",
+      "title": "Why I'm Worse Than Your Last Nigga",
+      "hook": "Why I'm Worse Than Your Last Nigga",
+      "viral": 8.5,
+      "score": 10.0,
+      "duration_s": 41.0,
+      "kind": "stream",
+      "status": "Needs review",
+      "watch_url": "https://www.youtube.com/watch?v=aINQ_DN8GJU",
+      "source_label": "YouTube · public VOD"
+    },
+    {
+      "id": "yt-aINQ_DN8GJU_C2",
+      "title": "He Stole His Money, I Took the Whole Purse",
+      "hook": "I'm way worse than him / Here's why",
+      "viral": 8.5,
+      "score": 10.0,
+      "duration_s": 44.3,
+      "kind": "stream",
+      "status": "Needs review",
+      "watch_url": "https://www.youtube.com/watch?v=aINQ_DN8GJU",
+      "source_label": "YouTube · public VOD"
+    },
+    {
+      "id": "yt-aINQ_DN8GJU_C3",
+      "title": "I'm Really That, I Don't Give a Fuck",
+      "hook": "I'm Really That, I Don't Give a Fuck",
+      "viral": 8.5,
+      "score": 10.0,
+      "duration_s": 29.3,
+      "kind": "stream",
+      "status": "Needs review",
+      "watch_url": "https://www.youtube.com/watch?v=aINQ_DN8GJU",
+      "source_label": "YouTube · public VOD"
+    },
+    {
+      "id": "yt-OOUfkTwGgEw_C4",
+      "title": "Why is it not working?  Let's go",
+      "hook": "Why is it not working?  Let's go",
+      "viral": 6.9,
+      "score": 7.0,
+      "duration_s": 135.4,
+      "kind": "stream",
+      "status": "Needs review",
+      "watch_url": "https://www.youtube.com/watch?v=OOUfkTwGgEw",
+      "source_label": "YouTube · public VOD"
+    },
+    {
+      "id": "yt-aINQ_DN8GJU_C4",
+      "title": "From Viral to Low Views? I'm Still Thuggin'",
+      "hook": "From Viral to Low Views? I'm Still Thuggin'",
+      "viral": 6.7,
+      "score": 7.0,
+      "duration_s": 88.3,
+      "kind": "stream",
+      "status": "Needs review",
+      "watch_url": "https://www.youtube.com/watch?v=aINQ_DN8GJU",
+      "source_label": "YouTube · public VOD"
+    },
+    {
+      "id": "yt-BDP2C6ihc00_C4",
+      "title": "You sure you were jerking? / I'm gonna open this one.",
+      "hook": "You sure you were jerking? / I'm gonna open this one.",
+      "viral": 6.3,
+      "score": 6.0,
+      "duration_s": 65.4,
+      "kind": "stream",
+      "status": "Needs review",
+      "watch_url": "https://www.youtube.com/watch?v=BDP2C6ihc00",
+      "source_label": "YouTube · public VOD"
+    },
+    {
+      "id": "yt-gEQumoX0cZ8_C4",
+      "title": "Why's the app called chat? / I need the real app",
+      "hook": "Why's the app called chat? / I need the real app",
+      "viral": 6.2,
+      "score": 6.0,
+      "duration_s": 88.4,
+      "kind": "stream",
+      "status": "Needs review",
+      "watch_url": "https://www.youtube.com/watch?v=gEQumoX0cZ8",
+      "source_label": "YouTube · public VOD"
+    },
+    {
+      "id": "yt-3z6nfKs4-Tw_C1",
+      "title": "You want to get your shit in? / Here's why!",
+      "hook": "You want to get your shit in? / Here's why!",
+      "viral": 5.7,
+      "score": 5.0,
+      "duration_s": 61.1,
+      "kind": "stream",
+      "status": "Needs review",
+      "watch_url": "https://www.youtube.com/watch?v=3z6nfKs4-Tw",
+      "source_label": "YouTube · public VOD"
+    },
+    {
+      "id": "yt-3z6nfKs4-Tw_C2",
+      "title": "Why did you get here so fast? / Watch this",
+      "hook": "Why did you get here so fast? / Watch this",
+      "viral": 5.7,
+      "score": 5.0,
+      "duration_s": 54.8,
+      "kind": "stream",
+      "status": "Needs review",
+      "watch_url": "https://www.youtube.com/watch?v=3z6nfKs4-Tw",
+      "source_label": "YouTube · public VOD"
+    },
+    {
+      "id": "yt-BDP2C6ihc00_C1",
+      "title": "Why don't you hit me with your? / Here's why!",
+      "hook": "Why don't you hit me with your? / Here's why!",
+      "viral": 5.7,
+      "score": 5.0,
+      "duration_s": 67.0,
+      "kind": "stream",
+      "status": "Needs review",
+      "watch_url": "https://www.youtube.com/watch?v=BDP2C6ihc00",
+      "source_label": "YouTube · public VOD"
+    },
+    {
+      "id": "yt-BDP2C6ihc00_C2",
+      "title": "Wait, what the fuck?",
+      "hook": "Wait, what the fuck?",
+      "viral": 5.7,
+      "score": 5.0,
+      "duration_s": 78.3,
+      "kind": "stream",
+      "status": "Needs review",
+      "watch_url": "https://www.youtube.com/watch?v=BDP2C6ihc00",
+      "source_label": "YouTube · public VOD"
+    },
+    {
+      "id": "yt-BDP2C6ihc00_C3",
+      "title": "What was that shit you were talking? / Here's why!",
+      "hook": "What was that shit you were talking? / Here's why!",
+      "viral": 5.7,
+      "score": 5.0,
+      "duration_s": 34.8,
+      "kind": "stream",
+      "status": "Needs review",
+      "watch_url": "https://www.youtube.com/watch?v=BDP2C6ihc00",
+      "source_label": "YouTube · public VOD"
+    },
+    {
+      "id": "yt-OOUfkTwGgEw_C1",
+      "title": "What you looking for, Pogging?",
+      "hook": "What you looking for, Pogging?",
+      "viral": 5.7,
+      "score": 5.0,
+      "duration_s": 41.3,
+      "kind": "stream",
+      "status": "Needs review",
+      "watch_url": "https://www.youtube.com/watch?v=OOUfkTwGgEw",
+      "source_label": "YouTube · public VOD"
+    },
+    {
+      "id": "yt-OOUfkTwGgEw_C3",
+      "title": "You're not ready for this / Let's go",
+      "hook": "You're not ready for this / Let's go",
+      "viral": 5.7,
+      "score": 5.0,
+      "duration_s": 71.7,
+      "kind": "stream",
+      "status": "Rendered",
+      "watch_url": "https://www.youtube.com/watch?v=OOUfkTwGgEw",
+      "source_label": "YouTube · public VOD"
+    },
+    {
+      "id": "yt-gEQumoX0cZ8_C1",
+      "title": "He didn't lit the bunt, chat / Here's why it's still lit",
+      "hook": "He didn't lit the bunt, chat / Here's why it's still lit",
+      "viral": 5.6,
+      "score": 5.0,
+      "duration_s": 58.6,
+      "kind": "stream",
+      "status": "Needs review",
+      "watch_url": "https://www.youtube.com/watch?v=gEQumoX0cZ8",
+      "source_label": "YouTube · public VOD"
+    },
+    {
+      "id": "yt-gEQumoX0cZ8_C2",
+      "title": "He's searching for that rare card",
+      "hook": "He's searching for that rare card",
+      "viral": 5.6,
+      "score": 5.0,
+      "duration_s": 45.2,
+      "kind": "stream",
+      "status": "Needs review",
+      "watch_url": "https://www.youtube.com/watch?v=gEQumoX0cZ8",
+      "source_label": "YouTube · public VOD"
+    }
+  ],
+  "sponsors": {
+    "sent": 3,
+    "queued": 5,
+    "pending_approval": 0,
+    "replies": 0,
+    "deals": 0,
+    "needs_manual_form": 6,
+    "watchlist": 4,
+    "skipped": 2,
+    "bounced": 0,
+    "other": 0,
+    "tracked": 20,
+    "daily_cap": 3
+  },
+  "fans": {
+    "name": "Ralfy Clips",
+    "posting": "off",
+    "accounts": [
+      {
+        "platform": "Instagram Reels",
+        "handle": "Ralfy Clips (being created)",
+        "url": "",
+        "status": "Being created",
+        "kind": "fan"
+      },
+      {
+        "platform": "YouTube Shorts",
+        "handle": "Ralfy Clips (being created)",
+        "url": "",
+        "status": "Being created",
+        "kind": "fan"
+      },
+      {
+        "platform": "YouTube",
+        "handle": "@ralfytheplug",
+        "url": "https://www.youtube.com/@ralfytheplug",
+        "status": "164K subscribers · 109.6M views",
+        "kind": "official"
+      },
+      {
+        "platform": "Instagram",
+        "handle": "@theplugbyralfy",
+        "url": "https://www.instagram.com/theplugbyralfy",
+        "status": "193,835 followers",
+        "kind": "official"
+      },
+      {
+        "platform": "Spotify",
+        "handle": "Ralfy the Plug",
+        "url": "https://open.spotify.com/artist/1yI0tX9OnfOx9siPj8KNOO",
+        "status": "383,111 monthly listeners",
+        "kind": "official"
+      },
+      {
+        "platform": "X",
+        "handle": "@RalfytheP",
+        "url": "https://x.com/RalfytheP",
+        "status": "39,287 followers",
+        "kind": "official"
+      },
+      {
+        "platform": "TikTok",
+        "handle": "@ralfytheplug032",
+        "url": "https://www.tiktok.com/@ralfytheplug032",
+        "status": "37.8K followers",
+        "kind": "official"
+      },
+      {
+        "platform": "Kick",
+        "handle": "ralfytheplug032",
+        "url": "https://kick.com/ralfytheplug032",
+        "status": "1,033 followers",
+        "kind": "official"
+      },
+      {
+        "platform": "Twitch",
+        "handle": "ralfytheplug032",
+        "url": "https://www.twitch.tv/ralfytheplug032",
+        "status": "Followers unknown",
+        "kind": "official"
+      }
+    ]
+  },
+  "commerce": {
+    "store_url": "https://stincteamtgf.com",
+    "store_name": "STINCTEAMTGF",
+    "as_of": "2026-11-20",
+    "store_published_count": 37,
+    "store_in_stock_count": 30,
+    "shown_count": 27,
+    "shown_in_stock": 23,
+    "price_min": 50.0,
+    "price_max": 180.0,
+    "products": [
+      {
+        "title": "Baddest Kids T-Shirt",
+        "handle": "baddest-kids-t-shirt",
+        "url": "https://stincteamtgf.com/products/baddest-kids-t-shirt",
+        "price_min": 60.0,
+        "price_max": 60.0,
+        "available": true,
+        "instock_sizes": [
+          "3XL"
+        ],
+        "image": "https://cdn.shopify.com/s/files/1/0672/9475/7046/files/stincwebmocks13.png?v=1780563902",
+        "category": "T-Shirt"
+      },
+      {
+        "title": "Bald Head Jason T-Shirt",
+        "handle": "bald-head-jason-t-shirt",
+        "url": "https://stincteamtgf.com/products/bald-head-jason-t-shirt",
+        "price_min": 60.0,
+        "price_max": 60.0,
+        "available": true,
+        "instock_sizes": [
+          "M",
+          "L",
+          "XL",
+          "2XL"
+        ],
+        "image": "https://cdn.shopify.com/s/files/1/0672/9475/7046/files/ScreenShot2026-10-26at3.57.20PM.png?v=1793347654",
+        "category": "T-Shirt"
+      },
+      {
+        "title": "Bald Head Whiskers T-Shirt",
+        "handle": "bald-head-whiskers-t-shirt",
+        "url": "https://stincteamtgf.com/products/bald-head-whiskers-t-shirt",
+        "price_min": 80.0,
+        "price_max": 80.0,
+        "available": true,
+        "instock_sizes": [
+          "M",
+          "XL"
+        ],
+        "image": "https://cdn.shopify.com/s/files/1/0672/9475/7046/files/Screenshot2026-10-30at1.34.49AM.png?v=1793349298",
+        "category": "T-Shirt"
+      },
+      {
+        "title": "Buddha Chain Skateboard",
+        "handle": "buddha-chain-skateboard",
+        "url": "https://stincteamtgf.com/products/buddha-chain-skateboard",
+        "price_min": 80.0,
+        "price_max": 80.0,
+        "available": true,
+        "instock_sizes": [
+          "Default Title"
+        ],
+        "image": "https://cdn.shopify.com/s/files/1/0672/9475/7046/files/stincboardmocks13.png?v=1790562760",
+        "category": "Skateboard"
+      },
+      {
+        "title": "Chunky Monkey Skateboard",
+        "handle": "chunky-monkey-skateboard",
+        "url": "https://stincteamtgf.com/products/chunky-monkey-skateboard",
+        "price_min": 80.0,
+        "price_max": 80.0,
+        "available": true,
+        "instock_sizes": [
+          "Default Title"
+        ],
+        "image": "https://cdn.shopify.com/s/files/1/0672/9475/7046/files/stincboard-monkey.png?v=1792136253",
+        "category": "Skateboard"
+      },
+      {
+        "title": "Def Jam",
+        "handle": "def-jam",
+        "url": "https://stincteamtgf.com/products/def-jam",
+        "price_min": 60.0,
+        "price_max": 60.0,
+        "available": true,
+        "instock_sizes": [
+          "2XL",
+          "3Xl"
+        ],
+        "image": "https://cdn.shopify.com/s/files/1/0672/9475/7046/files/stincwebmocks9.png?v=1780563298",
+        "category": "T-Shirt"
+      },
+      {
+        "title": "Electric Shorts",
+        "handle": "electric-shorts",
+        "url": "https://stincteamtgf.com/products/electric-shorts",
+        "price_min": 80.0,
+        "price_max": 80.0,
+        "available": true,
+        "instock_sizes": [
+          "S",
+          "XL",
+          "2XL"
+        ],
+        "image": "https://cdn.shopify.com/s/files/1/0672/9475/7046/files/IMG_0372.jpg?v=1793347458",
+        "category": "Shorts"
+      },
+      {
+        "title": "Electric Stinc Pullover",
+        "handle": "electric-stinc-pullover",
+        "url": "https://stincteamtgf.com/products/electric-stinc-pullover",
+        "price_min": 150.0,
+        "price_max": 150.0,
+        "available": false,
+        "instock_sizes": [],
+        "image": "https://cdn.shopify.com/s/files/1/0672/9475/7046/files/Photoroom_20261030_012309.jpg?v=1793348611",
+        "category": "Hoodie / outerwear"
+      },
+      {
+        "title": "Electric Stinc T-Shirt",
+        "handle": "electric-stinc-t-shirt",
+        "url": "https://stincteamtgf.com/products/electric-stinc-t-shirt",
+        "price_min": 100.0,
+        "price_max": 100.0,
+        "available": true,
+        "instock_sizes": [
+          "S",
+          "S",
+          "M",
+          "M",
+          "L",
+          "XL",
+          "XL",
+          "2XL"
+        ],
+        "image": "https://cdn.shopify.com/s/files/1/0672/9475/7046/files/Screenshot2026-10-30at1.16.48AM.png?v=1793348253",
+        "category": "T-Shirt"
+      },
+      {
+        "title": "Freddy vs Jason T-Shirt",
+        "handle": "freddy-vs-jason-t-shirt",
+        "url": "https://stincteamtgf.com/products/freddy-vs-jason-t-shirt",
+        "price_min": 80.0,
+        "price_max": 80.0,
+        "available": true,
+        "instock_sizes": [
+          "S",
+          "M",
+          "L",
+          "XL",
+          "2XL"
+        ],
+        "image": "https://cdn.shopify.com/s/files/1/0672/9475/7046/files/Screenshot2026-10-30at1.49.12AM.png?v=1793350161",
+        "category": "T-Shirt"
+      },
+      {
+        "title": "GotSole T-shirt",
+        "handle": "got-sole-t-shirt",
+        "url": "https://stincteamtgf.com/products/got-sole-t-shirt",
+        "price_min": 60.0,
+        "price_max": 60.0,
+        "available": true,
+        "instock_sizes": [
+          "M",
+          "XL",
+          "L",
+          "2XL",
+          "3XL"
+        ],
+        "image": "https://cdn.shopify.com/s/files/1/0672/9475/7046/files/IMG_1200.jpg?v=1790112488",
+        "category": "T-Shirt"
+      },
+      {
+        "title": "GRANDMASTER T-SHIRT BROWN",
+        "handle": "grandmaster-t-shirt-brown",
+        "url": "https://stincteamtgf.com/products/grandmaster-t-shirt-brown",
+        "price_min": 60.0,
+        "price_max": 60.0,
+        "available": false,
+        "instock_sizes": [],
+        "image": "https://cdn.shopify.com/s/files/1/0672/9475/7046/files/stincwebmocks30_9f0dcbe1-9915-47e6-9b1b-c233e1a2fe20.png?v=1780639953",
+        "category": "T-Shirt"
+      },
+      {
+        "title": "LAST DRAGON HOODIE",
+        "handle": "last-dragon-hoodie",
+        "url": "https://stincteamtgf.com/products/last-dragon-hoodie",
+        "price_min": 100.0,
+        "price_max": 100.0,
+        "available": true,
+        "instock_sizes": [
+          "S"
+        ],
+        "image": "https://cdn.shopify.com/s/files/1/0672/9475/7046/files/stincwebmocks47.png?v=1780636782",
+        "category": "Hoodie / outerwear"
+      },
+      {
+        "title": "Locals Only T-Shirt",
+        "handle": "locals-only-t-shirt",
+        "url": "https://stincteamtgf.com/products/locals-only-t-shirt",
+        "price_min": 75.0,
+        "price_max": 75.0,
+        "available": true,
+        "instock_sizes": [
+          "2XL",
+          "3XL"
+        ],
+        "image": "https://cdn.shopify.com/s/files/1/0672/9475/7046/files/Vintage_STINC_TEAM_Graphic_TShirt_shopify-smaller_1.png?v=1791912552",
+        "category": "T-Shirt"
+      },
+      {
+        "title": "OG Baddest Kids Zip Up",
+        "handle": "og-baddest-kids-zip-up",
+        "url": "https://stincteamtgf.com/products/og-baddest-kids-zip-up",
+        "price_min": 180.0,
+        "price_max": 180.0,
+        "available": true,
+        "instock_sizes": [
+          "XL"
+        ],
+        "image": "https://cdn.shopify.com/s/files/1/0672/9475/7046/files/IMG_6132.jpg?v=1781862930",
+        "category": "Hoodie / outerwear"
+      },
+      {
+        "title": "Plug Walk T-shirt",
+        "handle": "plug-walk-t-shirt",
+        "url": "https://stincteamtgf.com/products/plug-walk-t-shirt",
+        "price_min": 50.0,
+        "price_max": 50.0,
+        "available": true,
+        "instock_sizes": [
+          "M",
+          "L",
+          "XL",
+          "2XL",
+          "3XL"
+        ],
+        "image": "https://cdn.shopify.com/s/files/1/0672/9475/7046/files/plugwalkmock2.png?v=1790112775",
+        "category": "T-Shirt"
+      },
+      {
+        "title": "Stinc Myers T-Shirt",
+        "handle": "stinc-myers-t-shirt",
+        "url": "https://stincteamtgf.com/products/stinc-myers-t-shirt",
+        "price_min": 80.0,
+        "price_max": 80.0,
+        "available": true,
+        "instock_sizes": [
+          "S",
+          "M",
+          "XL"
+        ],
+        "image": "https://cdn.shopify.com/s/files/1/0672/9475/7046/files/Screenshot2026-10-30at1.31.18AM.png?v=1793349161",
+        "category": "T-Shirt"
+      },
+      {
+        "title": "Stinc Team Lucky Break T-Shirt",
+        "handle": "stinc-team-lucky-break-t-shirt",
+        "url": "https://stincteamtgf.com/products/stinc-team-lucky-break-t-shirt",
+        "price_min": 75.0,
+        "price_max": 75.0,
+        "available": true,
+        "instock_sizes": [
+          "2XL"
+        ],
+        "image": "https://cdn.shopify.com/s/files/1/0672/9475/7046/files/StincTeamComplexCon2026TeeMockup.png?v=1791911695",
+        "category": "T-Shirt"
+      },
+      {
+        "title": "Stinc Team Vintage Graphic Tee",
+        "handle": "stinc-team-vintage-graphic-tee",
+        "url": "https://stincteamtgf.com/products/stinc-team-vintage-graphic-tee",
+        "price_min": 60.0,
+        "price_max": 60.0,
+        "available": true,
+        "instock_sizes": [
+          "S",
+          "M",
+          "L",
+          "XL",
+          "2XL",
+          "3XL"
+        ],
+        "image": "https://cdn.shopify.com/s/files/1/0672/9475/7046/files/stincwebmocks67.png?v=1786127805",
+        "category": "T-Shirt"
+      },
+      {
+        "title": "Stinc Team x Chiefin Heavily ComplexCon Black Tee",
+        "handle": "stinc-team-x-chiefin-heavily-complexcon-black-tee",
+        "url": "https://stincteamtgf.com/products/stinc-team-x-chiefin-heavily-complexcon-black-tee",
+        "price_min": 80.0,
+        "price_max": 80.0,
+        "available": true,
+        "instock_sizes": [
+          "S",
+          "2XL"
+        ],
+        "image": "https://cdn.shopify.com/s/files/1/0672/9475/7046/files/stincwebmocks95.png?v=1791920601",
+        "category": "T-Shirt"
+      },
+      {
+        "title": "Stinc Team x Chiefin Heavily ComplexCon Grey Tee",
+        "handle": "stinc-team-x-chiefin-heavily-complexcon-grey-tee",
+        "url": "https://stincteamtgf.com/products/stinc-team-x-chiefin-heavily-complexcon-grey-tee",
+        "price_min": 80.0,
+        "price_max": 80.0,
+        "available": true,
+        "instock_sizes": [
+          "S",
+          "L",
+          "XL",
+          "2XL"
+        ],
+        "image": "https://cdn.shopify.com/s/files/1/0672/9475/7046/files/stincwebmocks97.png?v=1791921804",
+        "category": "T-Shirt"
+      },
+      {
+        "title": "Stinc Team x Complexcon Hoodie",
+        "handle": "stinc-team-x-complexcon-hoodie",
+        "url": "https://stincteamtgf.com/products/stinc-team-x-complexcon-hoodie",
+        "price_min": 100.0,
+        "price_max": 100.0,
+        "available": false,
+        "instock_sizes": [],
+        "image": "https://cdn.shopify.com/s/files/1/0672/9475/7046/files/NeonStreetwearGraphicHoodie.png?v=1791911278",
+        "category": "Hoodie / outerwear"
+      },
+      {
+        "title": "StincTeam Shoping Spree",
+        "handle": "stincteam-shoping-spree",
+        "url": "https://stincteamtgf.com/products/stincteam-shoping-spree",
+        "price_min": 60.0,
+        "price_max": 60.0,
+        "available": true,
+        "instock_sizes": [
+          "M",
+          "L",
+          "XL",
+          "2XL",
+          "3XL"
+        ],
+        "image": "https://cdn.shopify.com/s/files/1/0672/9475/7046/files/FullSizeRender.jpg?v=1790135716",
+        "category": "T-Shirt"
+      },
+      {
+        "title": "StincTeam Shoping Spree Off White",
+        "handle": "stincteam-shoping-spree-copy",
+        "url": "https://stincteamtgf.com/products/stincteam-shoping-spree-copy",
+        "price_min": 60.0,
+        "price_max": 60.0,
+        "available": true,
+        "instock_sizes": [
+          "M",
+          "XL",
+          "2XL",
+          "3XL"
+        ],
+        "image": "https://cdn.shopify.com/s/files/1/0672/9475/7046/files/IMG_8448.jpg?v=1790181157",
+        "category": "T-Shirt"
+      },
+      {
+        "title": "StincTeam Shoping Spree Tan",
+        "handle": "stincteam-shoping-spree-tan",
+        "url": "https://stincteamtgf.com/products/stincteam-shoping-spree-tan",
+        "price_min": 60.0,
+        "price_max": 60.0,
+        "available": true,
+        "instock_sizes": [
+          "L"
+        ],
+        "image": "https://cdn.shopify.com/s/files/1/0672/9475/7046/files/stincwebmocks94.png?v=1790190727",
+        "category": "T-Shirt"
+      },
+      {
+        "title": "StincZilla",
+        "handle": "stinczilla",
+        "url": "https://stincteamtgf.com/products/stinczilla",
+        "price_min": 60.0,
+        "price_max": 60.0,
+        "available": false,
+        "instock_sizes": [],
+        "image": "https://cdn.shopify.com/s/files/1/0672/9475/7046/files/stincwebmocks39.png?v=1780631638",
+        "category": "T-Shirt"
+      },
+      {
+        "title": "Take Over Tee",
+        "handle": "take-over-tee",
+        "url": "https://stincteamtgf.com/products/take-over-tee",
+        "price_min": 60.0,
+        "price_max": 60.0,
+        "available": true,
+        "instock_sizes": [
+          "S",
+          "2XL",
+          "3XL"
+        ],
+        "image": "https://cdn.shopify.com/s/files/1/0672/9475/7046/files/stincwebmocks51.png?v=1781864454",
+        "category": "T-Shirt"
+      }
+    ],
+    "emails_built": 14,
+    "emails": [
+      {
+        "id": "01-welcome-1-join",
+        "series": "Welcome series",
+        "segment": "New email subscribers, email 1 of 3 (day 0)",
+        "subject": "You are in — STINC TEAM merch",
+        "preheader": "Drops, restocks, and the rack at stincteamtgf.com. This is email 1 of 3.",
+        "preview": ""
+      },
+      {
+        "id": "02-welcome-2-how-we-drop",
+        "series": "Welcome series",
+        "segment": "New email subscribers, email 2 of 3 (day 2–3)",
+        "subject": "How STINC drops work",
+        "preheader": "VIP early access, then the public list, then a real last call when sizes are gone.",
+        "preview": ""
+      },
+      {
+        "id": "03-welcome-3-favorites",
+        "series": "Welcome series",
+        "segment": "New email subscribers, email 3 of 3 (day 5–7, suppress buyers)",
+        "subject": "From the rack: Halloween drop and everyday tees",
+        "preheader": "Freddy vs Jason $80, Electric Stinc $100, Plug Walk $50 — live sizes as of Nov 20.",
+        "preview": ""
+      },
+      {
+        "id": "04-drop-vip-early-access",
+        "series": "Drop / launch",
+        "segment": "VIP (past buyers, SMS-consented VIPs, high-click 30d)",
+        "subject": "VIP early access is open",
+        "preheader": "",
+        "preview": ""
+      },
+      {
+        "id": "05-drop-general",
+        "series": "Drop / launch",
+        "segment": "All engaged email (suppress VIP purchasers)",
+        "subject": "The drop is live",
+        "preheader": "",
+        "preview": ""
+      },
+      {
+        "id": "06-drop-last-call",
+        "series": "Drop / launch",
+        "segment": "Non-buyers who clicked/browsed drop + engaged list",
+        "subject": "Sizes are actually running out",
+        "preheader": "",
+        "preview": ""
+      },
+      {
+        "id": "07-drop-restock",
+        "series": "Drop / launch",
+        "segment": "Back-in-stock subscribers + past buyers + VIP",
+        "subject": "Want these back? / They are back — pick the right subject",
+        "preheader": "",
+        "preview": ""
+      },
+      {
+        "id": "08-seasonal-bfcm",
+        "series": "Seasonal",
+        "segment": "Engaged email + past buyers + VIP (Nov 26 / Nov 30)",
+        "subject": "The rack is open — Black Friday at STINC TEAM",
+        "preheader": "",
+        "preview": ""
+      },
+      {
+        "id": "09-seasonal-holiday-cutoff",
+        "series": "Seasonal",
+        "segment": "All engaged email (Dec 1–2, 2026)",
+        "subject": "Dec 2 is the last day we recommend for Christmas",
+        "preheader": "Tracking can take 7–14 days to issue after you order. Later than Dec 2 may miss the 25th.",
+        "preview": ""
+      },
+      {
+        "id": "10-seasonal-new-year",
+        "series": "Seasonal",
+        "segment": "Full engaged email list (Jan 5, 2027)",
+        "subject": "2027: restocks, new drops, same rack",
+        "preheader": "",
+        "preview": ""
+      },
+      {
+        "id": "11-community-stream-schedule",
+        "series": "Community-building",
+        "segment": "Stream viewers + engaged list",
+        "subject": "When Ralfy is live this week",
+        "preheader": "Times only go in this email when they are confirmed. Watch the official channels if the slot is still TBD.",
+        "preview": ""
+      },
+      {
+        "id": "12-community-bts",
+        "series": "Community-building",
+        "segment": "Stream viewers + past buyers",
+        "subject": "Packing the orders, for real",
+        "preheader": "He packs merch on stream. Tracking still takes 7–14 days after you order — that is the published policy.",
+        "preview": ""
+      },
+      {
+        "id": "13-community-clip-of-the-week",
+        "series": "Community-building",
+        "segment": "Stream viewers + music fans + engaged list",
+        "subject": "This week's clip, from the fan page",
+        "preheader": "Fan page — not the official account. Official credit always sits with the clip.",
+        "preview": ""
+      },
+      {
+        "id": "14-community-pokemon-giveaway",
+        "series": "Community-building",
+        "segment": "Pokémon / collectibles fans + stream viewers only",
+        "subject": "Pack-opening giveaway — no purchase needed",
+        "preheader": "Free entry by stream or email. Not sponsored by The Pokémon Company or Nintendo. Draft rules inside.",
+        "preview": ""
+      }
+    ],
+    "previews": "withheld",
+    "previews_reason": "Preview images stay off this public site because the draft HTML includes a contact email, phone number, or street address."
+  }
+}
