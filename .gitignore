@@ -1,2 +1,3 @@
 .DS_Store
 tests/*.jpg
+__pycache__/

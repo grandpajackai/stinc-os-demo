@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key><string>com.gilventures.stinc.osdata</string>
+  <key>Comment</key><string>Export a sanitized public snapshot and push data/live.json to grandpajackai/stinc-os-demo (GitHub Pages) at 9:00 AM, 2:00 PM and 9:00 PM ET. Mechanical, no LLM, no Grok. Never force-push.</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/bash</string>
+    <string>/Users/grandpajack/Projects/stinc-os-demo/tools/refresh_and_publish.sh</string>
+  </array>
+  <key>WorkingDirectory</key><string>/Users/grandpajack/Projects/stinc-os-demo</string>
+  <key>StartCalendarInterval</key>
+  <array>
+    <dict><key>Hour</key><integer>9</integer><key>Minute</key><integer>0</integer></dict>
+    <dict><key>Hour</key><integer>14</integer><key>Minute</key><integer>0</integer></dict>
+    <dict><key>Hour</key><integer>21</integer><key>Minute</key><integer>0</integer></dict>
+  </array>
+  <key>RunAtLoad</key><false/>
+  <key>LowPriorityIO</key><true/>
+  <key>Nice</key><integer>10</integer>
+  <key>EnvironmentVariables</key>
+  <dict>
+    <key>TZ</key><string>America/New_York</string>
+    <key>HOME</key><string>/Users/grandpajack</string>
+    <key>PATH</key><string>/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin</string>
+  </dict>
+  <key>StandardOutPath</key><string>/Users/grandpajack/Library/Logs/stinc-os-data.log</string>
+  <key>StandardErrorPath</key><string>/Users/grandpajack/Library/Logs/stinc-os-data.log</string>
+</dict>
+</plist>
