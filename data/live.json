@@ -1,6 +1,6 @@
 {
   "schema": "stinc-os.live.v1",
-  "generated_at": "2026-11-20T23:57:38-05:00",
+  "generated_at": "2026-11-21T09:00:05-05:00",
   "sources": {
     "platform": true,
     "tracker": "tracker.csv",
@@ -39,14 +39,14 @@
   "pipeline_highlights": [
     {
       "label": "Clip options",
-      "value": "20",
+      "value": "21",
       "as_of": "Scored, not posted",
       "icon": "play",
       "sample": false
     },
     {
       "label": "Clips rendered",
-      "value": "11",
+      "value": "16",
       "as_of": "Local files only",
       "icon": "play",
       "sample": false
@@ -163,10 +163,10 @@
   ],
   "pipeline": {
     "source_videos": 5,
-    "candidate_files": 5,
-    "clip_options": 20,
+    "candidate_files": 6,
+    "clip_options": 21,
     "clips_ticked": 0,
-    "clips_rendered": 11,
+    "clips_rendered": 16,
     "approved": 0,
     "posted": 0,
     "ready": 1,
@@ -176,37 +176,25 @@
   "clips": [
     {
       "id": "yt-3z6nfKs4-Tw_C4",
-      "title": "AI thinks it knows you / Just start printing",
-      "hook": "AI thinks it knows you / Just start printing",
+      "title": "What the fuck wrong with you, bitch? / What the fuck's up?",
+      "hook": "What the fuck wrong with you, bitch? / What the fuck's up?",
       "viral": 9.1,
       "score": 9.0,
       "duration_s": 28.7,
       "kind": "stream",
-      "status": "Needs review",
+      "status": "Rendered",
       "watch_url": "https://www.youtube.com/watch?v=3z6nfKs4-Tw",
       "source_label": "YouTube · public VOD"
     },
     {
-      "id": "yt-gEQumoX0cZ8_C3",
-      "title": "Is it worth something? / Deuces. See you tomorrow.",
-      "hook": "Is it worth something? / Deuces. See you tomorrow.",
-      "viral": 8.6,
-      "score": 10.0,
-      "duration_s": 78.1,
-      "kind": "stream",
-      "status": "Rendered",
-      "watch_url": "https://www.youtube.com/watch?v=gEQumoX0cZ8",
-      "source_label": "YouTube · public VOD"
-    },
-    {
       "id": "yt-BDP2C6ihc00_C3",
-      "title": "Chat, I Got to Go Fuck with My Brothers!",
-      "hook": "You know",
+      "title": "Chat, I got to go fuck with my brothers!",
+      "hook": "Chat, I got to go fuck with my brothers!",
       "viral": 8.5,
       "score": 9.0,
       "duration_s": 31.8,
       "kind": "stream",
-      "status": "Needs review",
+      "status": "Rendered",
       "watch_url": "https://www.youtube.com/watch?v=BDP2C6ihc00",
       "source_label": "YouTube · public VOD"
     },
@@ -224,26 +212,62 @@
     },
     {
       "id": "yt-3z6nfKs4-Tw_C2",
-      "title": "I'm way worse than your last nigga",
+      "title": "Bro, do you pre-order food? / Here's why",
       "hook": "Bro, do you pre-order food? / Here's why",
       "viral": 8.3,
       "score": 9.0,
       "duration_s": 49.1,
       "kind": "stream",
-      "status": "Needs review",
+      "status": "Rendered",
       "watch_url": "https://www.youtube.com/watch?v=3z6nfKs4-Tw",
       "source_label": "YouTube · public VOD"
     },
     {
       "id": "yt-BDP2C6ihc00_C1",
-      "title": "I Just Backed Off the Mildew, Chat!",
+      "title": "Backed off the Mildew. / Like I've been saying.",
       "hook": "Backed off the Mildew. / Like I've been saying.",
       "viral": 8.3,
       "score": 9.0,
       "duration_s": 17.6,
       "kind": "stream",
-      "status": "Needs review",
+      "status": "Rendered",
       "watch_url": "https://www.youtube.com/watch?v=BDP2C6ihc00",
+      "source_label": "YouTube · public VOD"
+    },
+    {
+      "id": "yt-gEQumoX0cZ8_C2",
+      "title": "Chat like that's what I'm saying / Here's why",
+      "hook": "Chat like that's what I'm saying / Here's why",
+      "viral": 8.2,
+      "score": 9.0,
+      "duration_s": 21.6,
+      "kind": "stream",
+      "status": "Rendered",
+      "watch_url": "https://www.youtube.com/watch?v=gEQumoX0cZ8",
+      "source_label": "YouTube · public VOD"
+    },
+    {
+      "id": "yt-gEQumoX0cZ8_C3",
+      "title": "Dude that was fucking insane / Here's why",
+      "hook": "Dude that was fucking insane / Here's why",
+      "viral": 8.2,
+      "score": 9.0,
+      "duration_s": 24.9,
+      "kind": "stream",
+      "status": "Needs review",
+      "watch_url": "https://www.youtube.com/watch?v=gEQumoX0cZ8",
+      "source_label": "YouTube · public VOD"
+    },
+    {
+      "id": "yt-gEQumoX0cZ8_C5",
+      "title": "I found something crazy / That's a bunch of gas",
+      "hook": "I found something crazy / That's a bunch of gas",
+      "viral": 8.2,
+      "score": 7.0,
+      "duration_s": 64.4,
+      "kind": "stream",
+      "status": "Needs review",
+      "watch_url": "https://www.youtube.com/watch?v=gEQumoX0cZ8",
       "source_label": "YouTube · public VOD"
     },
     {
@@ -271,6 +295,18 @@
       "source_label": "YouTube · public VOD"
     },
     {
+      "id": "yt-gEQumoX0cZ8_C4",
+      "title": "Wait, what the fuck?  Watch this",
+      "hook": "Wait, what the fuck?  Watch this",
+      "viral": 8.1,
+      "score": 9.0,
+      "duration_s": 19.9,
+      "kind": "stream",
+      "status": "Needs review",
+      "watch_url": "https://www.youtube.com/watch?v=gEQumoX0cZ8",
+      "source_label": "YouTube · public VOD"
+    },
+    {
       "id": "yt-BDP2C6ihc00_C2",
       "title": "You sell it then, nigga / White with the black",
       "hook": "You sell it then, nigga / White with the black",
@@ -292,6 +328,18 @@
       "kind": "stream",
       "status": "Needs review",
       "watch_url": "https://www.youtube.com/watch?v=OOUfkTwGgEw",
+      "source_label": "YouTube · public VOD"
+    },
+    {
+      "id": "yt-aINQ_DN8GJU_C2",
+      "title": "I'm Way Worse Than Your Last Nigga",
+      "hook": "I'm way worse than your last nigga",
+      "viral": 8.0,
+      "score": 9.0,
+      "duration_s": 15.0,
+      "kind": "stream",
+      "status": "Needs review",
+      "watch_url": "https://www.youtube.com/watch?v=aINQ_DN8GJU",
       "source_label": "YouTube · public VOD"
     },
     {
@@ -319,8 +367,32 @@
       "source_label": "YouTube · public VOD"
     },
     {
+      "id": "yt-gEQumoX0cZ8_C1",
+      "title": "Bro you're not wearing gloves / Chat",
+      "hook": "Bro you're not wearing gloves / Chat",
+      "viral": 7.6,
+      "score": 8.0,
+      "duration_s": 48.1,
+      "kind": "stream",
+      "status": "Needs review",
+      "watch_url": "https://www.youtube.com/watch?v=gEQumoX0cZ8",
+      "source_label": "YouTube · public VOD"
+    },
+    {
+      "id": "yt-aINQ_DN8GJU_C1",
+      "title": "I'll do you way worse",
+      "hook": "I'll do you way worse",
+      "viral": 7.4,
+      "score": 5.0,
+      "duration_s": 33.0,
+      "kind": "stream",
+      "status": "Needs review",
+      "watch_url": "https://www.youtube.com/watch?v=aINQ_DN8GJU",
+      "source_label": "YouTube · public VOD"
+    },
+    {
       "id": "yt-3z6nfKs4-Tw_C3",
-      "title": "You better not have touched my stuff / Here's how serious it was",
+      "title": "Order your own French toast and tenders",
       "hook": "You better not have touched my stuff / Here's how serious it was",
       "viral": 7.2,
       "score": 8.0,
@@ -331,12 +403,12 @@
       "source_label": "YouTube · public VOD"
     },
     {
-      "id": "yt-aINQ_DN8GJU_C2",
-      "title": "I'm Way Worse Than Your Last Nigga",
-      "hook": "I'm way worse than your last nigga",
-      "viral": 7.0,
+      "id": "yt-aINQ_DN8GJU_C3",
+      "title": "I'm in His Whip Doin' the Dash",
+      "hook": "Why do we act like we don't care? / Here's what he said",
+      "viral": 7.2,
       "score": 9.0,
-      "duration_s": 15.0,
+      "duration_s": 16.0,
       "kind": "stream",
       "status": "Needs review",
       "watch_url": "https://www.youtube.com/watch?v=aINQ_DN8GJU",
@@ -352,66 +424,6 @@
       "kind": "stream",
       "status": "Needs review",
       "watch_url": "https://www.youtube.com/watch?v=BDP2C6ihc00",
-      "source_label": "YouTube · public VOD"
-    },
-    {
-      "id": "yt-aINQ_DN8GJU_C1",
-      "title": "I'll do you way worse",
-      "hook": "I'll do you way worse",
-      "viral": 6.5,
-      "score": 5.0,
-      "duration_s": 33.0,
-      "kind": "stream",
-      "status": "Needs review",
-      "watch_url": "https://www.youtube.com/watch?v=aINQ_DN8GJU",
-      "source_label": "YouTube · public VOD"
-    },
-    {
-      "id": "yt-aINQ_DN8GJU_C3",
-      "title": "I'm in His Whip Doin' the Dash",
-      "hook": "Why do we act like we don't care? / Here's what he said",
-      "viral": 6.3,
-      "score": 9.0,
-      "duration_s": 16.0,
-      "kind": "stream",
-      "status": "Needs review",
-      "watch_url": "https://www.youtube.com/watch?v=aINQ_DN8GJU",
-      "source_label": "YouTube · public VOD"
-    },
-    {
-      "id": "yt-gEQumoX0cZ8_C4",
-      "title": "Why's the app called chat? / I need the real app",
-      "hook": "Why's the app called chat? / I need the real app",
-      "viral": 6.2,
-      "score": 6.0,
-      "duration_s": 88.4,
-      "kind": "stream",
-      "status": "Needs review",
-      "watch_url": "https://www.youtube.com/watch?v=gEQumoX0cZ8",
-      "source_label": "YouTube · public VOD"
-    },
-    {
-      "id": "yt-gEQumoX0cZ8_C1",
-      "title": "He didn't lit the bunt, chat / Here's why it's still lit",
-      "hook": "He didn't lit the bunt, chat / Here's why it's still lit",
-      "viral": 5.6,
-      "score": 5.0,
-      "duration_s": 58.6,
-      "kind": "stream",
-      "status": "Rendered",
-      "watch_url": "https://www.youtube.com/watch?v=gEQumoX0cZ8",
-      "source_label": "YouTube · public VOD"
-    },
-    {
-      "id": "yt-gEQumoX0cZ8_C2",
-      "title": "He's searching for that rare card",
-      "hook": "He's searching for that rare card",
-      "viral": 5.6,
-      "score": 5.0,
-      "duration_s": 45.2,
-      "kind": "stream",
-      "status": "Rendered",
-      "watch_url": "https://www.youtube.com/watch?v=gEQumoX0cZ8",
       "source_label": "YouTube · public VOD"
     }
   ],
