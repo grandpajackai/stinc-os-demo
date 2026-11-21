@@ -1,6 +1,6 @@
 {
   "schema": "stinc-os.live.v1",
-  "generated_at": "2026-11-21T09:00:05-05:00",
+  "generated_at": "2026-11-21T14:00:05-05:00",
   "sources": {
     "platform": true,
     "tracker": "tracker.csv",
@@ -39,7 +39,7 @@
   "pipeline_highlights": [
     {
       "label": "Clip options",
-      "value": "21",
+      "value": "24",
       "as_of": "Scored, not posted",
       "icon": "play",
       "sample": false
@@ -162,14 +162,14 @@
     }
   ],
   "pipeline": {
-    "source_videos": 5,
-    "candidate_files": 6,
-    "clip_options": 21,
+    "source_videos": 6,
+    "candidate_files": 7,
+    "clip_options": 24,
     "clips_ticked": 0,
     "clips_rendered": 16,
     "approved": 0,
     "posted": 0,
-    "ready": 1,
+    "ready": 2,
     "queue": 4,
     "emails_built": 14
   },
@@ -271,18 +271,6 @@
       "source_label": "YouTube · public VOD"
     },
     {
-      "id": "yt-OOUfkTwGgEw_C2",
-      "title": "Story 2: That's Some Weird Shit",
-      "hook": "Why won't it rotate? / Wipe this off",
-      "viral": 8.1,
-      "score": 9.0,
-      "duration_s": 45.8,
-      "kind": "stream",
-      "status": "Needs review",
-      "watch_url": "https://www.youtube.com/watch?v=OOUfkTwGgEw",
-      "source_label": "YouTube · public VOD"
-    },
-    {
       "id": "yt-OOUfkTwGgEw_C3",
       "title": "What's the deal with chat? / Here's how to fix it",
       "hook": "What's the deal with chat? / Here's how to fix it",
@@ -325,6 +313,18 @@
       "viral": 8.0,
       "score": 9.0,
       "duration_s": 29.6,
+      "kind": "stream",
+      "status": "Needs review",
+      "watch_url": "https://www.youtube.com/watch?v=OOUfkTwGgEw",
+      "source_label": "YouTube · public VOD"
+    },
+    {
+      "id": "yt-OOUfkTwGgEw_C2",
+      "title": "Story 2: That's Some Weird Shit",
+      "hook": "Why won't it rotate? / Wipe this off",
+      "viral": 8.0,
+      "score": 9.0,
+      "duration_s": 45.8,
       "kind": "stream",
       "status": "Needs review",
       "watch_url": "https://www.youtube.com/watch?v=OOUfkTwGgEw",
@@ -424,6 +424,42 @@
       "kind": "stream",
       "status": "Needs review",
       "watch_url": "https://www.youtube.com/watch?v=BDP2C6ihc00",
+      "source_label": "YouTube · public VOD"
+    },
+    {
+      "id": "yt-zvcl7QYZlAQ_C2",
+      "title": "What the fuck is this? / Here we go.",
+      "hook": "What the fuck is this? / Here we go.",
+      "viral": 6.8,
+      "score": 9.0,
+      "duration_s": 43.1,
+      "kind": "stream",
+      "status": "Needs review",
+      "watch_url": "https://www.youtube.com/watch?v=zvcl7QYZlAQ",
+      "source_label": "YouTube · public VOD"
+    },
+    {
+      "id": "yt-zvcl7QYZlAQ_C3",
+      "title": "Best time to film this track / Watch this",
+      "hook": "Best time to film this track / Watch this",
+      "viral": 6.8,
+      "score": 7.0,
+      "duration_s": 114.3,
+      "kind": "stream",
+      "status": "Needs review",
+      "watch_url": "https://www.youtube.com/watch?v=zvcl7QYZlAQ",
+      "source_label": "YouTube · public VOD"
+    },
+    {
+      "id": "yt-zvcl7QYZlAQ_C1",
+      "title": "Did you grab it?",
+      "hook": "Did you grab it?",
+      "viral": 5.0,
+      "score": 8.0,
+      "duration_s": 28.0,
+      "kind": "stream",
+      "status": "Needs review",
+      "watch_url": "https://www.youtube.com/watch?v=zvcl7QYZlAQ",
       "source_label": "YouTube · public VOD"
     }
   ],
