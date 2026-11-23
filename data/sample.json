@@ -1,0 +1,122 @@
+{
+  "schema": "stinc-os.sample.v1",
+  "notice": "Sample figures shown below illustrate what appears once accounts are connected.",
+  "roster_demo": {
+    "kpis": [
+      ["Content views", "42.8K", "Sample", "play"],
+      ["Music streams", "18.2K", "Sample", "headphones"],
+      ["Owned fans", "284", "Sample", "people"],
+      ["Store sales", "$840", "Sample", "bag"]
+    ],
+    "fans": [
+      ["Owned fans", "284", "Sample", "people"],
+      ["Email opt-ins", "210", "Sample", "link"]
+    ]
+  },
+  "today_todos": [
+    { "title": "Confirm the fan-page approach", "detail": "Keep @ralfyclips.daily running on Instagram & TikTok while official accounts stay yours.", "category": "Fan pages", "status": "Waiting on you" },
+    { "title": "Approve official music-video footage", "detail": "Allow cuts from the 24 official videos on YouTube (only Hancock is cut so far).", "category": "Content", "status": "Waiting on you" },
+    { "title": "Share admin / collaborator invites", "detail": "Distributor, DSP dashboards, Shopify, GA, email/SMS, PRO/MLC/SoundExchange — no passwords.", "category": "Connections", "status": "Waiting on you" },
+    { "title": "Confirm facts, releases, and merch drops", "detail": "Bio line, next single or project date, next drop timing, anything to avoid.", "category": "Facts", "status": "Waiting on you" },
+    { "title": "Pick one deal sign-off contact and feedback cadence", "detail": "Who approves brand deals, and weekly check-in vs notes.", "category": "Partnerships", "status": "Waiting on you" }
+  ],
+  "process_map": [
+    {
+      "name": "Content engine",
+      "status": "Active",
+      "tone": "live",
+      "summary": "Scans long streams and music videos, scores the top moments, and renders vertical clips.",
+      "stages": [["Scanned", "done", "7 videos"], ["Scored", "done", "32 moments"], ["Rendered", "done", "27 clips"], ["Queued", "current", "20 posts"]]
+    },
+    {
+      "name": "Fan-page network",
+      "status": "Active",
+      "tone": "live",
+      "summary": "Publishes twice daily on live fan pages with 30-minute stagger; official accounts untouched.",
+      "stages": [["Instagram", "done", "4 live"], ["TikTok", "current", "Queued"], ["X", "pending", "Next"], ["Shorts", "pending", "Next"]]
+    },
+    {
+      "name": "Outreach & partnerships",
+      "status": "Active",
+      "tone": "live",
+      "summary": "Researches brands, sends weekday emails, fills partner forms, and prepares PR & podcast pitches.",
+      "stages": [["Researched", "done", "20 tracked"], ["Emails", "done", "3 sent · 5 queued"], ["Forms", "current", "31 waiting"], ["PR / Press", "pending", "Planned"]]
+    },
+    {
+      "name": "Website, Shopify & merch",
+      "status": "Waiting on you",
+      "tone": "waiting",
+      "summary": "Tracks 37 store items today; store rebuild concept and drop workflows ready once Shopify connects.",
+      "stages": [["Catalog scan", "done", "37 items"], ["Store concept", "done", "Ready"], ["Shopify invite", "current", "Admin needed"], ["Drop sync", "pending", "After connect"]]
+    },
+    {
+      "name": "Email & SMS campaigns",
+      "status": "Waiting on you",
+      "tone": "waiting",
+      "summary": "14 welcome, drop, and community emails built; first 3 designs open for preview.",
+      "stages": [["Designed", "done", "14 built"], ["Previewed", "done", "3 live"], ["List connect", "current", "ESP / SMS"], ["Sending", "pending", "After OK"]]
+    },
+    {
+      "name": "Royalties, DSPs & finance",
+      "status": "Not connected yet",
+      "tone": "off",
+      "summary": "Brings distributor statements, streaming dashboards, PRO, MLC, and SoundExchange into one ledger.",
+      "stages": [["Distributor", "pending", "Read access"], ["DSPs", "pending", "Spotify / Apple"], ["PRO & MLC", "pending", "BMI/ASCAP/MLC"], ["Unified ledger", "pending", "Once connected"]]
+    }
+  ],
+  "platform_growth": [
+    { "name": "Instagram", "handle": "@theplugbyralfy + @ralfyclips.daily", "baseline": "193,835 official · 4 reels live", "sample_30d_reach": "480K", "sample_eng": "5.4%", "sample_lift": "+14%" },
+    { "name": "TikTok", "handle": "@ralfytheplug032 + @ralfyclips.daily", "baseline": "37.8K official · fan page live", "sample_30d_reach": "360K", "sample_eng": "6.1%", "sample_lift": "+22%" },
+    { "name": "YouTube", "handle": "@ralfytheplug", "baseline": "164K subs · 109.6M views", "sample_30d_reach": "1.4M", "sample_eng": "4.8%", "sample_lift": "+11%" },
+    { "name": "X", "handle": "@RalfytheP + planned fan page", "baseline": "39,287 official", "sample_30d_reach": "190K", "sample_eng": "3.2%", "sample_lift": "+9%" },
+    { "name": "Spotify", "handle": "Ralfy the Plug", "baseline": "383,111 monthly listeners", "sample_30d_reach": "425K", "sample_eng": "Save lift", "sample_lift": "+11%" },
+    { "name": "Apple Music", "handle": "Artist dashboard", "baseline": "Connect for baseline", "sample_30d_reach": "165K", "sample_eng": "Shazam lift", "sample_lift": "+8%" }
+  ],
+  "shopify_sample": {
+    "visits_30d": "14,200",
+    "conversion": "2.9%",
+    "orders_30d": "208",
+    "aov": "$60.00",
+    "repeat_rate": "24%",
+    "sales_30d": "$12,480",
+    "note": "Sample store funnel figures. Checkout stays on Shopify; real orders and conversion appear once Shopify collaborator access and Google Analytics are added."
+  },
+  "royalties_sample": {
+    "reported": "$18,720",
+    "estimated": "$4,860",
+    "awaiting_review": "$2,140",
+    "rows": [
+      ["Merchandise (Shopify)", "$12,480", "Reported", "Reconcile with Shopify payouts"],
+      ["Distribution (Audio DSPs)", "$6,240", "Reported", "Match monthly distributor statement"],
+      ["Streaming forecast", "$4,860", "Estimated", "Compare Spotify & Apple Music plays"],
+      ["Publishing / PRO / MLC / SoundExchange", "$2,140", "Awaiting review", "Confirm writer/publisher registrations"]
+    ]
+  },
+  "goals": [
+    ["Instagram (official + fan page)", "Followers, views & clicks", "193,835 official · 4 fan reels", "Set together", "Baseline set in week 1"],
+    ["TikTok (fan page + official)", "Views, engagement & sound use", "37.8K official · 10 scheduled", "Set together", "Baseline set in week 1"],
+    ["X & YouTube Shorts", "Impressions, subs & video clicks", "164K YT · 39.3K X · pages planned", "Set together", "Baseline set in week 1"],
+    ["Website & store traffic", "Sessions & product-page clicks", "GA not connected yet", "Set together", "Baseline set in week 1"],
+    ["Email & SMS list", "List growth, open rate & drop revenue", "14 emails built · list not connected", "Set together", "Baseline set in week 1"],
+    ["Shopify & merch", "Conversion, AOV & drop sell-through", "37 items tracked · 30 in stock", "Set together", "Baseline set in week 1"],
+    ["DSPs (Spotify & Apple)", "Monthly listeners, saves & streams lift", "383,111 Spotify monthly", "Set together", "Baseline set in week 1"],
+    ["Partnerships & PR", "Brand replies, deals & press placements", "3 emails sent · 31 forms waiting", "Set together", "Baseline set in week 1"]
+  ],
+  "monthly_report_sample": {
+    "label": "Sample monthly report · What arrives once connected",
+    "headline": "One calm brief tying clips, fan growth, merch drops, streams, and royalties together.",
+    "bullets": [
+      "Top-performing stream and music clips ranked by views, clicks to songs, and store referrals.",
+      "Shopify drop sell-through, email/SMS attributed orders, and repeat-buyer rate side by side.",
+      "Distributor payout check against Spotify/Apple Music streams, plus PRO, MLC, and SoundExchange status.",
+      "Brand replies, active negotiations, and PR/podcast placements ready for sign-off."
+    ]
+  },
+  "connections_summary": [
+    ["Distributor (DistroKid, TuneCore, AWAL)", "Not connected yet", "Audio streaming payouts & statements", "Add us as read-only / admin — no passwords"],
+    ["DSP dashboards (Spotify, Apple, YouTube Studio)", "Not connected yet", "Listeners, saves, Content ID & watch time", "Add us as team / manager — no passwords"],
+    ["PRO, The MLC & SoundExchange", "Not connected yet", "Writer, mechanical & digital royalties", "Add us as admin / payee rep — no passwords"],
+    ["Shopify & Google Analytics", "Not connected yet", "Merch orders, repeat buyers & site traffic", "Collaborator & viewer invite — no passwords"],
+    ["Email / SMS, Link-in-bio & Ticketing", "Not connected yet", "List growth, drop revenue & show sales", "Team member invite — no passwords"]
+  ]
+}
