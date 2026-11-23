@@ -243,6 +243,7 @@ def processes(root: Path, now: datetime | None = None, agents_dir: Path | None =
     now = now or datetime.now(ET)
     agents_dir = agents_dir or HOME / "Library/LaunchAgents"
     lc = _launchctl()
+    # Read-only local cooldown file. Never calls the Buffer API. A 429 is a quiet pause, not a failure.
     cooldown = _load(HOME / ".local/share/stinc-ralfy/buffer-cooldown.json", {})
     cd_until = _dt(str(cooldown.get("until") or "")) if isinstance(cooldown, dict) else None
     out = []
