@@ -1,6 +1,6 @@
 {
   "schema": "stinc-os.live.v1",
-  "generated_at": "2026-11-23T08:16:26-05:00",
+  "generated_at": "2026-11-23T09:00:03-05:00",
   "sources": {
     "platform": true,
     "tracker": "tracker.csv",
@@ -964,8 +964,8 @@
   ],
   "activity": [
     {
-      "at": "2026-11-23T08:16:25-05:00",
-      "at_label": "Mon 8:16 AM ET",
+      "at": "2026-11-23T09:00:02-05:00",
+      "at_label": "Mon 9:00 AM ET",
       "label": "Clips scheduled",
       "detail": "20 fan-page posts queued ahead",
       "count": 20
@@ -1286,20 +1286,20 @@
       {
         "name": "Fan-page poster",
         "what": "Hands finished clips to the scheduler for Instagram and TikTok at the warm-up pace (2 a day per channel) and records each post’s live link.",
-        "cadence": "Every 15 minutes",
+        "cadence": "Every 30 minutes",
         "health": "Healthy",
         "note": "Scheduled posts publish on time. Live-link check resumes Tue Nov 24, 12:03 AM ET.",
-        "last_run": "Mon Nov 23, 8:05 AM ET",
-        "next_run": "Mon Nov 23, 8:20 AM ET"
+        "last_run": "Mon Nov 23, 8:51 AM ET",
+        "next_run": "Mon Nov 23, 9:21 AM ET"
       },
       {
         "name": "Posting watchdog",
         "what": "Checks the poster every 15 minutes and flags anything stuck.",
-        "cadence": "Every 15 minutes",
+        "cadence": "Every 60 minutes",
         "health": "Healthy",
         "note": "",
-        "last_run": "Mon Nov 23, 8:08 AM ET",
-        "next_run": "Mon Nov 23, 8:23 AM ET"
+        "last_run": "Mon Nov 23, 8:21 AM ET",
+        "next_run": "Mon Nov 23, 9:21 AM ET"
       },
       {
         "name": "Content engine",
@@ -1326,7 +1326,7 @@
         "health": "Healthy",
         "note": "",
         "last_run": "Sun Nov 22, 9:00 PM ET",
-        "next_run": "Mon Nov 23, 9:00 AM ET"
+        "next_run": "Mon Nov 23, 2:00 PM ET"
       },
       {
         "name": "Partner-form routine",
