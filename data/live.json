@@ -1,6 +1,6 @@
 {
   "schema": "stinc-os.live.v1",
-  "generated_at": "2026-11-23T09:00:03-05:00",
+  "generated_at": "2026-11-23T13:00:06-05:00",
   "sources": {
     "platform": true,
     "tracker": "tracker.csv",
@@ -54,7 +54,7 @@
     {
       "label": "Sponsors sent",
       "value": "3",
-      "as_of": "Queued 5 · email cap 3/day",
+      "as_of": "Queued 0 · email cap 3/day",
       "icon": "target",
       "sample": false
     },
@@ -220,7 +220,7 @@
         "audio": 10.0,
         "chat_hype": 10.0,
         "traction": null,
-        "traction_label": "3,016 views · 20d old · 150m VOD"
+        "traction_label": "3,016 views · 21d old · 150m VOD"
       },
       "thumb": "assets/clip-thumbs/yt-3z6nfKs4-Tw_C4.jpg"
     },
@@ -275,7 +275,7 @@
         "audio": 7.3,
         "chat_hype": 9.4,
         "traction": null,
-        "traction_label": "2,619 views · 17d old · 160m VOD"
+        "traction_label": "2,619 views · 18d old · 160m VOD"
       },
       "thumb": "assets/clip-thumbs/yt-BDP2C6ihc00_C3.jpg"
     },
@@ -296,7 +296,7 @@
         "audio": 10.0,
         "chat_hype": 10.0,
         "traction": null,
-        "traction_label": "3,016 views · 20d old · 150m VOD"
+        "traction_label": "3,016 views · 21d old · 150m VOD"
       }
     },
     {
@@ -316,7 +316,7 @@
         "audio": 10.0,
         "chat_hype": 7.6,
         "traction": null,
-        "traction_label": "3,016 views · 20d old · 150m VOD"
+        "traction_label": "3,016 views · 21d old · 150m VOD"
       }
     },
     {
@@ -336,7 +336,7 @@
         "audio": 10.0,
         "chat_hype": 5.4,
         "traction": null,
-        "traction_label": "2,619 views · 17d old · 160m VOD"
+        "traction_label": "2,619 views · 18d old · 160m VOD"
       }
     },
     {
@@ -456,7 +456,7 @@
         "audio": 10.0,
         "chat_hype": 10.0,
         "traction": null,
-        "traction_label": "457 views · 14d old · 4m VOD"
+        "traction_label": "457 views · 15d old · 4m VOD"
       }
     },
     {
@@ -496,7 +496,7 @@
         "audio": 10.0,
         "chat_hype": 8.8,
         "traction": null,
-        "traction_label": "2,619 views · 17d old · 160m VOD"
+        "traction_label": "2,619 views · 18d old · 160m VOD"
       }
     },
     {
@@ -516,7 +516,7 @@
         "audio": 10.0,
         "chat_hype": 5.4,
         "traction": null,
-        "traction_label": "457 views · 14d old · 4m VOD"
+        "traction_label": "457 views · 15d old · 4m VOD"
       }
     },
     {
@@ -536,7 +536,7 @@
         "audio": 10.0,
         "chat_hype": 9.9,
         "traction": null,
-        "traction_label": "457 views · 14d old · 4m VOD"
+        "traction_label": "457 views · 15d old · 4m VOD"
       }
     },
     {
@@ -556,7 +556,7 @@
         "audio": null,
         "chat_hype": null,
         "traction": 7.7,
-        "traction_label": "113,879 views · 273d old · 2m VOD"
+        "traction_label": "113,879 views · 274d old · 2m VOD"
       }
     },
     {
@@ -576,7 +576,7 @@
         "audio": 10.0,
         "chat_hype": 8.8,
         "traction": null,
-        "traction_label": "2,619 views · 17d old · 160m VOD"
+        "traction_label": "2,619 views · 18d old · 160m VOD"
       }
     },
     {
@@ -616,7 +616,7 @@
         "audio": 10.0,
         "chat_hype": 5.4,
         "traction": null,
-        "traction_label": "3,016 views · 20d old · 150m VOD"
+        "traction_label": "3,016 views · 21d old · 150m VOD"
       }
     },
     {
@@ -676,7 +676,7 @@
         "audio": null,
         "chat_hype": null,
         "traction": 10.0,
-        "traction_label": "113,879 views · 273d old · 2m VOD"
+        "traction_label": "113,879 views · 274d old · 2m VOD"
       }
     },
     {
@@ -696,7 +696,7 @@
         "audio": 10.0,
         "chat_hype": 5.4,
         "traction": null,
-        "traction_label": "3,016 views · 20d old · 150m VOD"
+        "traction_label": "3,016 views · 21d old · 150m VOD"
       }
     },
     {
@@ -716,7 +716,7 @@
         "audio": null,
         "chat_hype": null,
         "traction": 5.0,
-        "traction_label": "113,879 views · 273d old · 2m VOD"
+        "traction_label": "113,879 views · 274d old · 2m VOD"
       }
     },
     {
@@ -736,7 +736,7 @@
         "audio": 6.1,
         "chat_hype": 6.6,
         "traction": null,
-        "traction_label": "2,619 views · 17d old · 160m VOD"
+        "traction_label": "2,619 views · 18d old · 160m VOD"
       }
     },
     {
@@ -756,7 +756,7 @@
         "audio": 0.2,
         "chat_hype": 6.0,
         "traction": null,
-        "traction_label": "2,797 views · 59d old · 110m VOD"
+        "traction_label": "2,797 views · 60d old · 110m VOD"
       }
     },
     {
@@ -776,7 +776,7 @@
         "audio": 2.3,
         "chat_hype": 6.0,
         "traction": null,
-        "traction_label": "2,797 views · 59d old · 110m VOD"
+        "traction_label": "2,797 views · 60d old · 110m VOD"
       }
     },
     {
@@ -796,7 +796,7 @@
         "audio": 0.0,
         "chat_hype": null,
         "traction": null,
-        "traction_label": "2,797 views · 59d old · 110m VOD"
+        "traction_label": "2,797 views · 60d old · 110m VOD"
       }
     }
   ],
@@ -964,8 +964,8 @@
   ],
   "activity": [
     {
-      "at": "2026-11-23T09:00:02-05:00",
-      "at_label": "Mon 9:00 AM ET",
+      "at": "2026-11-23T13:00:06-05:00",
+      "at_label": "Mon 1:00 PM ET",
       "label": "Clips scheduled",
       "detail": "20 fan-page posts queued ahead",
       "count": 20
@@ -1011,8 +1011,8 @@
   ],
   "sponsors": {
     "sent": 3,
-    "queued": 5,
-    "pending_approval": 0,
+    "queued": 0,
+    "pending_approval": 5,
     "replies": 0,
     "deals": 0,
     "needs_manual_form": 6,
@@ -1022,7 +1022,7 @@
     "other": 0,
     "tracked": 20,
     "daily_cap": 3,
-    "forms_queued": 31,
+    "forms_queued": 0,
     "forms_submitted": 0,
     "forms_submitted_today": 0,
     "forms_daily_cap": 10,
@@ -1032,14 +1032,14 @@
       {
         "channel": "email",
         "sent": 3,
-        "queued": 5,
+        "queued": 0,
         "replies": 0,
         "tracked": 8,
         "daily_cap": 3
       },
       {
         "channel": "form",
-        "queued": 31,
+        "queued": 0,
         "submitted": 0,
         "submitted_today": 0,
         "daily_cap": 10,
@@ -1182,8 +1182,8 @@
           "live": true,
           "planned": 2,
           "published": 0,
-          "due": 0,
-          "upcoming": 2,
+          "due": 1,
+          "upcoming": 1,
           "slots": [
             "12:00",
             "19:30"
@@ -1194,7 +1194,7 @@
               "time": "12:00 PM ET",
               "at": "2026-11-23T12:00:00-05:00",
               "title": "Chat like that's what I'm saying. Here's why",
-              "state": "upcoming",
+              "state": "due",
               "url": "",
               "kind": "stream"
             },
@@ -1214,8 +1214,8 @@
           "live": true,
           "planned": 2,
           "published": 0,
-          "due": 0,
-          "upcoming": 2,
+          "due": 1,
+          "upcoming": 1,
           "slots": [
             "12:30",
             "20:00"
@@ -1226,7 +1226,7 @@
               "time": "12:30 PM ET",
               "at": "2026-11-23T12:30:00-05:00",
               "title": "What the fuck wrong with you, bitch? What the fuck's up?",
-              "state": "upcoming",
+              "state": "due",
               "url": "",
               "kind": "stream"
             },
@@ -1279,7 +1279,7 @@
       "email_daily_cap": 3,
       "forms_submitted_today": 0,
       "forms_submitted": 0,
-      "forms_queued": 31,
+      "forms_queued": 0,
       "forms_daily_cap": 10
     },
     "processes": [
@@ -1289,8 +1289,8 @@
         "cadence": "Every 30 minutes",
         "health": "Healthy",
         "note": "Scheduled posts publish on time. Live-link check resumes Tue Nov 24, 12:03 AM ET.",
-        "last_run": "Mon Nov 23, 8:51 AM ET",
-        "next_run": "Mon Nov 23, 9:21 AM ET"
+        "last_run": "Mon Nov 23, 12:51 PM ET",
+        "next_run": "Mon Nov 23, 1:21 PM ET"
       },
       {
         "name": "Posting watchdog",
@@ -1298,8 +1298,8 @@
         "cadence": "Every 60 minutes",
         "health": "Healthy",
         "note": "",
-        "last_run": "Mon Nov 23, 8:21 AM ET",
-        "next_run": "Mon Nov 23, 9:21 AM ET"
+        "last_run": "Mon Nov 23, 12:21 PM ET",
+        "next_run": "Mon Nov 23, 1:21 PM ET"
       },
       {
         "name": "Content engine",
@@ -1307,8 +1307,8 @@
         "cadence": "Daily 11:00 AM, 6:00 PM ET",
         "health": "Healthy",
         "note": "",
-        "last_run": "Sun Nov 22, 6:00 PM ET",
-        "next_run": "Mon Nov 23, 11:00 AM ET"
+        "last_run": "Mon Nov 23, 11:00 AM ET",
+        "next_run": "Mon Nov 23, 6:00 PM ET"
       },
       {
         "name": "Brand email sender",
@@ -1316,8 +1316,8 @@
         "cadence": "Weekdays 10:30 AM, 12:45 PM, 3:00 PM ET",
         "health": "Healthy",
         "note": "",
-        "last_run": "Fri Nov 20, 3:07 PM ET",
-        "next_run": "Mon Nov 23, 10:30 AM ET"
+        "last_run": "Mon Nov 23, 12:54 PM ET",
+        "next_run": "Mon Nov 23, 3:00 PM ET"
       },
       {
         "name": "Public snapshot refresh",
@@ -1325,7 +1325,7 @@
         "cadence": "Daily 9:00 AM, 2:00 PM, 9:00 PM ET",
         "health": "Healthy",
         "note": "",
-        "last_run": "Sun Nov 22, 9:00 PM ET",
+        "last_run": "Mon Nov 23, 9:00 AM ET",
         "next_run": "Mon Nov 23, 2:00 PM ET"
       },
       {
@@ -1335,7 +1335,7 @@
         "health": "Scheduled",
         "note": "",
         "last_run": "",
-        "next_run": "Mon Nov 23, 10:15 AM ET"
+        "next_run": "Mon Nov 23, 1:15 PM ET"
       },
       {
         "name": "Outreach check-in",
@@ -1353,7 +1353,7 @@
         "health": "Scheduled",
         "note": "",
         "last_run": "",
-        "next_run": "Mon Nov 23, 10:00 AM ET"
+        "next_run": "Mon Nov 30, 10:00 AM ET"
       }
     ]
   },
