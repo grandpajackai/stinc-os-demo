@@ -273,8 +273,13 @@ def parse_candidates(path: Path) -> list[dict]:
             continue
         if current and stripped.startswith("- ") and not stripped.startswith("- ["):
             key, _, val = stripped[2:].partition(":")
-            if key.strip().lower() == "on-screen hook":
+            key_l = key.strip().lower()
+            if key_l == "on-screen hook":
                 current["hook"] = val.strip()
+            elif key_l == "viral signals":
+                current["signals"] = parse_viral_signals(val)
+            elif key_l == "source signals":
+                current["source_signals"] = val.strip()
     return out
 
 
@@ -323,7 +328,7 @@ def clips_from_brand(brand: Path, needles, tokens, phrases) -> list[dict]:
                 fields = [title, hook, status, watch, path.stem, option["id"]]
                 if any(blocked(field, needles, tokens, phrases) for field in fields):
                     continue
-                clips.append({
+                row = {
                     "id": f"{path.stem}_{option['id']}",
                     "title": title,
                     "hook": hook,
@@ -334,7 +339,11 @@ def clips_from_brand(brand: Path, needles, tokens, phrases) -> list[dict]:
                     "status": status,
                     "watch_url": watch,
                     "source_label": "YouTube · public VOD" if watch else "Public source",
-                })
+                }
+                breakdown = clip_breakdown(option)
+                if breakdown:
+                    row["breakdown"] = breakdown
+                clips.append(row)
     clips.sort(key=lambda row: (-(row["viral"] or 0), row["id"]))
     return clips
 
@@ -349,9 +358,15 @@ def pipeline_from_brand(brand: Path) -> dict:
 
     made = max(len(rows), count_videos(brand / "clips"))
     rendered = sum(1 for row in rows if status(row) == "rendered") or count_videos(brand / "clips")
+    cand_stream = list((brand / "candidates").glob("*.md")) if (brand / "candidates").is_dir() else []
+    cand_music = list((brand / "candidates-music").glob("*.md")) if (brand / "candidates-music").is_dir() else []
+    streams_scanned = count_videos(brand / "inbox") + count_videos(brand / "transcribed")
+    music_scanned = count_videos(brand / "inbox-music") + len(cand_music)
     return {
-        "source_videos": count_videos(brand / "inbox") + count_videos(brand / "transcribed") + count_videos(brand / "inbox-music"),
-        "candidate_files": len(list((brand / "candidates").glob("*.md"))) + len(list((brand / "candidates-music").glob("*.md"))) if brand.is_dir() else 0,
+        "source_videos": streams_scanned + count_videos(brand / "inbox-music"),
+        "streams_scanned": streams_scanned,
+        "music_videos_scanned": music_scanned,
+        "candidate_files": len(cand_stream) + len(cand_music),
         "clips_rendered": rendered or made,
         "approved": sum(1 for row in rows if row.get("approved_at") or status(row) in {"approved", "posted"}),
         "posted": sum(1 for row in rows if row.get("posted_at") or status(row) == "posted"),
@@ -583,43 +598,504 @@ def email_block(root: Path, needles, tokens, phrases) -> tuple[dict, list[tuple[
     }, pending
 
 
-def fan_block(root: Path, platforms: dict, needles, tokens, phrases) -> dict:
-    data = load_json(root / "data/fan_pages.json", {})
-    accounts = []
-    for row in (data.get("accounts") or []) if isinstance(data, dict) else []:
+FORMS_QUEUE = Path("campaigns/ralfy-sponsors/outbox/current/forms/queue.json")
+FORMS_LOG = Path("campaigns/ralfy-sponsors/outbox/current/forms/log.csv")
+SEND_LOG = Path("campaigns/ralfy-sponsors/send_log.csv")
+SIG_RX = re.compile(r"(hook|moment|audio|chat|replay|traction)\s+(\d+(?:\.\d+)?)", re.I)
+MUSIC_STEMS = ("yt-aINQ_DN8GJU",)
+FAN_URLS = {
+    "instagram": "https://www.instagram.com/ralfyclips.daily/",
+    "tiktok": "https://www.tiktok.com/@ralfyclips.daily",
+}
+PLATFORM_LABEL = {
+    "instagram": "Instagram",
+    "tiktok": "TikTok",
+    "x": "X",
+    "youtube": "YouTube Shorts",
+}
+
+
+def parse_viral_signals(text: str) -> dict:
+    found = {m.group(1).lower(): float(m.group(2)) for m in SIG_RX.finditer(text or "")}
+    return {
+        "hook": found.get("hook"),
+        "moment": found.get("moment"),
+        "audio": found.get("audio"),
+        "chat_hype": found.get("chat"),
+        "traction": found.get("traction") or found.get("replay"),
+    }
+
+
+def clip_kind(clip_file: str, explicit=None, folder_kind: str | None = None) -> str:
+    if explicit in {"stream", "music"}:
+        return explicit
+    if folder_kind in {"stream", "music"}:
+        return folder_kind
+    name = (clip_file or "").lower()
+    if any(stem.lower() in name for stem in MUSIC_STEMS):
+        return "music"
+    return "stream"
+
+
+def clip_breakdown(option: dict) -> dict | None:
+    sigs = option.get("signals") if isinstance(option.get("signals"), dict) else {}
+    story = option.get("score")
+    if not isinstance(story, (int, float)):
+        story = sigs.get("moment")
+    hook = sigs.get("hook")
+    audio = sigs.get("audio")
+    chat = sigs.get("chat_hype")
+    traction = sigs.get("traction")
+    label = str(option.get("source_signals") or "").strip()
+    if not any(isinstance(v, (int, float)) for v in (story, hook, audio, chat, traction)) and not label:
+        return None
+    out = {
+        "story": story if isinstance(story, (int, float)) else None,
+        "hook": hook if isinstance(hook, (int, float)) else None,
+        "audio": audio if isinstance(audio, (int, float)) else None,
+        "chat_hype": chat if isinstance(chat, (int, float)) else None,
+        "traction": traction if isinstance(traction, (int, float)) else None,
+    }
+    if label:
+        out["traction_label"] = label
+    return out
+
+
+def parse_dt(value: str):
+    raw = (value or "").strip()
+    if not raw:
+        return None
+    try:
+        dt = datetime.fromisoformat(raw.replace("Z", "+00:00"))
+    except ValueError:
+        return None
+    if dt.tzinfo is None:
+        dt = dt.replace(tzinfo=ET)
+    return dt.astimezone(ET)
+
+
+def format_et(value: str) -> str:
+    dt = parse_dt(value)
+    if not dt:
+        return ""
+    return dt.strftime("%a %b %-d, %-I:%M %p ET").replace(" 0", " ")
+
+
+def needles_from_forms(root: Path) -> list[str]:
+    found: set[str] = set()
+    queue = load_json(root / FORMS_QUEUE, [])
+    if isinstance(queue, list):
+        for row in queue:
+            if not isinstance(row, dict):
+                continue
+            for key in ("brand", "key", "brand_key"):
+                val = str(row.get(key) or "").strip()
+                if val and len(val) >= 4:
+                    found.add(val)
+    for row in read_csv(root / FORMS_LOG):
+        for key in ("brand", "key", "brand_key"):
+            val = str(row.get(key) or "").strip()
+            if val and len(val) >= 4:
+                found.add(val)
+    return sorted(found, key=len, reverse=True)
+
+
+def form_aggregates(root: Path) -> dict:
+    queue = load_json(root / FORMS_QUEUE, [])
+    queued = len(queue) if isinstance(queue, list) else 0
+    today = datetime.now(ET).date().isoformat()
+    submitted = 0
+    submitted_today = 0
+    for row in read_csv(root / FORMS_LOG):
+        status = (row.get("status") or "").strip().lower()
+        if status not in {"submitted", "sent", "ok", "success"}:
+            continue
+        submitted += 1
+        if (row.get("date") or "").strip()[:10] == today:
+            submitted_today += 1
+    return {
+        "forms_queued": queued,
+        "forms_submitted": submitted,
+        "forms_submitted_today": submitted_today,
+        "forms_daily_cap": 10,
+        "forms_min_spacing_min": 30,
+    }
+
+
+def outreach_by_channel(rows: list[dict], forms: dict, cap: int) -> list[dict]:
+    email = {"channel": "email", "sent": 0, "queued": 0, "replies": 0, "tracked": 0, "daily_cap": cap}
+    form_from_tracker = {"needs_manual_form": 0, "tracked": 0}
+    for row in rows:
+        if is_hold(row):
+            continue
+        channel = (row.get("channel") or "").strip().lower()
+        status = (row.get("status") or "").strip().lower().replace(" ", "_")
+        reply = (row.get("reply_status") or "").strip().lower()
+        replied = bool(reply and reply not in {"none", "n/a", "na", "-"})
+        if channel == "form" or status == "needs_manual_form":
+            form_from_tracker["tracked"] += 1
+            if status == "needs_manual_form":
+                form_from_tracker["needs_manual_form"] += 1
+            continue
+        email["tracked"] += 1
+        if status in SENT_STATUSES:
+            email["sent"] += 1
+        elif status == "queued":
+            email["queued"] += 1
+        if replied:
+            email["replies"] += 1
+    form = {
+        "channel": "form",
+        "queued": forms.get("forms_queued") or 0,
+        "submitted": forms.get("forms_submitted") or 0,
+        "submitted_today": forms.get("forms_submitted_today") or 0,
+        "daily_cap": forms.get("forms_daily_cap") or 10,
+        "min_spacing_min": forms.get("forms_min_spacing_min") or 30,
+        "needs_manual_form": form_from_tracker["needs_manual_form"],
+    }
+    return [email, form]
+
+
+def upcoming_queue(brand: Path, needles, tokens, phrases) -> list[dict]:
+    if not brand.is_dir():
+        return []
+    items = []
+    log = load_json(brand / "posting" / "post-log.json", {})
+    posts = log.get("posts") if isinstance(log, dict) else []
+    if not isinstance(posts, list):
+        posts = []
+    for row in posts:
+        if not isinstance(row, dict) or (row.get("status") or "") != "scheduled":
+            continue
+        clip = str(row.get("clip_file") or "").split("/")[-1]
+        title = str(row.get("hook") or row.get("title") or clip).strip()
+        when = str(row.get("publish_at") or row.get("posted_at") or "")
+        platform = str(row.get("platform") or "")
+        kind = clip_kind(clip, row.get("kind"))
+        if any(blocked(field, needles, tokens, phrases) for field in (title, clip, platform)):
+            continue
+        items.append({
+            "platform": platform,
+            "kind": kind,
+            "title": clean_title(title, title),
+            "scheduled_at": when,
+            "scheduled_label": format_et(when),
+            "status": "scheduled",
+        })
+    queue = load_json(brand / "posting" / "queue.json", {})
+    seen = {(r["platform"], r["title"], (r["scheduled_at"] or "")[:16]) for r in items}
+    for plat, rows in (queue.get("by_channel") or {}).items() if isinstance(queue, dict) else []:
+        if not isinstance(rows, list):
+            continue
+        for row in rows:
+            if not isinstance(row, dict):
+                continue
+            if (row.get("status") or "") not in {"planned", "queued", "pending"}:
+                continue
+            if (row.get("channel_ready") is False) or (row.get("channel_enabled") is False):
+                # Keep coming-soon planned items out of the public upcoming list.
+                continue
+            clip = str(row.get("clip_file") or "").split("/")[-1]
+            title = str(row.get("hook") or row.get("title") or clip).strip()
+            when = str(row.get("scheduled_at") or "")
+            platform = str(row.get("platform") or plat)
+            kind = clip_kind(clip, row.get("kind"))
+            key = (platform, title, when[:16])
+            if key in seen:
+                continue
+            if any(blocked(field, needles, tokens, phrases) for field in (title, clip, platform)):
+                continue
+            items.append({
+                "platform": platform,
+                "kind": kind,
+                "title": clean_title(title, title),
+                "scheduled_at": when,
+                "scheduled_label": format_et(when),
+                "status": "planned",
+            })
+            seen.add(key)
+    items.sort(key=lambda row: row.get("scheduled_at") or "")
+    return items[:16]
+
+
+def published_counts(brand: Path) -> dict:
+    log = load_json(brand / "posting" / "post-log.json", {})
+    posts = log.get("posts") if isinstance(log, dict) else []
+    if not isinstance(posts, list):
+        posts = []
+    today = datetime.now(ET).date()
+    out = {}
+    for name in PLATFORM_LABEL:
+        sent = [p for p in posts if isinstance(p, dict) and p.get("platform") == name and p.get("status") == "sent"]
+        scheduled = [p for p in posts if isinstance(p, dict) and p.get("platform") == name and p.get("status") == "scheduled"]
+        today_n = 0
+        for row in sent:
+            dt = parse_dt(str(row.get("publish_at") or row.get("posted_at") or ""))
+            if dt and dt.date() == today:
+                today_n += 1
+        out[name] = {"published": len(sent), "scheduled": len(scheduled), "published_today": today_n}
+    return out
+
+
+def activity_feed(brand: Path, root: Path, needles, tokens, phrases) -> list[dict]:
+    events = []
+    log = load_json(brand / "posting" / "post-log.json", {}) if brand.is_dir() else {}
+    posts = log.get("posts") if isinstance(log, dict) else []
+    if not isinstance(posts, list):
+        posts = []
+    for row in posts:
         if not isinstance(row, dict):
             continue
-        platform = clean_text(str(row.get("platform") or ""), needles, tokens, phrases)
-        handle = clean_text(str(row.get("handle") or ""), needles, tokens, phrases)
-        status = clean_text(str(row.get("status") or ""), needles, tokens, phrases) or ""
-        url = str(row.get("url") or "")
-        if url and not url.startswith("https://"):
-            url = ""
-        if platform and handle is not None:
-            accounts.append({"platform": platform, "handle": handle, "url": url, "status": status, "kind": "fan"})
+        platform = PLATFORM_LABEL.get(str(row.get("platform") or ""), str(row.get("platform") or "fan page"))
+        status = (row.get("status") or "").strip().lower()
+        when = str(row.get("posted_at") or row.get("publish_at") or "")
+        dt = parse_dt(when)
+        title = str(row.get("hook") or row.get("title") or "").strip()
+        if title and blocked(title, needles, tokens, phrases):
+            title = ""
+        if status != "sent":
+            continue
+        if not dt:
+            dt = parse_dt(str(row.get("publish_at") or ""))
+        if not dt:
+            continue
+        detail = f"{platform}: {title}" if title else f"{platform} fan page"
+        events.append({
+            "at": dt.isoformat(timespec="seconds"),
+            "at_label": dt.strftime("%a %-I:%M %p ET").replace(" 0", " "),
+            "label": "Clip posted",
+            "detail": detail,
+        })
+    # One aggregate for what is already scheduled ahead (details live in the queue).
+    scheduled_n = sum(1 for row in posts if isinstance(row, dict) and (row.get("status") or "") == "scheduled")
+    if scheduled_n:
+        now = datetime.now(ET)
+        events.append({
+            "at": now.isoformat(timespec="seconds"),
+            "at_label": now.strftime("%a %-I:%M %p ET").replace(" 0", " "),
+            "label": "Clips scheduled",
+            "detail": f"{scheduled_n} fan-page posts queued ahead",
+            "count": scheduled_n,
+        })
+    # Outreach as counts only — never brand names.
+    sent_by_day: dict[str, int] = {}
+    for row in read_csv(root / SEND_LOG):
+        result = (row.get("result") or "").strip().lower()
+        dry = (row.get("dry_run") or "").strip().lower()
+        if result != "sent" or dry in {"1", "true", "yes"}:
+            continue
+        stamp = (row.get("time_et") or "").strip()
+        day = stamp[:10]
+        if day:
+            sent_by_day[day] = sent_by_day.get(day, 0) + 1
+    for day, count in sent_by_day.items():
+        try:
+            stamp = datetime.fromisoformat(day).replace(tzinfo=ET, hour=12)
+        except ValueError:
+            continue
+        events.append({
+            "at": stamp.isoformat(timespec="seconds"),
+            "at_label": stamp.strftime("%a %b %-d ET").replace(" 0", " "),
+            "label": "Outreach sent",
+            "detail": f"{count} email{'s' if count != 1 else ''} (count only)",
+            "count": count,
+        })
+    form_by_day: dict[str, int] = {}
+    form_total = 0
+    for row in read_csv(root / FORMS_LOG):
+        status = (row.get("status") or "").strip().lower()
+        if status not in {"submitted", "sent", "ok", "success"}:
+            continue
+        form_total += 1
+        day = (row.get("date") or "").strip()[:10]
+        if day:
+            form_by_day[day] = form_by_day.get(day, 0) + 1
+    for day, count in form_by_day.items():
+        try:
+            stamp = datetime.fromisoformat(day).replace(tzinfo=ET, hour=15)
+        except ValueError:
+            continue
+        events.append({
+            "at": stamp.isoformat(timespec="seconds"),
+            "at_label": stamp.strftime("%a %b %-d ET").replace(" 0", " "),
+            "label": "Forms submitted",
+            "detail": f"{count} application{'s' if count != 1 else ''} (count only)",
+            "count": count,
+        })
+    clips_dir = brand / "clips" if brand.is_dir() else None
+    if clips_dir and clips_dir.is_dir():
+        newest = None
+        n = 0
+        for path in clips_dir.rglob("*"):
+            if path.is_file() and path.suffix.lower() in VIDEO:
+                n += 1
+                mtime = datetime.fromtimestamp(path.stat().st_mtime, tz=ET)
+                if newest is None or mtime > newest:
+                    newest = mtime
+        if n and newest:
+            events.append({
+                "at": newest.isoformat(timespec="seconds"),
+                "at_label": newest.strftime("%a %-I:%M %p ET").replace(" 0", " "),
+                "label": "Clips rendered",
+                "detail": f"{n} vertical clips on disk",
+                "count": n,
+            })
+    events.sort(key=lambda row: row.get("at") or "", reverse=True)
+    return events[:16]
+
+
+def posting_cfg(brand: Path) -> dict:
+    return load_json(brand / "posting.json", {}) if brand.is_dir() else {}
+
+
+def extract_thumbs(brand: Path, clips: list[dict], out: Path, limit: int = 6) -> None:
+    if not brand.is_dir():
+        return
+    thumb_dir = out / "assets" / "clip-thumbs"
+    ffmpeg = next((Path(p) for p in ("/opt/homebrew/bin/ffmpeg", "/usr/bin/ffmpeg") if Path(p).is_file()), None)
+    if ffmpeg is None:
+        return
+    written = set()
+    count = 0
+    clips_dir = brand / "clips"
+    if not clips_dir.is_dir():
+        return
+    for clip in clips:
+        if count >= limit:
+            break
+        cid = str(clip.get("id") or "")
+        if not cid or "/" in cid or ".." in cid:
+            continue
+        # id is like yt-xxxxx_C4 ; files are ralfy-the-plug_yt-xxxxx_C4.mp4 or _C4-v2.mp4
+        matches = sorted(clips_dir.glob(f"*{cid}*.mp4")) + sorted(clips_dir.glob(f"*{cid}*.mov"))
+        if not matches:
+            continue
+        src = matches[0]
+        name = re.sub(r"[^A-Za-z0-9_-]+", "-", cid) + ".jpg"
+        dest = thumb_dir / name
+        thumb_dir.mkdir(parents=True, exist_ok=True)
+        try:
+            import subprocess
+            proc = subprocess.run(
+                [str(ffmpeg), "-y", "-ss", "1", "-i", str(src), "-frames:v", "1",
+                 "-vf", "scale=320:-2", "-q:v", "6", str(dest)],
+                check=False, capture_output=True, timeout=20,
+            )
+        except (OSError, subprocess.TimeoutExpired):
+            continue
+        if proc.returncode != 0 or not dest.is_file() or dest.stat().st_size < 200:
+            if dest.exists():
+                dest.unlink()
+            continue
+        rel = f"assets/clip-thumbs/{name}"
+        clip["thumb"] = rel
+        written.add(name)
+        count += 1
+    if thumb_dir.is_dir():
+        for stale in thumb_dir.glob("*.jpg"):
+            if stale.name not in written and not any(c.get("thumb") == f"assets/clip-thumbs/{stale.name}" for c in clips):
+                # Keep previously referenced thumbs that belong to remaining top clips.
+                keep = False
+                for clip in clips:
+                    cid = re.sub(r"[^A-Za-z0-9_-]+", "-", str(clip.get("id") or ""))
+                    if cid and stale.name == cid + ".jpg":
+                        clip.setdefault("thumb", f"assets/clip-thumbs/{stale.name}")
+                        keep = True
+                        break
+                if not keep:
+                    # Do not delete all on a test run with no matches; only prune unmatched leftovers
+                    # when we wrote at least one new thumb this pass.
+                    if written:
+                        stale.unlink()
+
+
+def fan_block(root: Path, platforms: dict, needles, tokens, phrases, brand: Path | None = None) -> dict:
+    data = load_json(root / "data/fan_pages.json", {})
+    cfg = posting_cfg(brand) if brand else {}
+    channels_cfg = cfg.get("channels") if isinstance(cfg.get("channels"), dict) else {}
+    mix_cfg = cfg.get("content_mix") if isinstance(cfg.get("content_mix"), dict) else {}
+    stream_per = mix_cfg.get("stream_per_music") or 3
+    autopilot = bool(cfg.get("enabled") and cfg.get("live") and not cfg.get("dry_run"))
+    posting = "on" if autopilot else (str(data.get("posting") or "off") if isinstance(data, dict) else "off")
+    if posting not in {"off", "on"}:
+        posting = "off"
+    counts = published_counts(brand) if brand else {}
+    accounts = []
+    if channels_cfg:
+        for key, label in PLATFORM_LABEL.items():
+            ch = channels_cfg.get(key) if isinstance(channels_cfg.get(key), dict) else {}
+            enabled = bool(ch.get("enabled") and ch.get("account_created"))
+            handle = clean_text(str(ch.get("handle") or ""), needles, tokens, phrases)
+            if enabled:
+                handle = handle or "@ralfyclips.daily"
+                url = FAN_URLS.get(key, "")
+                status = "Live"
+            else:
+                handle = handle or "Coming soon"
+                url = ""
+                status = "Coming soon"
+            stats = counts.get(key) or {}
+            accounts.append({
+                "platform": label,
+                "handle": handle or "",
+                "url": url,
+                "status": status,
+                "kind": "fan",
+                "posts_published": int(stats.get("published") or 0),
+                "posts_scheduled": int(stats.get("scheduled") or 0),
+                "posts_published_today": int(stats.get("published_today") or 0),
+                "per_day": int(ch.get("per_day") or 2),
+                "slot_times_et": list(ch.get("slot_times_et") or []),
+            })
+    else:
+        for row in (data.get("accounts") or []) if isinstance(data, dict) else []:
+            if not isinstance(row, dict):
+                continue
+            platform = clean_text(str(row.get("platform") or ""), needles, tokens, phrases)
+            handle = clean_text(str(row.get("handle") or ""), needles, tokens, phrases)
+            status = clean_text(str(row.get("status") or ""), needles, tokens, phrases) or ""
+            url = str(row.get("url") or "")
+            if url and not url.startswith("https://"):
+                url = ""
+            if platform and handle is not None:
+                accounts.append({"platform": platform, "handle": handle, "url": url, "status": status, "kind": "fan"})
+    official = []
     for row in platforms.get("items") or []:
-        accounts.append({
+        official.append({
             "platform": row.get("platform") or "",
             "handle": row.get("handle") or "",
             "url": row.get("url") or "",
             "status": row.get("stat") or "",
             "kind": "official",
         })
-    posting = str(data.get("posting") or "off") if isinstance(data, dict) else "off"
-    if posting not in {"off", "on"}:
-        posting = "off"
-    return {"name": "Ralfy Clips", "posting": posting, "accounts": accounts}
+    return {
+        "name": "Ralfy Clips",
+        "posting": posting,
+        "autopilot": autopilot or posting == "on",
+        "mix": f"1 music teaser per {int(stream_per)} stream clips",
+        "warmup": "2 posts per day per live channel, 30-minute stagger",
+        "channels_live": sum(1 for a in accounts if (a.get("status") or "") == "Live"),
+        "channels_total": max(len(accounts), 4),
+        "posts_published_total": sum(int(a.get("posts_published") or 0) for a in accounts),
+        "posts_scheduled_total": sum(int(a.get("posts_scheduled") or 0) for a in accounts),
+        "accounts": accounts,
+        "official": official,
+    }
 
 
 def build(platform: Path, brand: Path, out: Path, deny_path: Path | None) -> dict:
     rows, tracker_source = tracker_rows(platform)
-    needles = needles_from_rows(rows)
+    needles = needles_from_rows(rows) + needles_from_forms(platform)
     phrases = deny_phrases(platform, deny_path)
     catalog = catalog_block(platform, needles, set(), phrases)
     tokens = catalog.pop("_tokens")
     # Re-filter products now that tribute tokens are known. catalog_block already
     # merged tribute tokens internally; pop removed the private helper.
     sponsors = sponsor_counts(rows, daily_cap(platform))
+    forms = form_aggregates(platform)
+    sponsors.update(forms)
+    sponsors["email_daily_cap"] = sponsors.get("daily_cap") or 3
+    sponsors["by_channel"] = outreach_by_channel(rows, forms, sponsors["email_daily_cap"])
     platforms, videos = platforms_block(platform, needles, tokens, phrases)
     brand_clips = clips_from_brand(brand, needles, tokens, phrases)
     dash_clips, dash_summary = clips_from_dashboard(platform, needles, tokens, phrases)
@@ -639,6 +1115,8 @@ def build(platform: Path, brand: Path, out: Path, deny_path: Path | None) -> dic
     emails, pending_previews = email_block(platform, needles, tokens, phrases)
     pipeline = {
         "source_videos": int(summary.get("source_videos") or 0),
+        "streams_scanned": int(summary.get("streams_scanned") or 0),
+        "music_videos_scanned": int(summary.get("music_videos_scanned") or 0),
         "candidate_files": int(summary.get("candidate_files") or 0),
         "clip_options": len(clips),
         "clips_ticked": sum(1 for clip in clips if clip["status"] == "Approved"),
@@ -648,16 +1126,27 @@ def build(platform: Path, brand: Path, out: Path, deny_path: Path | None) -> dic
         "ready": int(summary.get("ready") or 0),
         "queue": int(summary.get("queue") or 0),
         "emails_built": emails["emails_built"],
+        "mix": "1 music teaser per 3 stream clips",
     }
     highlights = highlights_for(platforms, int(catalog.get("store_published_count") or 0), catalog.get("as_of") or "")
     pipeline_highlights = [
-        {"label": "Clip options", "value": f"{pipeline['clip_options']:,}", "as_of": "Scored, not posted", "icon": "play", "sample": False},
+        {"label": "Clip options", "value": f"{pipeline['clip_options']:,}", "as_of": "Scored for the fan-page mix", "icon": "play", "sample": False},
         {"label": "Clips rendered", "value": f"{pipeline['clips_rendered']:,}", "as_of": "Local files only", "icon": "play", "sample": False},
-        {"label": "Sponsors sent", "value": f"{sponsors['sent']:,}", "as_of": f"Queued {sponsors['queued']} · cap {sponsors['daily_cap']}/day", "icon": "target", "sample": False},
+        {"label": "Sponsors sent", "value": f"{sponsors['sent']:,}", "as_of": f"Queued {sponsors['queued']} · email cap {sponsors['daily_cap']}/day", "icon": "target", "sample": False},
         {"label": "Merch email drafts", "value": f"{pipeline['emails_built']:,}", "as_of": "Drafts, not sending", "icon": "bag", "sample": False},
     ]
-    fans = fan_block(platform, platforms, needles, tokens, phrases)
+    fans = fan_block(platform, platforms, needles, tokens, phrases, brand)
+    queue = upcoming_queue(brand, needles, tokens, phrases)
+    activity = activity_feed(brand, platform, needles, tokens, phrases)
+    extract_thumbs(brand, clips, out, limit=6)
     generated = datetime.now(ET).isoformat(timespec="seconds")
+    # Prefer live Buffer publish counts when the older clip tracker is still at zero.
+    if fans.get("posts_published_total"):
+        pipeline["posted"] = max(int(pipeline.get("posted") or 0), int(fans["posts_published_total"]))
+    pipeline["queue"] = max(int(pipeline.get("queue") or 0), len(queue), int(fans.get("posts_scheduled_total") or 0))
+    if "streams_scanned" not in pipeline:
+        pipeline["streams_scanned"] = 0
+        pipeline["music_videos_scanned"] = 0
     doc = {
         "schema": "stinc-os.live.v1",
         "generated_at": generated,
@@ -668,6 +1157,8 @@ def build(platform: Path, brand: Path, out: Path, deny_path: Path | None) -> dic
         "videos": videos,
         "pipeline": pipeline,
         "clips": clips,
+        "queue": queue,
+        "activity": activity,
         "sponsors": sponsors,
         "fans": fans,
         "commerce": {key: value for key, value in {**catalog, **emails}.items() if key != "_tokens"},

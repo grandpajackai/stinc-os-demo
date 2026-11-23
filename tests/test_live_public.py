@@ -34,6 +34,17 @@ class LivePublicTests(unittest.TestCase):
             self.assertTrue(url == "" or url.startswith("https://www.youtube.com/watch?v=") or url.startswith("https://youtu.be/"))
         self.assertTrue(any(row.get("label") == "Spotify listeners" for row in data.get("highlights") or []))
 
+    def test_live_json_new_operations_keys(self):
+        data = json.loads(LIVE.read_text(encoding="utf-8"))
+        self.assertIn("queue", data)
+        self.assertIn("activity", data)
+        self.assertIn("accounts", data.get("fans") or {})
+        self.assertIn("by_channel", data.get("sponsors") or {})
+        blob = json.dumps(data)
+        self.assertNotIn("contact_email", blob)
+        self.assertNotIn("deal_route", blob)
+
+
 
 if __name__ == "__main__":
     unittest.main()

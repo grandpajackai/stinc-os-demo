@@ -16,7 +16,7 @@ The plan, the privacy rules, and the connector states are in `docs/plans/STINC_O
 
 ## Included
 
-- Public snapshot on Overview, Content studio, Campaigns, Opportunities, Commerce, and Fans
+- Public snapshot on Overview, Content studio, Campaigns, Opportunities, Commerce, and Fans, including the fan-page network, upcoming queue, content pipeline, score breakdown, activity feed, and sponsor/form counts
 - Sample rows kept and badged where a live source does not exist yet (chart, calendar, revenue, agents)
 - Connections shell for streaming, Shopify or a store URL, socials, and clipping. OAuth stays off until client IDs are set on the Mac
 - Campaign drafts, clip scheduling, pitch drafts, roster switching, and local JSON export
@@ -24,7 +24,7 @@ The plan, the privacy rules, and the connector states are in `docs/plans/STINC_O
 
 ## Boundaries
 
-`data/live.json` is a sanitized public snapshot: audience counts, clip candidates, sponsor totals, the merch catalog, and fan-page status. Sponsor names, contact details, deal terms, and legal-hold rows are not in it. Rows still marked Sample (the chart, campaign cards, calendar, revenue ledger, fan totals, agent activity) are not live measurements.
+`data/live.json` is a sanitized public snapshot: audience counts, the fan-page network and upcoming post queue, the content pipeline and top-clip scores, an activity feed, sponsor and form totals (counts only), the merch catalog, and clip candidates. Sponsor or prospect names, contacts, emails, phones, deal terms, and legal-hold rows are not in it. Rows still marked Sample (the chart, campaign cards, calendar, revenue ledger, owned-fan totals, demo storyboards) are not live measurements.
 
 No account is connected. Connectors stay disabled until client IDs exist on the Mac. The site does not send email, post video, collect fan records, or take payment. Do not enter confidential information into this public site.
 

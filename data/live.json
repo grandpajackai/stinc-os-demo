@@ -1,6 +1,6 @@
 {
   "schema": "stinc-os.live.v1",
-  "generated_at": "2026-11-21T21:00:06-05:00",
+  "generated_at": "2026-11-23T01:01:35-05:00",
   "sources": {
     "platform": true,
     "tracker": "tracker.csv",
@@ -39,14 +39,14 @@
   "pipeline_highlights": [
     {
       "label": "Clip options",
-      "value": "29",
-      "as_of": "Scored, not posted",
+      "value": "32",
+      "as_of": "Scored for the fan-page mix",
       "icon": "play",
       "sample": false
     },
     {
       "label": "Clips rendered",
-      "value": "16",
+      "value": "27",
       "as_of": "Local files only",
       "icon": "play",
       "sample": false
@@ -54,7 +54,7 @@
     {
       "label": "Sponsors sent",
       "value": "3",
-      "as_of": "Queued 5 · cap 3/day",
+      "as_of": "Queued 5 · email cap 3/day",
       "icon": "target",
       "sample": false
     },
@@ -163,17 +163,46 @@
   ],
   "pipeline": {
     "source_videos": 7,
-    "candidate_files": 8,
-    "clip_options": 29,
+    "streams_scanned": 7,
+    "music_videos_scanned": 1,
+    "candidate_files": 9,
+    "clip_options": 32,
     "clips_ticked": 0,
-    "clips_rendered": 16,
+    "clips_rendered": 27,
     "approved": 0,
-    "posted": 0,
+    "posted": 4,
     "ready": 2,
-    "queue": 4,
-    "emails_built": 14
+    "queue": 20,
+    "emails_built": 14,
+    "mix": "1 music teaser per 3 stream clips"
   },
   "clips": [
+    {
+      "id": "yt-aINQ_DN8GJU_C1",
+      "title": "Hancock",
+      "hook": "Hancock",
+      "viral": 9.5,
+      "score": null,
+      "duration_s": 16.0,
+      "kind": "music",
+      "status": "Rendered",
+      "watch_url": "https://www.youtube.com/watch?v=aINQ_DN8GJU",
+      "source_label": "YouTube · public VOD",
+      "thumb": "assets/clip-thumbs/yt-aINQ_DN8GJU_C1.jpg"
+    },
+    {
+      "id": "yt-aINQ_DN8GJU_C2",
+      "title": "I'm way worse than your last n***a",
+      "hook": "I'm way worse than your last n***a",
+      "viral": 9.2,
+      "score": null,
+      "duration_s": 15.0,
+      "kind": "music",
+      "status": "Rendered",
+      "watch_url": "https://www.youtube.com/watch?v=aINQ_DN8GJU",
+      "source_label": "YouTube · public VOD",
+      "thumb": "assets/clip-thumbs/yt-aINQ_DN8GJU_C2.jpg"
+    },
     {
       "id": "yt-3z6nfKs4-Tw_C4",
       "title": "What the fuck wrong with you, bitch? / What the fuck's up?",
@@ -184,19 +213,50 @@
       "kind": "stream",
       "status": "Rendered",
       "watch_url": "https://www.youtube.com/watch?v=3z6nfKs4-Tw",
-      "source_label": "YouTube · public VOD"
+      "source_label": "YouTube · public VOD",
+      "breakdown": {
+        "story": 9.0,
+        "hook": 10.0,
+        "audio": 10.0,
+        "chat_hype": 10.0,
+        "traction": null,
+        "traction_label": "3,016 views · 20d old · 150m VOD"
+      },
+      "thumb": "assets/clip-thumbs/yt-3z6nfKs4-Tw_C4.jpg"
     },
     {
       "id": "yt-0hvehnsQp_U_C3",
-      "title": "Segregation & Equality",
+      "title": "Stop pretending you're equal / It turned into some shit",
       "hook": "Stop pretending you're equal / It turned into some shit",
       "viral": 8.9,
       "score": 9.0,
       "duration_s": 41.6,
       "kind": "stream",
-      "status": "Needs review",
+      "status": "Rendered",
       "watch_url": "https://www.youtube.com/watch?v=0hvehnsQp_U",
-      "source_label": "YouTube · public VOD"
+      "source_label": "YouTube · public VOD",
+      "breakdown": {
+        "story": 9.0,
+        "hook": 10.0,
+        "audio": 10.0,
+        "chat_hype": 10.0,
+        "traction": null,
+        "traction_label": "3,540 views · 65d old · 122m VOD"
+      },
+      "thumb": "assets/clip-thumbs/yt-0hvehnsQp_U_C3.jpg"
+    },
+    {
+      "id": "yt-aINQ_DN8GJU_C3",
+      "title": "I'm in his whip doin' the dash",
+      "hook": "I'm in his whip doin' the dash",
+      "viral": 8.6,
+      "score": null,
+      "duration_s": 16.0,
+      "kind": "music",
+      "status": "Rendered",
+      "watch_url": "https://www.youtube.com/watch?v=aINQ_DN8GJU",
+      "source_label": "YouTube · public VOD",
+      "thumb": "assets/clip-thumbs/yt-aINQ_DN8GJU_C3.jpg"
     },
     {
       "id": "yt-BDP2C6ihc00_C3",
@@ -208,7 +268,16 @@
       "kind": "stream",
       "status": "Rendered",
       "watch_url": "https://www.youtube.com/watch?v=BDP2C6ihc00",
-      "source_label": "YouTube · public VOD"
+      "source_label": "YouTube · public VOD",
+      "breakdown": {
+        "story": 9.0,
+        "hook": 9.0,
+        "audio": 7.3,
+        "chat_hype": 9.4,
+        "traction": null,
+        "traction_label": "2,619 views · 17d old · 160m VOD"
+      },
+      "thumb": "assets/clip-thumbs/yt-BDP2C6ihc00_C3.jpg"
     },
     {
       "id": "yt-3z6nfKs4-Tw_C5",
@@ -220,7 +289,15 @@
       "kind": "stream",
       "status": "Needs review",
       "watch_url": "https://www.youtube.com/watch?v=3z6nfKs4-Tw",
-      "source_label": "YouTube · public VOD"
+      "source_label": "YouTube · public VOD",
+      "breakdown": {
+        "story": 7.0,
+        "hook": 10.0,
+        "audio": 10.0,
+        "chat_hype": 10.0,
+        "traction": null,
+        "traction_label": "3,016 views · 20d old · 150m VOD"
+      }
     },
     {
       "id": "yt-3z6nfKs4-Tw_C2",
@@ -232,7 +309,15 @@
       "kind": "stream",
       "status": "Rendered",
       "watch_url": "https://www.youtube.com/watch?v=3z6nfKs4-Tw",
-      "source_label": "YouTube · public VOD"
+      "source_label": "YouTube · public VOD",
+      "breakdown": {
+        "story": 9.0,
+        "hook": 9.0,
+        "audio": 10.0,
+        "chat_hype": 7.6,
+        "traction": null,
+        "traction_label": "3,016 views · 20d old · 150m VOD"
+      }
     },
     {
       "id": "yt-BDP2C6ihc00_C1",
@@ -244,7 +329,15 @@
       "kind": "stream",
       "status": "Rendered",
       "watch_url": "https://www.youtube.com/watch?v=BDP2C6ihc00",
-      "source_label": "YouTube · public VOD"
+      "source_label": "YouTube · public VOD",
+      "breakdown": {
+        "story": 9.0,
+        "hook": 7.9,
+        "audio": 10.0,
+        "chat_hype": 5.4,
+        "traction": null,
+        "traction_label": "2,619 views · 17d old · 160m VOD"
+      }
     },
     {
       "id": "yt-0hvehnsQp_U_C5",
@@ -256,7 +349,15 @@
       "kind": "stream",
       "status": "Needs review",
       "watch_url": "https://www.youtube.com/watch?v=0hvehnsQp_U",
-      "source_label": "YouTube · public VOD"
+      "source_label": "YouTube · public VOD",
+      "breakdown": {
+        "story": 7.0,
+        "hook": 9.9,
+        "audio": 10.0,
+        "chat_hype": 10.0,
+        "traction": null,
+        "traction_label": "3,540 views · 65d old · 122m VOD"
+      }
     },
     {
       "id": "yt-gEQumoX0cZ8_C2",
@@ -268,7 +369,15 @@
       "kind": "stream",
       "status": "Rendered",
       "watch_url": "https://www.youtube.com/watch?v=gEQumoX0cZ8",
-      "source_label": "YouTube · public VOD"
+      "source_label": "YouTube · public VOD",
+      "breakdown": {
+        "story": 9.0,
+        "hook": 7.0,
+        "audio": 10.0,
+        "chat_hype": 7.6,
+        "traction": null,
+        "traction_label": "2,500 views · 21d old · 137m VOD"
+      }
     },
     {
       "id": "yt-gEQumoX0cZ8_C3",
@@ -278,9 +387,17 @@
       "score": 9.0,
       "duration_s": 24.9,
       "kind": "stream",
-      "status": "Needs review",
+      "status": "Rendered",
       "watch_url": "https://www.youtube.com/watch?v=gEQumoX0cZ8",
-      "source_label": "YouTube · public VOD"
+      "source_label": "YouTube · public VOD",
+      "breakdown": {
+        "story": 9.0,
+        "hook": 7.0,
+        "audio": 10.0,
+        "chat_hype": 10.0,
+        "traction": null,
+        "traction_label": "2,500 views · 21d old · 137m VOD"
+      }
     },
     {
       "id": "yt-gEQumoX0cZ8_C5",
@@ -292,19 +409,35 @@
       "kind": "stream",
       "status": "Needs review",
       "watch_url": "https://www.youtube.com/watch?v=gEQumoX0cZ8",
-      "source_label": "YouTube · public VOD"
+      "source_label": "YouTube · public VOD",
+      "breakdown": {
+        "story": 7.0,
+        "hook": 9.0,
+        "audio": 10.0,
+        "chat_hype": 10.0,
+        "traction": null,
+        "traction_label": "2,500 views · 21d old · 137m VOD"
+      }
     },
     {
       "id": "yt-0hvehnsQp_U_C1",
-      "title": "The PlayStation Quest",
+      "title": "You 5dB, CHAT 7.6, BARS You got to…",
       "hook": "You 5dB, CHAT 7.6, BARS You got to…",
       "viral": 8.1,
       "score": 9.0,
       "duration_s": 27.8,
       "kind": "stream",
-      "status": "Needs review",
+      "status": "Rendered",
       "watch_url": "https://www.youtube.com/watch?v=0hvehnsQp_U",
-      "source_label": "YouTube · public VOD"
+      "source_label": "YouTube · public VOD",
+      "breakdown": {
+        "story": 9.0,
+        "hook": 8.3,
+        "audio": 10.0,
+        "chat_hype": 10.0,
+        "traction": null,
+        "traction_label": "3,540 views · 65d old · 122m VOD"
+      }
     },
     {
       "id": "yt-OOUfkTwGgEw_C3",
@@ -316,7 +449,15 @@
       "kind": "stream",
       "status": "Needs review",
       "watch_url": "https://www.youtube.com/watch?v=OOUfkTwGgEw",
-      "source_label": "YouTube · public VOD"
+      "source_label": "YouTube · public VOD",
+      "breakdown": {
+        "story": 7.0,
+        "hook": 8.7,
+        "audio": 10.0,
+        "chat_hype": 10.0,
+        "traction": null,
+        "traction_label": "457 views · 14d old · 4m VOD"
+      }
     },
     {
       "id": "yt-gEQumoX0cZ8_C4",
@@ -328,7 +469,15 @@
       "kind": "stream",
       "status": "Needs review",
       "watch_url": "https://www.youtube.com/watch?v=gEQumoX0cZ8",
-      "source_label": "YouTube · public VOD"
+      "source_label": "YouTube · public VOD",
+      "breakdown": {
+        "story": 9.0,
+        "hook": 7.0,
+        "audio": 10.0,
+        "chat_hype": 5.2,
+        "traction": null,
+        "traction_label": "2,500 views · 21d old · 137m VOD"
+      }
     },
     {
       "id": "yt-BDP2C6ihc00_C2",
@@ -340,7 +489,15 @@
       "kind": "stream",
       "status": "Needs review",
       "watch_url": "https://www.youtube.com/watch?v=BDP2C6ihc00",
-      "source_label": "YouTube · public VOD"
+      "source_label": "YouTube · public VOD",
+      "breakdown": {
+        "story": 6.0,
+        "hook": 9.8,
+        "audio": 10.0,
+        "chat_hype": 8.8,
+        "traction": null,
+        "traction_label": "2,619 views · 17d old · 160m VOD"
+      }
     },
     {
       "id": "yt-OOUfkTwGgEw_C1",
@@ -352,19 +509,35 @@
       "kind": "stream",
       "status": "Needs review",
       "watch_url": "https://www.youtube.com/watch?v=OOUfkTwGgEw",
-      "source_label": "YouTube · public VOD"
+      "source_label": "YouTube · public VOD",
+      "breakdown": {
+        "story": 9.0,
+        "hook": 8.7,
+        "audio": 10.0,
+        "chat_hype": 5.4,
+        "traction": null,
+        "traction_label": "457 views · 14d old · 4m VOD"
+      }
     },
     {
       "id": "yt-OOUfkTwGgEw_C2",
-      "title": "Story 2: That's Some Weird Shit",
+      "title": "Why won't it rotate? / Wipe this off",
       "hook": "Why won't it rotate? / Wipe this off",
       "viral": 8.0,
       "score": 9.0,
       "duration_s": 45.8,
       "kind": "stream",
-      "status": "Needs review",
+      "status": "Rendered",
       "watch_url": "https://www.youtube.com/watch?v=OOUfkTwGgEw",
-      "source_label": "YouTube · public VOD"
+      "source_label": "YouTube · public VOD",
+      "breakdown": {
+        "story": 9.0,
+        "hook": 6.8,
+        "audio": 10.0,
+        "chat_hype": 9.9,
+        "traction": null,
+        "traction_label": "457 views · 14d old · 4m VOD"
+      }
     },
     {
       "id": "yt-aINQ_DN8GJU_C2",
@@ -376,7 +549,15 @@
       "kind": "stream",
       "status": "Needs review",
       "watch_url": "https://www.youtube.com/watch?v=aINQ_DN8GJU",
-      "source_label": "YouTube · public VOD"
+      "source_label": "YouTube · public VOD",
+      "breakdown": {
+        "story": 9.0,
+        "hook": 6.8,
+        "audio": null,
+        "chat_hype": null,
+        "traction": 7.7,
+        "traction_label": "113,879 views · 273d old · 2m VOD"
+      }
     },
     {
       "id": "yt-BDP2C6ihc00_C5",
@@ -388,19 +569,35 @@
       "kind": "stream",
       "status": "Needs review",
       "watch_url": "https://www.youtube.com/watch?v=BDP2C6ihc00",
-      "source_label": "YouTube · public VOD"
+      "source_label": "YouTube · public VOD",
+      "breakdown": {
+        "story": 7.0,
+        "hook": 7.9,
+        "audio": 10.0,
+        "chat_hype": 8.8,
+        "traction": null,
+        "traction_label": "2,619 views · 17d old · 160m VOD"
+      }
     },
     {
       "id": "yt-0hvehnsQp_U_C2",
-      "title": "Walt Disney's Money Talks",
+      "title": "No, you wouldn't, bro / He was having it",
       "hook": "No, you wouldn't, bro / He was having it",
       "viral": 7.8,
       "score": 8.0,
       "duration_s": 46.8,
       "kind": "stream",
-      "status": "Needs review",
+      "status": "Rendered",
       "watch_url": "https://www.youtube.com/watch?v=0hvehnsQp_U",
-      "source_label": "YouTube · public VOD"
+      "source_label": "YouTube · public VOD",
+      "breakdown": {
+        "story": 8.0,
+        "hook": 10.0,
+        "audio": 7.6,
+        "chat_hype": 5.4,
+        "traction": null,
+        "traction_label": "3,540 views · 65d old · 122m VOD"
+      }
     },
     {
       "id": "yt-3z6nfKs4-Tw_C1",
@@ -412,19 +609,35 @@
       "kind": "stream",
       "status": "Needs review",
       "watch_url": "https://www.youtube.com/watch?v=3z6nfKs4-Tw",
-      "source_label": "YouTube · public VOD"
+      "source_label": "YouTube · public VOD",
+      "breakdown": {
+        "story": 8.0,
+        "hook": 9.5,
+        "audio": 10.0,
+        "chat_hype": 5.4,
+        "traction": null,
+        "traction_label": "3,016 views · 20d old · 150m VOD"
+      }
     },
     {
       "id": "yt-0hvehnsQp_U_C4",
-      "title": "Bluetooth & Dreams",
+      "title": "Bluetooth steals your ideas / Here's why",
       "hook": "Bluetooth steals your ideas / Here's why",
       "viral": 7.6,
       "score": 9.0,
       "duration_s": 44.0,
       "kind": "stream",
-      "status": "Needs review",
+      "status": "Rendered",
       "watch_url": "https://www.youtube.com/watch?v=0hvehnsQp_U",
-      "source_label": "YouTube · public VOD"
+      "source_label": "YouTube · public VOD",
+      "breakdown": {
+        "story": 9.0,
+        "hook": 5.7,
+        "audio": 10.0,
+        "chat_hype": 10.0,
+        "traction": null,
+        "traction_label": "3,540 views · 65d old · 122m VOD"
+      }
     },
     {
       "id": "yt-gEQumoX0cZ8_C1",
@@ -436,7 +649,15 @@
       "kind": "stream",
       "status": "Needs review",
       "watch_url": "https://www.youtube.com/watch?v=gEQumoX0cZ8",
-      "source_label": "YouTube · public VOD"
+      "source_label": "YouTube · public VOD",
+      "breakdown": {
+        "story": 8.0,
+        "hook": 9.0,
+        "audio": 10.0,
+        "chat_hype": null,
+        "traction": null,
+        "traction_label": "2,500 views · 21d old · 137m VOD"
+      }
     },
     {
       "id": "yt-aINQ_DN8GJU_C1",
@@ -448,7 +669,15 @@
       "kind": "stream",
       "status": "Needs review",
       "watch_url": "https://www.youtube.com/watch?v=aINQ_DN8GJU",
-      "source_label": "YouTube · public VOD"
+      "source_label": "YouTube · public VOD",
+      "breakdown": {
+        "story": 5.0,
+        "hook": 9.8,
+        "audio": null,
+        "chat_hype": null,
+        "traction": 10.0,
+        "traction_label": "113,879 views · 273d old · 2m VOD"
+      }
     },
     {
       "id": "yt-3z6nfKs4-Tw_C3",
@@ -460,7 +689,15 @@
       "kind": "stream",
       "status": "Needs review",
       "watch_url": "https://www.youtube.com/watch?v=3z6nfKs4-Tw",
-      "source_label": "YouTube · public VOD"
+      "source_label": "YouTube · public VOD",
+      "breakdown": {
+        "story": 8.0,
+        "hook": 6.5,
+        "audio": 10.0,
+        "chat_hype": 5.4,
+        "traction": null,
+        "traction_label": "3,016 views · 20d old · 150m VOD"
+      }
     },
     {
       "id": "yt-aINQ_DN8GJU_C3",
@@ -472,7 +709,15 @@
       "kind": "stream",
       "status": "Needs review",
       "watch_url": "https://www.youtube.com/watch?v=aINQ_DN8GJU",
-      "source_label": "YouTube · public VOD"
+      "source_label": "YouTube · public VOD",
+      "breakdown": {
+        "story": 9.0,
+        "hook": 5.3,
+        "audio": null,
+        "chat_hype": null,
+        "traction": 5.0,
+        "traction_label": "113,879 views · 273d old · 2m VOD"
+      }
     },
     {
       "id": "yt-BDP2C6ihc00_C4",
@@ -484,7 +729,15 @@
       "kind": "stream",
       "status": "Needs review",
       "watch_url": "https://www.youtube.com/watch?v=BDP2C6ihc00",
-      "source_label": "YouTube · public VOD"
+      "source_label": "YouTube · public VOD",
+      "breakdown": {
+        "story": 9.0,
+        "hook": 5.3,
+        "audio": 6.1,
+        "chat_hype": 6.6,
+        "traction": null,
+        "traction_label": "2,619 views · 17d old · 160m VOD"
+      }
     },
     {
       "id": "yt-zvcl7QYZlAQ_C2",
@@ -494,9 +747,17 @@
       "score": 9.0,
       "duration_s": 43.1,
       "kind": "stream",
-      "status": "Needs review",
+      "status": "Rendered",
       "watch_url": "https://www.youtube.com/watch?v=zvcl7QYZlAQ",
-      "source_label": "YouTube · public VOD"
+      "source_label": "YouTube · public VOD",
+      "breakdown": {
+        "story": 9.0,
+        "hook": 9.9,
+        "audio": 0.2,
+        "chat_hype": 6.0,
+        "traction": null,
+        "traction_label": "2,797 views · 59d old · 110m VOD"
+      }
     },
     {
       "id": "yt-zvcl7QYZlAQ_C3",
@@ -508,7 +769,15 @@
       "kind": "stream",
       "status": "Needs review",
       "watch_url": "https://www.youtube.com/watch?v=zvcl7QYZlAQ",
-      "source_label": "YouTube · public VOD"
+      "source_label": "YouTube · public VOD",
+      "breakdown": {
+        "story": 7.0,
+        "hook": 9.9,
+        "audio": 2.3,
+        "chat_hype": 6.0,
+        "traction": null,
+        "traction_label": "2,797 views · 59d old · 110m VOD"
+      }
     },
     {
       "id": "yt-zvcl7QYZlAQ_C1",
@@ -518,9 +787,194 @@
       "score": 8.0,
       "duration_s": 28.0,
       "kind": "stream",
-      "status": "Needs review",
+      "status": "Rendered",
       "watch_url": "https://www.youtube.com/watch?v=zvcl7QYZlAQ",
-      "source_label": "YouTube · public VOD"
+      "source_label": "YouTube · public VOD",
+      "breakdown": {
+        "story": 8.0,
+        "hook": 5.3,
+        "audio": 0.0,
+        "chat_hype": null,
+        "traction": null,
+        "traction_label": "2,797 views · 59d old · 110m VOD"
+      }
+    }
+  ],
+  "queue": [
+    {
+      "platform": "instagram",
+      "kind": "stream",
+      "title": "Chat like that's what I'm saying. Here's why",
+      "scheduled_at": "2026-11-23T17:00:00.000Z",
+      "scheduled_label": "Mon Nov 23, 12:00 PM ET",
+      "status": "scheduled"
+    },
+    {
+      "platform": "tiktok",
+      "kind": "stream",
+      "title": "What the fuck wrong with you, bitch? What the fuck's up?",
+      "scheduled_at": "2026-11-23T17:30:00.000Z",
+      "scheduled_label": "Mon Nov 23, 12:30 PM ET",
+      "status": "scheduled"
+    },
+    {
+      "platform": "instagram",
+      "kind": "stream",
+      "title": "You're not ready for this. Let's go",
+      "scheduled_at": "2026-11-24T00:30:00.000Z",
+      "scheduled_label": "Mon Nov 23, 7:30 PM ET",
+      "status": "scheduled"
+    },
+    {
+      "platform": "tiktok",
+      "kind": "stream",
+      "title": "Stop pretending you're equal. It turned into some shit",
+      "scheduled_at": "2026-11-24T01:00:00.000Z",
+      "scheduled_label": "Mon Nov 23, 8:00 PM ET",
+      "status": "scheduled"
+    },
+    {
+      "platform": "instagram",
+      "kind": "stream",
+      "title": "Is it worth something? Deuces. See you tomorrow.",
+      "scheduled_at": "2026-11-24T17:00:00.000Z",
+      "scheduled_label": "Tue Nov 24, 12:00 PM ET",
+      "status": "scheduled"
+    },
+    {
+      "platform": "tiktok",
+      "kind": "stream",
+      "title": "Chat, I got to go fuck with my brothers!",
+      "scheduled_at": "2026-11-24T17:30:00.000Z",
+      "scheduled_label": "Tue Nov 24, 12:30 PM ET",
+      "status": "scheduled"
+    },
+    {
+      "platform": "instagram",
+      "kind": "music",
+      "title": "Why I'm Worse Than Your Last N***a",
+      "scheduled_at": "2026-11-25T00:30:00.000Z",
+      "scheduled_label": "Tue Nov 24, 7:30 PM ET",
+      "status": "scheduled"
+    },
+    {
+      "platform": "tiktok",
+      "kind": "music",
+      "title": "Hancock",
+      "scheduled_at": "2026-11-25T01:00:00.000Z",
+      "scheduled_label": "Tue Nov 24, 8:00 PM ET",
+      "status": "scheduled"
+    },
+    {
+      "platform": "instagram",
+      "kind": "music",
+      "title": "I'm way worse than him. Here's why",
+      "scheduled_at": "2026-11-25T17:00:00.000Z",
+      "scheduled_label": "Wed Nov 25, 12:00 PM ET",
+      "status": "scheduled"
+    },
+    {
+      "platform": "tiktok",
+      "kind": "stream",
+      "title": "Bro, do you pre-order food? Here's why",
+      "scheduled_at": "2026-11-25T17:30:00.000Z",
+      "scheduled_label": "Wed Nov 25, 12:30 PM ET",
+      "status": "scheduled"
+    },
+    {
+      "platform": "instagram",
+      "kind": "stream",
+      "title": "He didn't lit the bunt, chat. Here's why it's still lit",
+      "scheduled_at": "2026-11-26T00:30:00.000Z",
+      "scheduled_label": "Wed Nov 25, 7:30 PM ET",
+      "status": "scheduled"
+    },
+    {
+      "platform": "tiktok",
+      "kind": "stream",
+      "title": "Backed off the Mildew. Like I've been saying.",
+      "scheduled_at": "2026-11-26T01:00:00.000Z",
+      "scheduled_label": "Wed Nov 25, 8:00 PM ET",
+      "status": "scheduled"
+    },
+    {
+      "platform": "instagram",
+      "kind": "stream",
+      "title": "He's searching for that rare card",
+      "scheduled_at": "2026-11-26T17:00:00.000Z",
+      "scheduled_label": "Thu Nov 26, 12:00 PM ET",
+      "status": "scheduled"
+    },
+    {
+      "platform": "tiktok",
+      "kind": "stream",
+      "title": "Dude that was fucking insane. Here's why",
+      "scheduled_at": "2026-11-26T17:30:00.000Z",
+      "scheduled_label": "Thu Nov 26, 12:30 PM ET",
+      "status": "scheduled"
+    },
+    {
+      "platform": "instagram",
+      "kind": "music",
+      "title": "I'm Really That, I Don't Give a Fuck",
+      "scheduled_at": "2026-11-27T00:30:00.000Z",
+      "scheduled_label": "Thu Nov 26, 7:30 PM ET",
+      "status": "scheduled"
+    },
+    {
+      "platform": "tiktok",
+      "kind": "music",
+      "title": "I'm way worse than your last n***a",
+      "scheduled_at": "2026-11-27T01:00:00.000Z",
+      "scheduled_label": "Thu Nov 26, 8:00 PM ET",
+      "status": "scheduled"
+    }
+  ],
+  "activity": [
+    {
+      "at": "2026-11-23T01:01:34-05:00",
+      "at_label": "Mon 1:01 AM ET",
+      "label": "Clips scheduled",
+      "detail": "20 fan-page posts queued ahead",
+      "count": 20
+    },
+    {
+      "at": "2026-11-23T00:27:18-05:00",
+      "at_label": "Mon 12:27 AM ET",
+      "label": "Clips rendered",
+      "detail": "27 vertical clips on disk",
+      "count": 27
+    },
+    {
+      "at": "2026-11-22T19:32:11-05:00",
+      "at_label": "Sun 7:32 PM ET",
+      "label": "Clip posted",
+      "detail": "Instagram: Backed off the Mildew. Like I've been saying."
+    },
+    {
+      "at": "2026-11-22T12:02:33-05:00",
+      "at_label": "Sun 12:02 PM ET",
+      "label": "Clip posted",
+      "detail": "Instagram: Bro, do you pre-order food? Here's why"
+    },
+    {
+      "at": "2026-11-21T19:31:42-05:00",
+      "at_label": "Sat 7:31 PM ET",
+      "label": "Clip posted",
+      "detail": "Instagram: Chat, I got to go fuck with my brothers!"
+    },
+    {
+      "at": "2026-11-21T12:02:50-05:00",
+      "at_label": "Sat 12:02 PM ET",
+      "label": "Clip posted",
+      "detail": "Instagram: What the fuck wrong with you, bitch? What the fuck's up?"
+    },
+    {
+      "at": "2026-11-18T12:00:00-05:00",
+      "at_label": "Wed Nov 18 ET",
+      "label": "Outreach sent",
+      "detail": "3 emails (count only)",
+      "count": 3
     }
   ],
   "sponsors": {
@@ -535,26 +989,106 @@
     "bounced": 0,
     "other": 0,
     "tracked": 20,
-    "daily_cap": 3
+    "daily_cap": 3,
+    "forms_queued": 31,
+    "forms_submitted": 0,
+    "forms_submitted_today": 0,
+    "forms_daily_cap": 10,
+    "forms_min_spacing_min": 30,
+    "email_daily_cap": 3,
+    "by_channel": [
+      {
+        "channel": "email",
+        "sent": 3,
+        "queued": 5,
+        "replies": 0,
+        "tracked": 8,
+        "daily_cap": 3
+      },
+      {
+        "channel": "form",
+        "queued": 31,
+        "submitted": 0,
+        "submitted_today": 0,
+        "daily_cap": 10,
+        "min_spacing_min": 30,
+        "needs_manual_form": 6
+      }
+    ]
   },
   "fans": {
     "name": "Ralfy Clips",
-    "posting": "off",
+    "posting": "on",
+    "autopilot": true,
+    "mix": "1 music teaser per 3 stream clips",
+    "warmup": "2 posts per day per live channel, 30-minute stagger",
+    "channels_live": 2,
+    "channels_total": 4,
+    "posts_published_total": 4,
+    "posts_scheduled_total": 20,
     "accounts": [
       {
-        "platform": "Instagram Reels",
-        "handle": "Ralfy Clips (being created)",
+        "platform": "Instagram",
+        "handle": "@ralfyclips.daily",
+        "url": "https://www.instagram.com/ralfyclips.daily/",
+        "status": "Live",
+        "kind": "fan",
+        "posts_published": 4,
+        "posts_scheduled": 10,
+        "posts_published_today": 0,
+        "per_day": 2,
+        "slot_times_et": [
+          "12:00",
+          "19:30"
+        ]
+      },
+      {
+        "platform": "TikTok",
+        "handle": "@ralfyclips.daily",
+        "url": "https://www.tiktok.com/@ralfyclips.daily",
+        "status": "Live",
+        "kind": "fan",
+        "posts_published": 0,
+        "posts_scheduled": 10,
+        "posts_published_today": 0,
+        "per_day": 2,
+        "slot_times_et": [
+          "12:30",
+          "20:00"
+        ]
+      },
+      {
+        "platform": "X",
+        "handle": "Coming soon",
         "url": "",
-        "status": "Being created",
-        "kind": "fan"
+        "status": "Coming soon",
+        "kind": "fan",
+        "posts_published": 0,
+        "posts_scheduled": 0,
+        "posts_published_today": 0,
+        "per_day": 2,
+        "slot_times_et": [
+          "12:45",
+          "20:15"
+        ]
       },
       {
         "platform": "YouTube Shorts",
-        "handle": "Ralfy Clips (being created)",
+        "handle": "Coming soon",
         "url": "",
-        "status": "Being created",
-        "kind": "fan"
-      },
+        "status": "Coming soon",
+        "kind": "fan",
+        "posts_published": 0,
+        "posts_scheduled": 0,
+        "posts_published_today": 0,
+        "per_day": 2,
+        "slot_times_et": [
+          "13:00",
+          "20:30"
+        ]
+      }
+    ],
+    "official": [
       {
         "platform": "YouTube",
         "handle": "@ralfytheplug",

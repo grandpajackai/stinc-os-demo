@@ -119,13 +119,18 @@ if [ "$changed" -eq 0 ]; then
 fi
 
 git add -- data/live.json
-# Never let anything but the public snapshot ride along.
+if [ -d "$REPO/assets/clip-thumbs" ]; then
+  git add -- assets/clip-thumbs/*.jpg 2>/dev/null || true
+fi
+# Never let anything but the public snapshot (and its thumbs) ride along.
 while IFS= read -r path; do
-  [ "$path" = "data/live.json" ] && continue
+  case "$path" in
+    data/live.json|assets/clip-thumbs/*.jpg) continue ;;
+  esac
   git reset -q -- "$path"
 done < <(git diff --cached --name-only)
 
-if git diff --cached --quiet -- data/live.json; then
+if git diff --cached --quiet -- data/live.json assets/clip-thumbs; then
   log "snapshot unchanged"
   exit 0
 fi

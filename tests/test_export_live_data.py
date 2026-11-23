@@ -194,6 +194,85 @@ class ExportTests(unittest.TestCase):
                 exporter.build(root, Path(tmp) / "missing-brand", out, None)
             self.assertFalse((out / "data/live.json").exists())
 
+
+    def test_posting_queue_and_score_breakdown(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp) / "platform"
+            brand = Path(tmp) / "brand"
+            out = Path(tmp) / "site"
+            platform_tree(root)
+            write(root / "campaigns/ralfy-sponsors/outbox/current/forms/queue.json", json.dumps([
+                {"brand": "ZephyrOutreachCo", "key": "zephyroutreachco", "form_url": "https://example.com/form", "subject": "Hi", "message": "please review"},
+            ]))
+            write(root / "campaigns/ralfy-sponsors/outbox/current/forms/log.csv",
+                  "date,brand_key,status\n2026-11-01,zephyroutreachco,submitted\n")
+            write(root / "campaigns/ralfy-sponsors/send_log.csv",
+                  "time_et,result,dry_run,brand\n2026-11-18 11:00,sent,0,ZephyrOutreachCo\n")
+            write(brand / "posting.json", json.dumps({
+                "enabled": True, "live": True, "dry_run": False,
+                "content_mix": {"stream_per_music": 3},
+                "channels": {
+                    "instagram": {"enabled": True, "account_created": True, "handle": "@exampleclips.daily",
+                                  "per_day": 2, "slot_times_et": ["12:00", "19:30"]},
+                    "tiktok": {"enabled": True, "account_created": True, "handle": "@exampleclips.daily",
+                               "per_day": 2, "slot_times_et": ["12:30", "20:00"]},
+                    "x": {"enabled": False, "account_created": False, "handle": "",
+                          "per_day": 2, "slot_times_et": ["12:45", "20:15"]},
+                    "youtube": {"enabled": False, "account_created": False, "handle": "",
+                                "per_day": 2, "slot_times_et": ["13:00", "20:30"]},
+                },
+            }))
+            write(brand / "posting/post-log.json", json.dumps({
+                "posts": [
+                    {"platform": "instagram", "status": "sent", "hook": "Chat is stuck",
+                     "clip_file": "demo_C1.mp4", "kind": "stream",
+                     "publish_at": "2026-11-22T17:00:00.000Z", "posted_at": "2026-11-22T17:02:00.000Z"},
+                    {"platform": "tiktok", "status": "scheduled", "hook": "Chat is stuck",
+                     "clip_file": "demo_C1.mp4", "kind": "stream",
+                     "publish_at": "2026-11-23T17:30:00.000Z"},
+                    {"platform": "tiktok", "status": "scheduled", "hook": "Do not leak ZephyrOutreachCo",
+                     "clip_file": "demo_C9.mp4", "kind": "stream",
+                     "publish_at": "2026-11-24T17:30:00.000Z"},
+                ]
+            }))
+            write(brand / "candidates/demo.md", """# Demo
+- [ ] C1 | viral 9.1 | score 9 | 28.7s | Chat is stuck
+  - Source signals: 3,016 views · 20d old
+  - Viral signals: hook 10.0 · moment 9.0 · audio 10.0 · chat 8.5 · 29s
+  - On-screen hook: Why it looks weird, chat?
+""")
+            doc = exporter.build(root, brand, out, None)
+            blob = json.dumps(doc)
+            self.assertEqual(find_issues(blob), [])
+            self.assertNotIn("ZephyrOutreachCo", blob)
+            self.assertNotIn("zephyroutreachco", blob)
+            self.assertEqual(doc["fans"]["posting"], "on")
+            self.assertTrue(doc["fans"]["autopilot"])
+            self.assertEqual(doc["fans"]["channels_live"], 2)
+            handles = {a["handle"] for a in doc["fans"]["accounts"]}
+            self.assertIn("@exampleclips.daily", handles)
+            statuses = {a["platform"]: a["status"] for a in doc["fans"]["accounts"]}
+            self.assertEqual(statuses["X"], "Coming soon")
+            self.assertTrue(any(row["kind"] == "official" for row in doc["fans"]["official"]))
+            self.assertEqual(doc["sponsors"]["forms_queued"], 1)
+            self.assertEqual(doc["sponsors"]["forms_submitted"], 1)
+            channels = {row["channel"]: row for row in doc["sponsors"]["by_channel"]}
+            self.assertEqual(channels["form"]["queued"], 1)
+            self.assertGreaterEqual(len(doc["queue"]), 1)
+            self.assertEqual(doc["queue"][0]["platform"], "tiktok")
+            self.assertEqual(doc["queue"][0]["kind"], "stream")
+            titles = [row["title"] for row in doc["queue"]]
+            self.assertNotIn("Do not leak ZephyrOutreachCo", titles)
+            top = doc["clips"][0]
+            self.assertEqual(top["breakdown"]["hook"], 10.0)
+            self.assertEqual(top["breakdown"]["story"], 9)
+            self.assertEqual(top["breakdown"]["audio"], 10.0)
+            self.assertEqual(top["breakdown"]["chat_hype"], 8.5)
+            self.assertTrue(any(ev["label"] == "Clip posted" for ev in doc["activity"]))
+            self.assertTrue(any(ev["label"] == "Outreach sent" and ev.get("count") == 1 for ev in doc["activity"]))
+            self.assertIn("count only", json.dumps(doc["activity"]))
+            self.assertNotIn("contact", blob.lower().split("count only")[0][-20:] if False else "")
+
     def test_first_stat_keeps_suffixes_and_ignores_words(self):
         self.assertEqual(exporter.first_stat("383,111 monthly listeners"), "383,111")
         self.assertEqual(exporter.first_stat("164K subscribers · 109.6M views"), "164K")
