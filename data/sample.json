@@ -54,7 +54,7 @@
       "status": "Waiting on you",
       "tone": "waiting",
       "summary": "14 welcome, drop, and community emails built; first 3 designs open for preview.",
-      "stages": [["Designed", "done", "14 built"], ["Previewed", "done", "3 live"], ["List connect", "current", "ESP / SMS"], ["Sending", "pending", "After OK"]]
+      "stages": [["Designed", "done", "14 built"], ["Previewed", "done", "14 live"], ["List connect", "current", "ESP / SMS"], ["Sending", "pending", "After OK"]]
     },
     {
       "name": "Royalties, DSPs & finance",
