@@ -26,16 +26,39 @@ CHANNEL_LABEL = {"instagram": "Instagram", "tiktok": "TikTok", "x": "X", "youtub
 EMAIL_RX = re.compile(r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}")
 PHONE_RX = re.compile(r"\(?\b\d{3}\)?[-. ]\d{3}[-. ]\d{4}\b")
 STREET_RX = re.compile(r"\b\d{2,6}\s+[A-Z][A-Za-z]+(?:\s+[A-Z][A-Za-z]+)*\s+(?:Ave|Avenue|St|Street|Blvd|Boulevard|Rd|Road|Dr|Drive|Way|Ln|Lane)\b\.?(?:,\s*[A-Za-z .]+,\s*[A-Z]{2}\s*\d{5})?")
-FEATURED_EMAILS = ("01-welcome-1-join", "13-community-clip-of-the-week")
+FEATURED_EMAILS = ("05-drop-general", "08-seasonal-bfcm", "01-welcome-1-join", "13-community-clip-of-the-week")
 # Only designs whose copy is final enough to show a client. Others keep
 # production notes or many unfilled fields and stay private.
-PUBLIC_EMAILS = ("01-welcome-1-join", "03-welcome-3-favorites", "13-community-clip-of-the-week")
 FILLS = {
+    "{{BACK_IN_STOCK_URL}}": "https://stincteamtgf.com/",
+    "{{BTS_CLIP_URL}}": "https://www.instagram.com/ralfyclips.daily/",
+    "{{CLAIM_DAYS}}": "[7]",
     "{{CLIP_TITLE}}": "This week’s top clip",
     "{{CLIP_URL}}": "https://www.instagram.com/ralfyclips.daily/",
-    "{{VIEW_IN_BROWSER_URL}}": "#",
-    "{{UNSUBSCRIBE_URL}}": "#",
+    "{{DISCOUNT_CODE}}": "[VIPCODE]",
+    "{{DRAW_DATE}}": "[Draw date]",
+    "{{END_DATETIME}}": "[End time]",
+    "{{ENTER_URL}}": "https://www.youtube.com/@ralfytheplug",
+    "{{KEYWORD}}": "[STINC]",
+    "{{MAILING_ADDRESS}}": "",
+    "{{NOTIFY_DAYS}}": "[3]",
+    "{{OFFER}}": "[Drop offer]",
     "{{PREFERENCES_URL}}": "#",
+    "{{PRIZE_ARV}}": "[Modest prize value]",
+    "{{PRIZE_DESCRIPTION}}": "[Sealed pack bundle]",
+    "{{RULES_URL}}": "#",
+    "{{SHORT_CODE}}": "[55555]",
+    "{{START_DATETIME}}": "[Start time]",
+    "{{STREAM_DAY}}": "[Day]",
+    "{{STREAM_PLATFORM}}": "YouTube",
+    "{{STREAM_TIME}}": "[Time]",
+    "{{STREAM_TZ}}": "ET",
+    "{{STREAM_URL}}": "https://www.youtube.com/@ralfytheplug",
+    "{{UNSUBSCRIBE_URL}}": "#",
+    "{{VIEW_IN_BROWSER_URL}}": "#",
+    "{{VIP_CODE}}": "[VIP24H]",
+    "{{VIP_END_TIME}}": "[24h window]",
+    "{{WELCOME_OFFER}}": "[Welcome offer]",
 }
 
 
@@ -272,28 +295,40 @@ def sanitize_email_html(html: str) -> str:
     html = STREET_RX.sub("Mailing address", html)
     html = EMAIL_RX.sub("support email", html).replace("mailto:support email", "#")
     html = PHONE_RX.sub("", html)
-    html = html.replace("({{MAILING_ADDRESS}})", "").replace("{{MAILING_ADDRESS}}", "")
+    html = html.replace("({{MAILING_ADDRESS}})", "")
     html = html.replace("DEMO DRAFT &middot; DO NOT SEND", "DESIGN PREVIEW")
+    html = html.replace(" &middot; Managed in demo by Gil Ventures LLC", "")
     html = re.sub(r"\s*<strong[^>]*>Demo draft only[^<]*</strong>[^<]*", "", html)
     html = re.sub(r"If a welcome offer is later approved[^<]*(?:<br\s*/?>\s*)*", "", html)
-    html = html.replace(" &middot; Managed in demo by Gil Ventures LLC", "")
+    html = re.sub(r"If EVOL approves[^<]*(?:<br\s*/?>\s*)*", "", html)
+    html = re.sub(r"If EVOL cuts[^<]*(?:<br\s*/?>\s*)*", "", html)
+    html = re.sub(r"OPERATOR GUARDRAIL[^<]*", "", html)
+    html = re.sub(r"Optional promo slot:[^<]*", "", html)
+    html = re.sub(r"No invented (?:promo codes|discount)[^<]*", "New drops reach this list first.", html)
     html = html.replace("OPTIONAL WELCOME OFFER SLOT", "FIRST LOOK")
-    html = html.replace("No invented promo codes.", "New drops reach this list first.")
+    html = re.sub(r"If no time is confirmed[^<]*", "", html)
+    html = re.sub(r"Note: Replace[^<]*", "", html)
+    html = html.replace("Draft rules inside.", "Sample giveaway layout.")
+    html = html.replace("This sweepstakes draft is built for equal odds", "Sample fan giveaway built for equal odds")
+    html = re.sub(r"https://stincteamtgf\.com/products/[^\"\s]*asaali[^\"\s]*", "https://stincteamtgf.com/", html, flags=re.I)
+    html = re.sub(r"asaali", "Partner brand", html, flags=re.I)
+    html = re.sub(r"most requested", "Top pick", html, flags=re.I)
+    html = re.sub(r"questions:", "Help:", html, flags=re.I)
+    html = html.replace("sweepstakes", "giveaway").replace("Sweepstakes", "Giveaway")
     for key, value in FILLS.items():
         html = html.replace(key, value)
-    return html.replace("<head>", '<head><meta name="robots" content="noindex">', 1)
+    return html.replace("<head>", '<head><meta name="robots" content="noindex,nofollow">', 1)
 
 
 def email_pages(root: Path, out: Path, blocked) -> list[dict]:
-    """Write sanitized HTML copies of the designed emails. Returns public links."""
+    """Write sanitized HTML copies of all 14 designed emails. Returns public links."""
     src = root / "ecommerce/emails"
     dest = out / "assets/emails"
+    thumbs = out / "assets/email-thumbs"
     links = []
     written = set()
     for html_path in sorted(src.glob("[0-9][0-9]-*.html")):
         stem = html_path.stem
-        if stem not in PUBLIC_EMAILS:
-            continue
         try:
             html = sanitize_email_html(html_path.read_text(encoding="utf-8", errors="replace"))
         except OSError:
@@ -303,7 +338,8 @@ def email_pages(root: Path, out: Path, blocked) -> list[dict]:
         dest.mkdir(parents=True, exist_ok=True)
         (dest / f"{stem}.html").write_text(html, encoding="utf-8")
         written.add(f"{stem}.html")
-        links.append({"id": stem, "html": f"assets/emails/{stem}.html", "featured": stem in FEATURED_EMAILS})
+        thumb = f"assets/email-thumbs/{stem}.jpg" if (thumbs / f"{stem}.jpg").is_file() else ""
+        links.append({"id": stem, "html": f"assets/emails/{stem}.html", "thumb": thumb, "featured": stem in FEATURED_EMAILS})
     if dest.is_dir():
         for stale in dest.glob("*.html"):
             if stale.name not in written:

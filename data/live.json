@@ -1,6 +1,6 @@
 {
   "schema": "stinc-os.live.v1",
-  "generated_at": "2026-11-23T08:04:05-05:00",
+  "generated_at": "2026-11-23T08:16:26-05:00",
   "sources": {
     "platform": true,
     "tracker": "tracker.csv",
@@ -964,8 +964,8 @@
   ],
   "activity": [
     {
-      "at": "2026-11-23T08:04:05-05:00",
-      "at_label": "Mon 8:04 AM ET",
+      "at": "2026-11-23T08:16:25-05:00",
+      "at_label": "Mon 8:16 AM ET",
       "label": "Clips scheduled",
       "detail": "20 fan-page posts queued ahead",
       "count": 20
@@ -1289,8 +1289,8 @@
         "cadence": "Every 15 minutes",
         "health": "Healthy",
         "note": "Scheduled posts publish on time. Live-link check resumes Tue Nov 24, 12:03 AM ET.",
-        "last_run": "Mon Nov 23, 7:50 AM ET",
-        "next_run": "Mon Nov 23, 8:05 AM ET"
+        "last_run": "Mon Nov 23, 8:05 AM ET",
+        "next_run": "Mon Nov 23, 8:20 AM ET"
       },
       {
         "name": "Posting watchdog",
@@ -1298,8 +1298,8 @@
         "cadence": "Every 15 minutes",
         "health": "Healthy",
         "note": "",
-        "last_run": "Mon Nov 23, 7:53 AM ET",
-        "next_run": "Mon Nov 23, 8:08 AM ET"
+        "last_run": "Mon Nov 23, 8:08 AM ET",
+        "next_run": "Mon Nov 23, 8:23 AM ET"
       },
       {
         "name": "Content engine",
@@ -1914,17 +1914,86 @@
       {
         "id": "01-welcome-1-join",
         "html": "assets/emails/01-welcome-1-join.html",
+        "thumb": "assets/email-thumbs/01-welcome-1-join.jpg",
         "featured": true
+      },
+      {
+        "id": "02-welcome-2-how-we-drop",
+        "html": "assets/emails/02-welcome-2-how-we-drop.html",
+        "thumb": "assets/email-thumbs/02-welcome-2-how-we-drop.jpg",
+        "featured": false
       },
       {
         "id": "03-welcome-3-favorites",
         "html": "assets/emails/03-welcome-3-favorites.html",
+        "thumb": "assets/email-thumbs/03-welcome-3-favorites.jpg",
+        "featured": false
+      },
+      {
+        "id": "04-drop-vip-early-access",
+        "html": "assets/emails/04-drop-vip-early-access.html",
+        "thumb": "assets/email-thumbs/04-drop-vip-early-access.jpg",
+        "featured": false
+      },
+      {
+        "id": "05-drop-general",
+        "html": "assets/emails/05-drop-general.html",
+        "thumb": "assets/email-thumbs/05-drop-general.jpg",
+        "featured": true
+      },
+      {
+        "id": "06-drop-last-call",
+        "html": "assets/emails/06-drop-last-call.html",
+        "thumb": "assets/email-thumbs/06-drop-last-call.jpg",
+        "featured": false
+      },
+      {
+        "id": "07-drop-restock",
+        "html": "assets/emails/07-drop-restock.html",
+        "thumb": "assets/email-thumbs/07-drop-restock.jpg",
+        "featured": false
+      },
+      {
+        "id": "08-seasonal-bfcm",
+        "html": "assets/emails/08-seasonal-bfcm.html",
+        "thumb": "assets/email-thumbs/08-seasonal-bfcm.jpg",
+        "featured": true
+      },
+      {
+        "id": "09-seasonal-holiday-cutoff",
+        "html": "assets/emails/09-seasonal-holiday-cutoff.html",
+        "thumb": "assets/email-thumbs/09-seasonal-holiday-cutoff.jpg",
+        "featured": false
+      },
+      {
+        "id": "10-seasonal-new-year",
+        "html": "assets/emails/10-seasonal-new-year.html",
+        "thumb": "assets/email-thumbs/10-seasonal-new-year.jpg",
+        "featured": false
+      },
+      {
+        "id": "11-community-stream-schedule",
+        "html": "assets/emails/11-community-stream-schedule.html",
+        "thumb": "assets/email-thumbs/11-community-stream-schedule.jpg",
+        "featured": false
+      },
+      {
+        "id": "12-community-bts",
+        "html": "assets/emails/12-community-bts.html",
+        "thumb": "assets/email-thumbs/12-community-bts.jpg",
         "featured": false
       },
       {
         "id": "13-community-clip-of-the-week",
         "html": "assets/emails/13-community-clip-of-the-week.html",
+        "thumb": "assets/email-thumbs/13-community-clip-of-the-week.jpg",
         "featured": true
+      },
+      {
+        "id": "14-community-pokemon-giveaway",
+        "html": "assets/emails/14-community-pokemon-giveaway.html",
+        "thumb": "assets/email-thumbs/14-community-pokemon-giveaway.jpg",
+        "featured": false
       }
     ]
   }
