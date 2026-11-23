@@ -1,6 +1,6 @@
 {
   "schema": "stinc-os.live.v1",
-  "generated_at": "2026-11-23T13:00:06-05:00",
+  "generated_at": "2026-11-23T14:00:04-05:00",
   "sources": {
     "platform": true,
     "tracker": "tracker.csv",
@@ -964,8 +964,8 @@
   ],
   "activity": [
     {
-      "at": "2026-11-23T13:00:06-05:00",
-      "at_label": "Mon 1:00 PM ET",
+      "at": "2026-11-23T14:00:03-05:00",
+      "at_label": "Mon 2:00 PM ET",
       "label": "Clips scheduled",
       "detail": "20 fan-page posts queued ahead",
       "count": 20
@@ -1289,8 +1289,8 @@
         "cadence": "Every 30 minutes",
         "health": "Healthy",
         "note": "Scheduled posts publish on time. Live-link check resumes Tue Nov 24, 12:03 AM ET.",
-        "last_run": "Mon Nov 23, 12:51 PM ET",
-        "next_run": "Mon Nov 23, 1:21 PM ET"
+        "last_run": "Mon Nov 23, 1:51 PM ET",
+        "next_run": "Mon Nov 23, 2:21 PM ET"
       },
       {
         "name": "Posting watchdog",
@@ -1298,8 +1298,8 @@
         "cadence": "Every 60 minutes",
         "health": "Healthy",
         "note": "",
-        "last_run": "Mon Nov 23, 12:21 PM ET",
-        "next_run": "Mon Nov 23, 1:21 PM ET"
+        "last_run": "Mon Nov 23, 1:21 PM ET",
+        "next_run": "Mon Nov 23, 2:21 PM ET"
       },
       {
         "name": "Content engine",
@@ -1325,8 +1325,8 @@
         "cadence": "Daily 9:00 AM, 2:00 PM, 9:00 PM ET",
         "health": "Healthy",
         "note": "",
-        "last_run": "Mon Nov 23, 9:00 AM ET",
-        "next_run": "Mon Nov 23, 2:00 PM ET"
+        "last_run": "Mon Nov 23, 1:00 PM ET",
+        "next_run": "Mon Nov 23, 9:00 PM ET"
       },
       {
         "name": "Partner-form routine",
@@ -1335,7 +1335,7 @@
         "health": "Scheduled",
         "note": "",
         "last_run": "",
-        "next_run": "Mon Nov 23, 1:15 PM ET"
+        "next_run": "Mon Nov 23, 2:15 PM ET"
       },
       {
         "name": "Outreach check-in",
