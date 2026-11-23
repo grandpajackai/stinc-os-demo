@@ -1,6 +1,6 @@
 {
   "schema": "stinc-os.live.v1",
-  "generated_at": "2026-11-23T01:01:35-05:00",
+  "generated_at": "2026-11-23T08:04:05-05:00",
   "sources": {
     "platform": true,
     "tracker": "tracker.csv",
@@ -928,12 +928,44 @@
       "scheduled_at": "2026-11-27T01:00:00.000Z",
       "scheduled_label": "Thu Nov 26, 8:00 PM ET",
       "status": "scheduled"
+    },
+    {
+      "platform": "instagram",
+      "kind": "stream",
+      "title": "Stop pretending you're equal. It turned into some shit",
+      "scheduled_at": "2026-11-27T17:00:00.000Z",
+      "scheduled_label": "Fri Nov 27, 12:00 PM ET",
+      "status": "scheduled"
+    },
+    {
+      "platform": "tiktok",
+      "kind": "stream",
+      "title": "Chat like that's what I'm saying. Here's why",
+      "scheduled_at": "2026-11-27T17:30:00.000Z",
+      "scheduled_label": "Fri Nov 27, 12:30 PM ET",
+      "status": "scheduled"
+    },
+    {
+      "platform": "instagram",
+      "kind": "stream",
+      "title": "Dude that was fucking insane. Here's why",
+      "scheduled_at": "2026-11-28T00:30:00.000Z",
+      "scheduled_label": "Fri Nov 27, 7:30 PM ET",
+      "status": "scheduled"
+    },
+    {
+      "platform": "tiktok",
+      "kind": "stream",
+      "title": "You 5dB, CHAT 7.6, BARS You got to…",
+      "scheduled_at": "2026-11-28T01:00:00.000Z",
+      "scheduled_label": "Fri Nov 27, 8:00 PM ET",
+      "status": "scheduled"
     }
   ],
   "activity": [
     {
-      "at": "2026-11-23T01:01:34-05:00",
-      "at_label": "Mon 1:01 AM ET",
+      "at": "2026-11-23T08:04:05-05:00",
+      "at_label": "Mon 8:04 AM ET",
       "label": "Clips scheduled",
       "detail": "20 fan-page posts queued ahead",
       "count": 20
@@ -1140,6 +1172,225 @@
       }
     ]
   },
+  "ops": {
+    "today": {
+      "date": "Mon Nov 23",
+      "channels": [
+        {
+          "channel": "Instagram",
+          "key": "instagram",
+          "live": true,
+          "planned": 2,
+          "published": 0,
+          "due": 0,
+          "upcoming": 2,
+          "slots": [
+            "12:00",
+            "19:30"
+          ],
+          "profile_url": "https://www.instagram.com/ralfyclips.daily/",
+          "items": [
+            {
+              "time": "12:00 PM ET",
+              "at": "2026-11-23T12:00:00-05:00",
+              "title": "Chat like that's what I'm saying. Here's why",
+              "state": "upcoming",
+              "url": "",
+              "kind": "stream"
+            },
+            {
+              "time": "7:30 PM ET",
+              "at": "2026-11-23T19:30:00-05:00",
+              "title": "You're not ready for this. Let's go",
+              "state": "upcoming",
+              "url": "",
+              "kind": "stream"
+            }
+          ]
+        },
+        {
+          "channel": "TikTok",
+          "key": "tiktok",
+          "live": true,
+          "planned": 2,
+          "published": 0,
+          "due": 0,
+          "upcoming": 2,
+          "slots": [
+            "12:30",
+            "20:00"
+          ],
+          "profile_url": "https://www.tiktok.com/@ralfyclips.daily",
+          "items": [
+            {
+              "time": "12:30 PM ET",
+              "at": "2026-11-23T12:30:00-05:00",
+              "title": "What the fuck wrong with you, bitch? What the fuck's up?",
+              "state": "upcoming",
+              "url": "",
+              "kind": "stream"
+            },
+            {
+              "time": "8:00 PM ET",
+              "at": "2026-11-23T20:00:00-05:00",
+              "title": "Stop pretending you're equal. It turned into some shit",
+              "state": "upcoming",
+              "url": "",
+              "kind": "stream"
+            }
+          ]
+        },
+        {
+          "channel": "X",
+          "key": "x",
+          "live": false,
+          "planned": 0,
+          "published": 0,
+          "due": 0,
+          "upcoming": 0,
+          "slots": [
+            "12:45",
+            "20:15"
+          ],
+          "profile_url": "",
+          "items": []
+        },
+        {
+          "channel": "YouTube Shorts",
+          "key": "youtube",
+          "live": false,
+          "planned": 0,
+          "published": 0,
+          "due": 0,
+          "upcoming": 0,
+          "slots": [
+            "13:00",
+            "20:30"
+          ],
+          "profile_url": "",
+          "items": []
+        }
+      ]
+    },
+    "outreach_today": {
+      "emails_due_today": 0,
+      "emails_sent_today": 0,
+      "emails_sent_total": 3,
+      "email_daily_cap": 3,
+      "forms_submitted_today": 0,
+      "forms_submitted": 0,
+      "forms_queued": 31,
+      "forms_daily_cap": 10
+    },
+    "processes": [
+      {
+        "name": "Fan-page poster",
+        "what": "Hands finished clips to the scheduler for Instagram and TikTok at the warm-up pace (2 a day per channel) and records each post’s live link.",
+        "cadence": "Every 15 minutes",
+        "health": "Healthy",
+        "note": "Scheduled posts publish on time. Live-link check resumes Tue Nov 24, 12:03 AM ET.",
+        "last_run": "Mon Nov 23, 7:50 AM ET",
+        "next_run": "Mon Nov 23, 8:05 AM ET"
+      },
+      {
+        "name": "Posting watchdog",
+        "what": "Checks the poster every 15 minutes and flags anything stuck.",
+        "cadence": "Every 15 minutes",
+        "health": "Healthy",
+        "note": "",
+        "last_run": "Mon Nov 23, 7:53 AM ET",
+        "next_run": "Mon Nov 23, 8:08 AM ET"
+      },
+      {
+        "name": "Content engine",
+        "what": "Scans new streams and videos, scores the moments and cuts vertical clips.",
+        "cadence": "Daily 11:00 AM, 6:00 PM ET",
+        "health": "Healthy",
+        "note": "",
+        "last_run": "Sun Nov 22, 6:00 PM ET",
+        "next_run": "Mon Nov 23, 11:00 AM ET"
+      },
+      {
+        "name": "Brand email sender",
+        "what": "Sends partner emails on weekdays, 3 a day at most, with one follow-up after 7 days.",
+        "cadence": "Weekdays 10:30 AM, 12:45 PM, 3:00 PM ET",
+        "health": "Healthy",
+        "note": "",
+        "last_run": "Fri Nov 20, 3:07 PM ET",
+        "next_run": "Mon Nov 23, 10:30 AM ET"
+      },
+      {
+        "name": "Public snapshot refresh",
+        "what": "Refreshes this dashboard from the live system.",
+        "cadence": "Daily 9:00 AM, 2:00 PM, 9:00 PM ET",
+        "health": "Healthy",
+        "note": "",
+        "last_run": "Sun Nov 22, 9:00 PM ET",
+        "next_run": "Mon Nov 23, 9:00 AM ET"
+      },
+      {
+        "name": "Partner-form routine",
+        "what": "Fills brand contact forms, hourly 10:15 AM–7:15 PM ET on weekdays. Up to 10 a day, 30+ minutes apart.",
+        "cadence": "Scheduled routine",
+        "health": "Scheduled",
+        "note": "",
+        "last_run": "",
+        "next_run": "Mon Nov 23, 10:15 AM ET"
+      },
+      {
+        "name": "Outreach check-in",
+        "what": "Confirms the day’s brand emails went out, weekdays at 3:30 PM ET.",
+        "cadence": "Scheduled routine",
+        "health": "Scheduled",
+        "note": "",
+        "last_run": "",
+        "next_run": "Mon Nov 23, 3:30 PM ET"
+      },
+      {
+        "name": "Warm-up ramp review",
+        "what": "Reviews posting pace each Monday and raises it only when the accounts are ready.",
+        "cadence": "Scheduled routine",
+        "health": "Scheduled",
+        "note": "",
+        "last_run": "",
+        "next_run": "Mon Nov 23, 10:00 AM ET"
+      }
+    ]
+  },
+  "published": [
+    {
+      "platform": "instagram",
+      "title": "Backed off the Mildew. Like I've been saying.",
+      "url": "https://www.instagram.com/reel/DgEGUkuip0m/",
+      "at": "2026-11-22T19:32:11.363000-05:00",
+      "at_label": "Sun Nov 22, 7:32 PM ET",
+      "kind": "stream"
+    },
+    {
+      "platform": "instagram",
+      "title": "Bro, do you pre-order food? Here's why",
+      "url": "https://www.instagram.com/reel/DgDS3RDGXpR/",
+      "at": "2026-11-22T12:02:33.175000-05:00",
+      "at_label": "Sun Nov 22, 12:02 PM ET",
+      "kind": "stream"
+    },
+    {
+      "platform": "instagram",
+      "title": "Chat, I got to go fuck with my brothers!",
+      "url": "https://www.instagram.com/reel/DgBhZqKFE-q/",
+      "at": "2026-11-21T19:31:42.907000-05:00",
+      "at_label": "Sat Nov 21, 7:31 PM ET",
+      "kind": "stream"
+    },
+    {
+      "platform": "instagram",
+      "title": "What the fuck wrong with you, bitch? What the fuck's up?",
+      "url": "https://www.instagram.com/reel/DgAuFXrAnJc/",
+      "at": "2026-11-21T12:02:50.696000-05:00",
+      "at_label": "Sat Nov 21, 12:02 PM ET",
+      "kind": "stream"
+    }
+  ],
   "commerce": {
     "store_url": "https://stincteamtgf.com",
     "store_name": "STINCTEAMTGF",
@@ -1658,6 +1909,23 @@
       }
     ],
     "previews": "withheld",
-    "previews_reason": "Preview images stay off this public site because the draft HTML includes a contact email, phone number, or street address."
+    "previews_reason": "Preview images stay off this public site because the draft HTML includes a contact email, phone number, or street address.",
+    "email_pages": [
+      {
+        "id": "01-welcome-1-join",
+        "html": "assets/emails/01-welcome-1-join.html",
+        "featured": true
+      },
+      {
+        "id": "03-welcome-3-favorites",
+        "html": "assets/emails/03-welcome-3-favorites.html",
+        "featured": false
+      },
+      {
+        "id": "13-community-clip-of-the-week",
+        "html": "assets/emails/13-community-clip-of-the-week.html",
+        "featured": true
+      }
+    ]
   }
 }

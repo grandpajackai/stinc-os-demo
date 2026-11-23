@@ -122,10 +122,13 @@ git add -- data/live.json
 if [ -d "$REPO/assets/clip-thumbs" ]; then
   git add -- assets/clip-thumbs/*.jpg 2>/dev/null || true
 fi
+if [ -d "$REPO/assets/emails" ]; then
+  git add -A -- assets/emails 2>/dev/null || true
+fi
 # Never let anything but the public snapshot (and its thumbs) ride along.
 while IFS= read -r path; do
   case "$path" in
-    data/live.json|assets/clip-thumbs/*.jpg) continue ;;
+    data/live.json|assets/clip-thumbs/*.jpg|assets/emails/*.html) continue ;;
   esac
   git reset -q -- "$path"
 done < <(git diff --cached --name-only)

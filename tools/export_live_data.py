@@ -31,6 +31,7 @@ from zoneinfo import ZoneInfo
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from public_safety import find_issues, find_key_issues  # noqa: E402
+import ops_block  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 ET = ZoneInfo("America/New_York")
@@ -815,7 +816,7 @@ def upcoming_queue(brand: Path, needles, tokens, phrases) -> list[dict]:
             })
             seen.add(key)
     items.sort(key=lambda row: row.get("scheduled_at") or "")
-    return items[:16]
+    return items[:24]
 
 
 def published_counts(brand: Path) -> dict:
@@ -1136,6 +1137,23 @@ def build(platform: Path, brand: Path, out: Path, deny_path: Path | None) -> dic
         {"label": "Merch email drafts", "value": f"{pipeline['emails_built']:,}", "as_of": "Drafts, not sending", "icon": "bag", "sample": False},
     ]
     fans = fan_block(platform, platforms, needles, tokens, phrases, brand)
+    def _clean(text):
+        return None if blocked(text, needles, tokens, phrases) else clean_title(text, text)
+    cfg = posting_cfg(brand) if brand.is_dir() else {}
+    ops = {
+        "today": ops_block.today_posts(brand, _clean, cfg, clip_kind) if brand.is_dir() else {"channels": []},
+        "outreach_today": ops_block.outreach_today(platform, rows, is_hold, sponsors["email_daily_cap"]),
+        "processes": ops_block.processes(platform),
+    }
+    ops["outreach_today"].update({
+        "forms_submitted_today": sponsors.get("forms_submitted_today", 0),
+        "forms_submitted": sponsors.get("forms_submitted", 0),
+        "forms_queued": sponsors.get("forms_queued", 0),
+        "forms_daily_cap": sponsors.get("forms_daily_cap", 10),
+    })
+    published = ops_block.published_posts(brand, _clean, clip_kind) if brand.is_dir() else []
+    email_links = ops_block.email_pages(platform, out, lambda html: blocked(html, needles, tokens, phrases))
+    emails["email_pages"] = email_links
     queue = upcoming_queue(brand, needles, tokens, phrases)
     activity = activity_feed(brand, platform, needles, tokens, phrases)
     extract_thumbs(brand, clips, out, limit=6)
@@ -1161,6 +1179,8 @@ def build(platform: Path, brand: Path, out: Path, deny_path: Path | None) -> dic
         "activity": activity,
         "sponsors": sponsors,
         "fans": fans,
+        "ops": ops,
+        "published": published,
         "commerce": {key: value for key, value in {**catalog, **emails}.items() if key != "_tokens"},
     }
     issues = find_key_issues(doc)
