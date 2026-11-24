@@ -1,6 +1,6 @@
 {
   "schema": "stinc-os.live.v1",
-  "generated_at": "2026-11-23T21:00:06-05:00",
+  "generated_at": "2026-11-24T09:00:07-05:00",
   "sources": {
     "platform": true,
     "tracker": "tracker.csv",
@@ -162,8 +162,8 @@
     }
   ],
   "pipeline": {
-    "source_videos": 7,
-    "streams_scanned": 7,
+    "source_videos": 5,
+    "streams_scanned": 5,
     "music_videos_scanned": 1,
     "candidate_files": 9,
     "clip_options": 32,
@@ -964,8 +964,8 @@
   ],
   "activity": [
     {
-      "at": "2026-11-23T21:00:06-05:00",
-      "at_label": "Mon 9:00 PM ET",
+      "at": "2026-11-24T09:00:06-05:00",
+      "at_label": "Tue 9:00 AM ET",
       "label": "Clips scheduled",
       "detail": "20 fan-page posts queued ahead",
       "count": 20
@@ -1174,7 +1174,7 @@
   },
   "ops": {
     "today": {
-      "date": "Mon Nov 23",
+      "date": "Tue Nov 24",
       "channels": [
         {
           "channel": "Instagram",
@@ -1182,8 +1182,8 @@
           "live": true,
           "planned": 2,
           "published": 0,
-          "due": 2,
-          "upcoming": 0,
+          "due": 0,
+          "upcoming": 2,
           "slots": [
             "12:00",
             "19:30"
@@ -1192,19 +1192,19 @@
           "items": [
             {
               "time": "12:00 PM ET",
-              "at": "2026-11-23T12:00:00-05:00",
-              "title": "Chat like that's what I'm saying. Here's why",
-              "state": "due",
+              "at": "2026-11-24T12:00:00-05:00",
+              "title": "Is it worth something? Deuces. See you tomorrow.",
+              "state": "upcoming",
               "url": "",
               "kind": "stream"
             },
             {
               "time": "7:30 PM ET",
-              "at": "2026-11-23T19:30:00-05:00",
-              "title": "You're not ready for this. Let's go",
-              "state": "due",
+              "at": "2026-11-24T19:30:00-05:00",
+              "title": "Why I'm Worse Than Your Last N***a",
+              "state": "upcoming",
               "url": "",
-              "kind": "stream"
+              "kind": "music"
             }
           ]
         },
@@ -1214,8 +1214,8 @@
           "live": true,
           "planned": 2,
           "published": 0,
-          "due": 2,
-          "upcoming": 0,
+          "due": 0,
+          "upcoming": 2,
           "slots": [
             "12:30",
             "20:00"
@@ -1224,19 +1224,19 @@
           "items": [
             {
               "time": "12:30 PM ET",
-              "at": "2026-11-23T12:30:00-05:00",
-              "title": "What the fuck wrong with you, bitch? What the fuck's up?",
-              "state": "due",
+              "at": "2026-11-24T12:30:00-05:00",
+              "title": "Chat, I got to go fuck with my brothers!",
+              "state": "upcoming",
               "url": "",
               "kind": "stream"
             },
             {
               "time": "8:00 PM ET",
-              "at": "2026-11-23T20:00:00-05:00",
-              "title": "Stop pretending you're equal. It turned into some shit",
-              "state": "due",
+              "at": "2026-11-24T20:00:00-05:00",
+              "title": "Hancock",
+              "state": "upcoming",
               "url": "",
-              "kind": "stream"
+              "kind": "music"
             }
           ]
         },
@@ -1288,9 +1288,9 @@
         "what": "Hands finished clips to the scheduler for Instagram and TikTok at the warm-up pace (2 a day per channel) and records each post’s live link.",
         "cadence": "Every 30 minutes",
         "health": "Healthy",
-        "note": "Scheduled posts publish on time. Live-link check resumes Tue Nov 24, 12:03 AM ET.",
-        "last_run": "Mon Nov 23, 8:51 PM ET",
-        "next_run": "Mon Nov 23, 9:21 PM ET"
+        "note": "Scheduled posts publish on time. Live-link check resumes Tue Nov 24, 9:21 AM ET.",
+        "last_run": "Tue Nov 24, 8:51 AM ET",
+        "next_run": "Tue Nov 24, 9:21 AM ET"
       },
       {
         "name": "Posting watchdog",
@@ -1298,8 +1298,8 @@
         "cadence": "Every 60 minutes",
         "health": "Healthy",
         "note": "",
-        "last_run": "Mon Nov 23, 8:21 PM ET",
-        "next_run": "Mon Nov 23, 9:21 PM ET"
+        "last_run": "Tue Nov 24, 8:21 AM ET",
+        "next_run": "Tue Nov 24, 9:21 AM ET"
       },
       {
         "name": "Content engine",
@@ -1325,8 +1325,8 @@
         "cadence": "Daily 9:00 AM, 2:00 PM, 9:00 PM ET",
         "health": "Healthy",
         "note": "",
-        "last_run": "Mon Nov 23, 2:00 PM ET",
-        "next_run": "Tue Nov 24, 9:00 AM ET"
+        "last_run": "Mon Nov 23, 9:00 PM ET",
+        "next_run": "Tue Nov 24, 2:00 PM ET"
       },
       {
         "name": "Partner-form routine",
