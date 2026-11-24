@@ -1,6 +1,6 @@
 {
   "schema": "stinc-os.live.v1",
-  "generated_at": "2026-11-23T14:00:04-05:00",
+  "generated_at": "2026-11-23T21:00:06-05:00",
   "sources": {
     "platform": true,
     "tracker": "tracker.csv",
@@ -241,7 +241,7 @@
         "audio": 10.0,
         "chat_hype": 10.0,
         "traction": null,
-        "traction_label": "3,540 views · 65d old · 122m VOD"
+        "traction_label": "3,540 views · 66d old · 122m VOD"
       },
       "thumb": "assets/clip-thumbs/yt-0hvehnsQp_U_C3.jpg"
     },
@@ -257,27 +257,6 @@
       "watch_url": "https://www.youtube.com/watch?v=aINQ_DN8GJU",
       "source_label": "YouTube · public VOD",
       "thumb": "assets/clip-thumbs/yt-aINQ_DN8GJU_C3.jpg"
-    },
-    {
-      "id": "yt-BDP2C6ihc00_C3",
-      "title": "Chat, I got to go fuck with my brothers!",
-      "hook": "Chat, I got to go fuck with my brothers!",
-      "viral": 8.5,
-      "score": 9.0,
-      "duration_s": 31.8,
-      "kind": "stream",
-      "status": "Rendered",
-      "watch_url": "https://www.youtube.com/watch?v=BDP2C6ihc00",
-      "source_label": "YouTube · public VOD",
-      "breakdown": {
-        "story": 9.0,
-        "hook": 9.0,
-        "audio": 7.3,
-        "chat_hype": 9.4,
-        "traction": null,
-        "traction_label": "2,619 views · 18d old · 160m VOD"
-      },
-      "thumb": "assets/clip-thumbs/yt-BDP2C6ihc00_C3.jpg"
     },
     {
       "id": "yt-3z6nfKs4-Tw_C5",
@@ -300,24 +279,25 @@
       }
     },
     {
-      "id": "yt-3z6nfKs4-Tw_C2",
-      "title": "Bro, do you pre-order food? / Here's why",
-      "hook": "Bro, do you pre-order food? / Here's why",
-      "viral": 8.3,
+      "id": "yt-BDP2C6ihc00_C3",
+      "title": "Chat, I got to go fuck with my brothers!",
+      "hook": "Chat, I got to go fuck with my brothers!",
+      "viral": 8.4,
       "score": 9.0,
-      "duration_s": 49.1,
+      "duration_s": 31.8,
       "kind": "stream",
       "status": "Rendered",
-      "watch_url": "https://www.youtube.com/watch?v=3z6nfKs4-Tw",
+      "watch_url": "https://www.youtube.com/watch?v=BDP2C6ihc00",
       "source_label": "YouTube · public VOD",
       "breakdown": {
         "story": 9.0,
         "hook": 9.0,
-        "audio": 10.0,
-        "chat_hype": 7.6,
+        "audio": 7.3,
+        "chat_hype": 9.4,
         "traction": null,
-        "traction_label": "3,016 views · 21d old · 150m VOD"
-      }
+        "traction_label": "2,619 views · 18d old · 160m VOD"
+      },
+      "thumb": "assets/clip-thumbs/yt-BDP2C6ihc00_C3.jpg"
     },
     {
       "id": "yt-BDP2C6ihc00_C1",
@@ -356,7 +336,27 @@
         "audio": 10.0,
         "chat_hype": 10.0,
         "traction": null,
-        "traction_label": "3,540 views · 65d old · 122m VOD"
+        "traction_label": "3,540 views · 66d old · 122m VOD"
+      }
+    },
+    {
+      "id": "yt-3z6nfKs4-Tw_C2",
+      "title": "Bro, do you pre-order food? / Here's why",
+      "hook": "Bro, do you pre-order food? / Here's why",
+      "viral": 8.2,
+      "score": 9.0,
+      "duration_s": 49.1,
+      "kind": "stream",
+      "status": "Rendered",
+      "watch_url": "https://www.youtube.com/watch?v=3z6nfKs4-Tw",
+      "source_label": "YouTube · public VOD",
+      "breakdown": {
+        "story": 9.0,
+        "hook": 9.0,
+        "audio": 10.0,
+        "chat_hype": 7.6,
+        "traction": null,
+        "traction_label": "3,016 views · 21d old · 150m VOD"
       }
     },
     {
@@ -376,7 +376,7 @@
         "audio": 10.0,
         "chat_hype": 7.6,
         "traction": null,
-        "traction_label": "2,500 views · 21d old · 137m VOD"
+        "traction_label": "2,500 views · 22d old · 137m VOD"
       }
     },
     {
@@ -396,7 +396,7 @@
         "audio": 10.0,
         "chat_hype": 10.0,
         "traction": null,
-        "traction_label": "2,500 views · 21d old · 137m VOD"
+        "traction_label": "2,500 views · 22d old · 137m VOD"
       }
     },
     {
@@ -416,7 +416,7 @@
         "audio": 10.0,
         "chat_hype": 10.0,
         "traction": null,
-        "traction_label": "2,500 views · 21d old · 137m VOD"
+        "traction_label": "2,500 views · 22d old · 137m VOD"
       }
     },
     {
@@ -436,7 +436,7 @@
         "audio": 10.0,
         "chat_hype": 10.0,
         "traction": null,
-        "traction_label": "3,540 views · 65d old · 122m VOD"
+        "traction_label": "3,540 views · 66d old · 122m VOD"
       }
     },
     {
@@ -476,7 +476,7 @@
         "audio": 10.0,
         "chat_hype": 5.2,
         "traction": null,
-        "traction_label": "2,500 views · 21d old · 137m VOD"
+        "traction_label": "2,500 views · 22d old · 137m VOD"
       }
     },
     {
@@ -596,7 +596,7 @@
         "audio": 7.6,
         "chat_hype": 5.4,
         "traction": null,
-        "traction_label": "3,540 views · 65d old · 122m VOD"
+        "traction_label": "3,540 views · 66d old · 122m VOD"
       }
     },
     {
@@ -636,7 +636,7 @@
         "audio": 10.0,
         "chat_hype": 10.0,
         "traction": null,
-        "traction_label": "3,540 views · 65d old · 122m VOD"
+        "traction_label": "3,540 views · 66d old · 122m VOD"
       }
     },
     {
@@ -656,7 +656,7 @@
         "audio": 10.0,
         "chat_hype": null,
         "traction": null,
-        "traction_label": "2,500 views · 21d old · 137m VOD"
+        "traction_label": "2,500 views · 22d old · 137m VOD"
       }
     },
     {
@@ -964,8 +964,8 @@
   ],
   "activity": [
     {
-      "at": "2026-11-23T14:00:03-05:00",
-      "at_label": "Mon 2:00 PM ET",
+      "at": "2026-11-23T21:00:06-05:00",
+      "at_label": "Mon 9:00 PM ET",
       "label": "Clips scheduled",
       "detail": "20 fan-page posts queued ahead",
       "count": 20
@@ -1182,8 +1182,8 @@
           "live": true,
           "planned": 2,
           "published": 0,
-          "due": 1,
-          "upcoming": 1,
+          "due": 2,
+          "upcoming": 0,
           "slots": [
             "12:00",
             "19:30"
@@ -1202,7 +1202,7 @@
               "time": "7:30 PM ET",
               "at": "2026-11-23T19:30:00-05:00",
               "title": "You're not ready for this. Let's go",
-              "state": "upcoming",
+              "state": "due",
               "url": "",
               "kind": "stream"
             }
@@ -1214,8 +1214,8 @@
           "live": true,
           "planned": 2,
           "published": 0,
-          "due": 1,
-          "upcoming": 1,
+          "due": 2,
+          "upcoming": 0,
           "slots": [
             "12:30",
             "20:00"
@@ -1234,7 +1234,7 @@
               "time": "8:00 PM ET",
               "at": "2026-11-23T20:00:00-05:00",
               "title": "Stop pretending you're equal. It turned into some shit",
-              "state": "upcoming",
+              "state": "due",
               "url": "",
               "kind": "stream"
             }
@@ -1289,8 +1289,8 @@
         "cadence": "Every 30 minutes",
         "health": "Healthy",
         "note": "Scheduled posts publish on time. Live-link check resumes Tue Nov 24, 12:03 AM ET.",
-        "last_run": "Mon Nov 23, 1:51 PM ET",
-        "next_run": "Mon Nov 23, 2:21 PM ET"
+        "last_run": "Mon Nov 23, 8:51 PM ET",
+        "next_run": "Mon Nov 23, 9:21 PM ET"
       },
       {
         "name": "Posting watchdog",
@@ -1298,8 +1298,8 @@
         "cadence": "Every 60 minutes",
         "health": "Healthy",
         "note": "",
-        "last_run": "Mon Nov 23, 1:21 PM ET",
-        "next_run": "Mon Nov 23, 2:21 PM ET"
+        "last_run": "Mon Nov 23, 8:21 PM ET",
+        "next_run": "Mon Nov 23, 9:21 PM ET"
       },
       {
         "name": "Content engine",
@@ -1307,8 +1307,8 @@
         "cadence": "Daily 11:00 AM, 6:00 PM ET",
         "health": "Healthy",
         "note": "",
-        "last_run": "Mon Nov 23, 11:00 AM ET",
-        "next_run": "Mon Nov 23, 6:00 PM ET"
+        "last_run": "Mon Nov 23, 6:00 PM ET",
+        "next_run": "Tue Nov 24, 11:00 AM ET"
       },
       {
         "name": "Brand email sender",
@@ -1316,8 +1316,8 @@
         "cadence": "Weekdays 10:30 AM, 12:45 PM, 3:00 PM ET",
         "health": "Healthy",
         "note": "",
-        "last_run": "Mon Nov 23, 12:54 PM ET",
-        "next_run": "Mon Nov 23, 3:00 PM ET"
+        "last_run": "Mon Nov 23, 3:08 PM ET",
+        "next_run": "Tue Nov 24, 10:30 AM ET"
       },
       {
         "name": "Public snapshot refresh",
@@ -1325,8 +1325,8 @@
         "cadence": "Daily 9:00 AM, 2:00 PM, 9:00 PM ET",
         "health": "Healthy",
         "note": "",
-        "last_run": "Mon Nov 23, 1:00 PM ET",
-        "next_run": "Mon Nov 23, 9:00 PM ET"
+        "last_run": "Mon Nov 23, 2:00 PM ET",
+        "next_run": "Tue Nov 24, 9:00 AM ET"
       },
       {
         "name": "Partner-form routine",
@@ -1335,7 +1335,7 @@
         "health": "Scheduled",
         "note": "",
         "last_run": "",
-        "next_run": "Mon Nov 23, 2:15 PM ET"
+        "next_run": "Tue Nov 24, 10:15 AM ET"
       },
       {
         "name": "Outreach check-in",
@@ -1344,7 +1344,7 @@
         "health": "Scheduled",
         "note": "",
         "last_run": "",
-        "next_run": "Mon Nov 23, 3:30 PM ET"
+        "next_run": "Tue Nov 24, 3:30 PM ET"
       },
       {
         "name": "Warm-up ramp review",
