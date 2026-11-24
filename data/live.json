@@ -1,6 +1,6 @@
 {
   "schema": "stinc-os.live.v1",
-  "generated_at": "2026-11-24T09:00:07-05:00",
+  "generated_at": "2026-11-24T14:00:03-05:00",
   "sources": {
     "platform": true,
     "tracker": "tracker.csv",
@@ -220,7 +220,7 @@
         "audio": 10.0,
         "chat_hype": 10.0,
         "traction": null,
-        "traction_label": "3,016 views · 21d old · 150m VOD"
+        "traction_label": "3,016 views · 22d old · 150m VOD"
       },
       "thumb": "assets/clip-thumbs/yt-3z6nfKs4-Tw_C4.jpg"
     },
@@ -275,7 +275,7 @@
         "audio": 10.0,
         "chat_hype": 10.0,
         "traction": null,
-        "traction_label": "3,016 views · 21d old · 150m VOD"
+        "traction_label": "3,016 views · 22d old · 150m VOD"
       }
     },
     {
@@ -295,7 +295,7 @@
         "audio": 7.3,
         "chat_hype": 9.4,
         "traction": null,
-        "traction_label": "2,619 views · 18d old · 160m VOD"
+        "traction_label": "2,619 views · 19d old · 160m VOD"
       },
       "thumb": "assets/clip-thumbs/yt-BDP2C6ihc00_C3.jpg"
     },
@@ -316,7 +316,7 @@
         "audio": 10.0,
         "chat_hype": 5.4,
         "traction": null,
-        "traction_label": "2,619 views · 18d old · 160m VOD"
+        "traction_label": "2,619 views · 19d old · 160m VOD"
       }
     },
     {
@@ -356,7 +356,7 @@
         "audio": 10.0,
         "chat_hype": 7.6,
         "traction": null,
-        "traction_label": "3,016 views · 21d old · 150m VOD"
+        "traction_label": "3,016 views · 22d old · 150m VOD"
       }
     },
     {
@@ -456,7 +456,7 @@
         "audio": 10.0,
         "chat_hype": 10.0,
         "traction": null,
-        "traction_label": "457 views · 15d old · 4m VOD"
+        "traction_label": "457 views · 16d old · 4m VOD"
       }
     },
     {
@@ -496,27 +496,7 @@
         "audio": 10.0,
         "chat_hype": 8.8,
         "traction": null,
-        "traction_label": "2,619 views · 18d old · 160m VOD"
-      }
-    },
-    {
-      "id": "yt-OOUfkTwGgEw_C1",
-      "title": "Story 1: What You Looking For, Pogging?",
-      "hook": "What you looking for, Pogging?",
-      "viral": 8.0,
-      "score": 9.0,
-      "duration_s": 29.6,
-      "kind": "stream",
-      "status": "Needs review",
-      "watch_url": "https://www.youtube.com/watch?v=OOUfkTwGgEw",
-      "source_label": "YouTube · public VOD",
-      "breakdown": {
-        "story": 9.0,
-        "hook": 8.7,
-        "audio": 10.0,
-        "chat_hype": 5.4,
-        "traction": null,
-        "traction_label": "457 views · 15d old · 4m VOD"
+        "traction_label": "2,619 views · 19d old · 160m VOD"
       }
     },
     {
@@ -536,7 +516,7 @@
         "audio": 10.0,
         "chat_hype": 9.9,
         "traction": null,
-        "traction_label": "457 views · 15d old · 4m VOD"
+        "traction_label": "457 views · 16d old · 4m VOD"
       }
     },
     {
@@ -556,7 +536,7 @@
         "audio": null,
         "chat_hype": null,
         "traction": 7.7,
-        "traction_label": "113,879 views · 274d old · 2m VOD"
+        "traction_label": "113,879 views · 275d old · 2m VOD"
       }
     },
     {
@@ -576,7 +556,27 @@
         "audio": 10.0,
         "chat_hype": 8.8,
         "traction": null,
-        "traction_label": "2,619 views · 18d old · 160m VOD"
+        "traction_label": "2,619 views · 19d old · 160m VOD"
+      }
+    },
+    {
+      "id": "yt-OOUfkTwGgEw_C1",
+      "title": "Story 1: What You Looking For, Pogging?",
+      "hook": "What you looking for, Pogging?",
+      "viral": 7.9,
+      "score": 9.0,
+      "duration_s": 29.6,
+      "kind": "stream",
+      "status": "Needs review",
+      "watch_url": "https://www.youtube.com/watch?v=OOUfkTwGgEw",
+      "source_label": "YouTube · public VOD",
+      "breakdown": {
+        "story": 9.0,
+        "hook": 8.7,
+        "audio": 10.0,
+        "chat_hype": 5.4,
+        "traction": null,
+        "traction_label": "457 views · 16d old · 4m VOD"
       }
     },
     {
@@ -616,7 +616,7 @@
         "audio": 10.0,
         "chat_hype": 5.4,
         "traction": null,
-        "traction_label": "3,016 views · 21d old · 150m VOD"
+        "traction_label": "3,016 views · 22d old · 150m VOD"
       }
     },
     {
@@ -676,7 +676,7 @@
         "audio": null,
         "chat_hype": null,
         "traction": 10.0,
-        "traction_label": "113,879 views · 274d old · 2m VOD"
+        "traction_label": "113,879 views · 275d old · 2m VOD"
       }
     },
     {
@@ -696,7 +696,7 @@
         "audio": 10.0,
         "chat_hype": 5.4,
         "traction": null,
-        "traction_label": "3,016 views · 21d old · 150m VOD"
+        "traction_label": "3,016 views · 22d old · 150m VOD"
       }
     },
     {
@@ -716,7 +716,7 @@
         "audio": null,
         "chat_hype": null,
         "traction": 5.0,
-        "traction_label": "113,879 views · 274d old · 2m VOD"
+        "traction_label": "113,879 views · 275d old · 2m VOD"
       }
     },
     {
@@ -736,7 +736,7 @@
         "audio": 6.1,
         "chat_hype": 6.6,
         "traction": null,
-        "traction_label": "2,619 views · 18d old · 160m VOD"
+        "traction_label": "2,619 views · 19d old · 160m VOD"
       }
     },
     {
@@ -756,7 +756,7 @@
         "audio": 0.2,
         "chat_hype": 6.0,
         "traction": null,
-        "traction_label": "2,797 views · 60d old · 110m VOD"
+        "traction_label": "2,797 views · 61d old · 110m VOD"
       }
     },
     {
@@ -776,7 +776,7 @@
         "audio": 2.3,
         "chat_hype": 6.0,
         "traction": null,
-        "traction_label": "2,797 views · 60d old · 110m VOD"
+        "traction_label": "2,797 views · 61d old · 110m VOD"
       }
     },
     {
@@ -796,7 +796,7 @@
         "audio": 0.0,
         "chat_hype": null,
         "traction": null,
-        "traction_label": "2,797 views · 60d old · 110m VOD"
+        "traction_label": "2,797 views · 61d old · 110m VOD"
       }
     }
   ],
@@ -964,11 +964,18 @@
   ],
   "activity": [
     {
-      "at": "2026-11-24T09:00:06-05:00",
-      "at_label": "Tue 9:00 AM ET",
+      "at": "2026-11-24T14:00:03-05:00",
+      "at_label": "Tue 2:00 PM ET",
       "label": "Clips scheduled",
       "detail": "20 fan-page posts queued ahead",
       "count": 20
+    },
+    {
+      "at": "2026-11-24T12:00:00-05:00",
+      "at_label": "Tue Nov 24 ET",
+      "label": "Outreach sent",
+      "detail": "2 emails (count only)",
+      "count": 2
     },
     {
       "at": "2026-11-23T00:27:18-05:00",
@@ -1182,8 +1189,8 @@
           "live": true,
           "planned": 2,
           "published": 0,
-          "due": 0,
-          "upcoming": 2,
+          "due": 1,
+          "upcoming": 1,
           "slots": [
             "12:00",
             "19:30"
@@ -1194,7 +1201,7 @@
               "time": "12:00 PM ET",
               "at": "2026-11-24T12:00:00-05:00",
               "title": "Is it worth something? Deuces. See you tomorrow.",
-              "state": "upcoming",
+              "state": "due",
               "url": "",
               "kind": "stream"
             },
@@ -1214,8 +1221,8 @@
           "live": true,
           "planned": 2,
           "published": 0,
-          "due": 0,
-          "upcoming": 2,
+          "due": 1,
+          "upcoming": 1,
           "slots": [
             "12:30",
             "20:00"
@@ -1226,7 +1233,7 @@
               "time": "12:30 PM ET",
               "at": "2026-11-24T12:30:00-05:00",
               "title": "Chat, I got to go fuck with my brothers!",
-              "state": "upcoming",
+              "state": "due",
               "url": "",
               "kind": "stream"
             },
@@ -1273,9 +1280,9 @@
       ]
     },
     "outreach_today": {
-      "emails_due_today": 0,
-      "emails_sent_today": 0,
-      "emails_sent_total": 3,
+      "emails_due_today": 2,
+      "emails_sent_today": 2,
+      "emails_sent_total": 5,
       "email_daily_cap": 3,
       "forms_submitted_today": 0,
       "forms_submitted": 0,
@@ -1288,9 +1295,9 @@
         "what": "Hands finished clips to the scheduler for Instagram and TikTok at the warm-up pace (2 a day per channel) and records each post’s live link.",
         "cadence": "Every 30 minutes",
         "health": "Healthy",
-        "note": "Scheduled posts publish on time. Live-link check resumes Tue Nov 24, 9:21 AM ET.",
-        "last_run": "Tue Nov 24, 8:51 AM ET",
-        "next_run": "Tue Nov 24, 9:21 AM ET"
+        "note": "Scheduled posts publish on time. Live-link check resumes Tue Nov 24, 2:21 PM ET.",
+        "last_run": "Tue Nov 24, 1:51 PM ET",
+        "next_run": "Tue Nov 24, 2:21 PM ET"
       },
       {
         "name": "Posting watchdog",
@@ -1298,8 +1305,8 @@
         "cadence": "Every 60 minutes",
         "health": "Healthy",
         "note": "",
-        "last_run": "Tue Nov 24, 8:21 AM ET",
-        "next_run": "Tue Nov 24, 9:21 AM ET"
+        "last_run": "Tue Nov 24, 1:21 PM ET",
+        "next_run": "Tue Nov 24, 2:21 PM ET"
       },
       {
         "name": "Content engine",
@@ -1307,8 +1314,8 @@
         "cadence": "Daily 11:00 AM, 6:00 PM ET",
         "health": "Healthy",
         "note": "",
-        "last_run": "Mon Nov 23, 6:00 PM ET",
-        "next_run": "Tue Nov 24, 11:00 AM ET"
+        "last_run": "Tue Nov 24, 11:00 AM ET",
+        "next_run": "Tue Nov 24, 6:00 PM ET"
       },
       {
         "name": "Brand email sender",
@@ -1316,8 +1323,8 @@
         "cadence": "Weekdays 10:30 AM, 12:45 PM, 3:00 PM ET",
         "health": "Healthy",
         "note": "",
-        "last_run": "Mon Nov 23, 3:08 PM ET",
-        "next_run": "Tue Nov 24, 10:30 AM ET"
+        "last_run": "Tue Nov 24, 12:55 PM ET",
+        "next_run": "Tue Nov 24, 3:00 PM ET"
       },
       {
         "name": "Public snapshot refresh",
@@ -1325,8 +1332,8 @@
         "cadence": "Daily 9:00 AM, 2:00 PM, 9:00 PM ET",
         "health": "Healthy",
         "note": "",
-        "last_run": "Mon Nov 23, 9:00 PM ET",
-        "next_run": "Tue Nov 24, 2:00 PM ET"
+        "last_run": "Tue Nov 24, 9:00 AM ET",
+        "next_run": "Tue Nov 24, 9:00 PM ET"
       },
       {
         "name": "Partner-form routine",
@@ -1335,7 +1342,7 @@
         "health": "Scheduled",
         "note": "",
         "last_run": "",
-        "next_run": "Tue Nov 24, 10:15 AM ET"
+        "next_run": "Tue Nov 24, 2:15 PM ET"
       },
       {
         "name": "Outreach check-in",
