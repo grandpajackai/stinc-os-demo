@@ -1,6 +1,6 @@
 {
   "schema": "stinc-os.live.v1",
-  "generated_at": "2026-11-25T09:00:07-05:00",
+  "generated_at": "2026-11-25T14:00:07-05:00",
   "sources": {
     "platform": true,
     "tracker": "tracker.csv",
@@ -220,7 +220,7 @@
         "audio": 10.0,
         "chat_hype": 10.0,
         "traction": null,
-        "traction_label": "3,016 views · 22d old · 150m VOD"
+        "traction_label": "3,016 views · 23d old · 150m VOD"
       },
       "thumb": "assets/clip-thumbs/yt-3z6nfKs4-Tw_C4.jpg"
     },
@@ -275,7 +275,7 @@
         "audio": 10.0,
         "chat_hype": 10.0,
         "traction": null,
-        "traction_label": "3,016 views · 22d old · 150m VOD"
+        "traction_label": "3,016 views · 23d old · 150m VOD"
       }
     },
     {
@@ -295,7 +295,7 @@
         "audio": 7.3,
         "chat_hype": 9.4,
         "traction": null,
-        "traction_label": "2,619 views · 19d old · 160m VOD"
+        "traction_label": "2,619 views · 20d old · 160m VOD"
       },
       "thumb": "assets/clip-thumbs/yt-BDP2C6ihc00_C3.jpg"
     },
@@ -316,7 +316,7 @@
         "audio": 10.0,
         "chat_hype": 5.4,
         "traction": null,
-        "traction_label": "2,619 views · 19d old · 160m VOD"
+        "traction_label": "2,619 views · 20d old · 160m VOD"
       }
     },
     {
@@ -356,7 +356,7 @@
         "audio": 10.0,
         "chat_hype": 7.6,
         "traction": null,
-        "traction_label": "3,016 views · 22d old · 150m VOD"
+        "traction_label": "3,016 views · 23d old · 150m VOD"
       }
     },
     {
@@ -375,26 +375,6 @@
         "hook": 7.0,
         "audio": 10.0,
         "chat_hype": 7.6,
-        "traction": null,
-        "traction_label": "2,500 views · 23d old · 137m VOD"
-      }
-    },
-    {
-      "id": "yt-gEQumoX0cZ8_C3",
-      "title": "Dude that was fucking insane / Here's why",
-      "hook": "Dude that was fucking insane / Here's why",
-      "viral": 8.2,
-      "score": 9.0,
-      "duration_s": 24.9,
-      "kind": "stream",
-      "status": "Rendered",
-      "watch_url": "https://www.youtube.com/watch?v=gEQumoX0cZ8",
-      "source_label": "YouTube · public VOD",
-      "breakdown": {
-        "story": 9.0,
-        "hook": 7.0,
-        "audio": 10.0,
-        "chat_hype": 10.0,
         "traction": null,
         "traction_label": "2,500 views · 23d old · 137m VOD"
       }
@@ -456,7 +436,27 @@
         "audio": 10.0,
         "chat_hype": 10.0,
         "traction": null,
-        "traction_label": "457 views · 16d old · 4m VOD"
+        "traction_label": "457 views · 17d old · 4m VOD"
+      }
+    },
+    {
+      "id": "yt-gEQumoX0cZ8_C3",
+      "title": "Dude that was fucking insane / Here's why",
+      "hook": "Dude that was fucking insane / Here's why",
+      "viral": 8.1,
+      "score": 9.0,
+      "duration_s": 24.9,
+      "kind": "stream",
+      "status": "Rendered",
+      "watch_url": "https://www.youtube.com/watch?v=gEQumoX0cZ8",
+      "source_label": "YouTube · public VOD",
+      "breakdown": {
+        "story": 9.0,
+        "hook": 7.0,
+        "audio": 10.0,
+        "chat_hype": 10.0,
+        "traction": null,
+        "traction_label": "2,500 views · 23d old · 137m VOD"
       }
     },
     {
@@ -496,7 +496,7 @@
         "audio": 10.0,
         "chat_hype": 8.8,
         "traction": null,
-        "traction_label": "2,619 views · 19d old · 160m VOD"
+        "traction_label": "2,619 views · 20d old · 160m VOD"
       }
     },
     {
@@ -516,7 +516,7 @@
         "audio": 10.0,
         "chat_hype": 9.9,
         "traction": null,
-        "traction_label": "457 views · 16d old · 4m VOD"
+        "traction_label": "457 views · 17d old · 4m VOD"
       }
     },
     {
@@ -536,7 +536,7 @@
         "audio": null,
         "chat_hype": null,
         "traction": 7.7,
-        "traction_label": "113,879 views · 275d old · 2m VOD"
+        "traction_label": "113,879 views · 276d old · 2m VOD"
       }
     },
     {
@@ -556,7 +556,7 @@
         "audio": 10.0,
         "chat_hype": 8.8,
         "traction": null,
-        "traction_label": "2,619 views · 19d old · 160m VOD"
+        "traction_label": "2,619 views · 20d old · 160m VOD"
       }
     },
     {
@@ -576,7 +576,7 @@
         "audio": 10.0,
         "chat_hype": 5.4,
         "traction": null,
-        "traction_label": "457 views · 16d old · 4m VOD"
+        "traction_label": "457 views · 17d old · 4m VOD"
       }
     },
     {
@@ -616,7 +616,7 @@
         "audio": 10.0,
         "chat_hype": 5.4,
         "traction": null,
-        "traction_label": "3,016 views · 22d old · 150m VOD"
+        "traction_label": "3,016 views · 23d old · 150m VOD"
       }
     },
     {
@@ -676,7 +676,7 @@
         "audio": null,
         "chat_hype": null,
         "traction": 10.0,
-        "traction_label": "113,879 views · 275d old · 2m VOD"
+        "traction_label": "113,879 views · 276d old · 2m VOD"
       }
     },
     {
@@ -696,7 +696,7 @@
         "audio": 10.0,
         "chat_hype": 5.4,
         "traction": null,
-        "traction_label": "3,016 views · 22d old · 150m VOD"
+        "traction_label": "3,016 views · 23d old · 150m VOD"
       }
     },
     {
@@ -716,7 +716,7 @@
         "audio": null,
         "chat_hype": null,
         "traction": 5.0,
-        "traction_label": "113,879 views · 275d old · 2m VOD"
+        "traction_label": "113,879 views · 276d old · 2m VOD"
       }
     },
     {
@@ -736,7 +736,7 @@
         "audio": 6.1,
         "chat_hype": 6.6,
         "traction": null,
-        "traction_label": "2,619 views · 19d old · 160m VOD"
+        "traction_label": "2,619 views · 20d old · 160m VOD"
       }
     },
     {
@@ -756,7 +756,7 @@
         "audio": 0.2,
         "chat_hype": 6.0,
         "traction": null,
-        "traction_label": "2,797 views · 61d old · 110m VOD"
+        "traction_label": "2,797 views · 62d old · 110m VOD"
       }
     },
     {
@@ -776,7 +776,7 @@
         "audio": 2.3,
         "chat_hype": 6.0,
         "traction": null,
-        "traction_label": "2,797 views · 61d old · 110m VOD"
+        "traction_label": "2,797 views · 62d old · 110m VOD"
       }
     },
     {
@@ -796,7 +796,7 @@
         "audio": 0.0,
         "chat_hype": null,
         "traction": null,
-        "traction_label": "2,797 views · 61d old · 110m VOD"
+        "traction_label": "2,797 views · 62d old · 110m VOD"
       }
     }
   ],
@@ -964,8 +964,8 @@
   ],
   "activity": [
     {
-      "at": "2026-11-25T09:00:06-05:00",
-      "at_label": "Wed 9:00 AM ET",
+      "at": "2026-11-25T14:00:06-05:00",
+      "at_label": "Wed 2:00 PM ET",
       "label": "Clips scheduled",
       "detail": "20 fan-page posts queued ahead",
       "count": 20
@@ -1189,8 +1189,8 @@
           "live": true,
           "planned": 2,
           "published": 0,
-          "due": 0,
-          "upcoming": 2,
+          "due": 1,
+          "upcoming": 1,
           "slots": [
             "12:00",
             "19:30"
@@ -1201,7 +1201,7 @@
               "time": "12:00 PM ET",
               "at": "2026-11-25T12:00:00-05:00",
               "title": "I'm way worse than him. Here's why",
-              "state": "upcoming",
+              "state": "due",
               "url": "",
               "kind": "music"
             },
@@ -1221,8 +1221,8 @@
           "live": true,
           "planned": 2,
           "published": 0,
-          "due": 0,
-          "upcoming": 2,
+          "due": 1,
+          "upcoming": 1,
           "slots": [
             "12:30",
             "20:00"
@@ -1233,7 +1233,7 @@
               "time": "12:30 PM ET",
               "at": "2026-11-25T12:30:00-05:00",
               "title": "Bro, do you pre-order food? Here's why",
-              "state": "upcoming",
+              "state": "due",
               "url": "",
               "kind": "stream"
             },
@@ -1295,9 +1295,9 @@
         "what": "Hands finished clips to the scheduler for Instagram and TikTok at the warm-up pace (2 a day per channel) and records each post’s live link.",
         "cadence": "Every 30 minutes",
         "health": "Healthy",
-        "note": "Scheduled posts publish on time. Live-link check resumes Wed Nov 25, 9:21 AM ET.",
-        "last_run": "Wed Nov 25, 8:51 AM ET",
-        "next_run": "Wed Nov 25, 9:21 AM ET"
+        "note": "Scheduled posts publish on time. Live-link check resumes Wed Nov 25, 2:21 PM ET.",
+        "last_run": "Wed Nov 25, 1:51 PM ET",
+        "next_run": "Wed Nov 25, 2:21 PM ET"
       },
       {
         "name": "Posting watchdog",
@@ -1305,8 +1305,8 @@
         "cadence": "Every 60 minutes",
         "health": "Healthy",
         "note": "",
-        "last_run": "Wed Nov 25, 8:21 AM ET",
-        "next_run": "Wed Nov 25, 9:21 AM ET"
+        "last_run": "Wed Nov 25, 1:21 PM ET",
+        "next_run": "Wed Nov 25, 2:21 PM ET"
       },
       {
         "name": "Content engine",
@@ -1314,8 +1314,8 @@
         "cadence": "Daily 11:00 AM, 6:00 PM ET",
         "health": "Healthy",
         "note": "",
-        "last_run": "Tue Nov 24, 6:00 PM ET",
-        "next_run": "Wed Nov 25, 11:00 AM ET"
+        "last_run": "Wed Nov 25, 11:00 AM ET",
+        "next_run": "Wed Nov 25, 6:00 PM ET"
       },
       {
         "name": "Brand email sender",
@@ -1323,8 +1323,8 @@
         "cadence": "Weekdays 10:30 AM, 12:45 PM, 3:00 PM ET",
         "health": "Healthy",
         "note": "",
-        "last_run": "Tue Nov 24, 3:15 PM ET",
-        "next_run": "Wed Nov 25, 10:30 AM ET"
+        "last_run": "Wed Nov 25, 12:56 PM ET",
+        "next_run": "Wed Nov 25, 3:00 PM ET"
       },
       {
         "name": "Public snapshot refresh",
@@ -1332,8 +1332,8 @@
         "cadence": "Daily 9:00 AM, 2:00 PM, 9:00 PM ET",
         "health": "Healthy",
         "note": "",
-        "last_run": "Tue Nov 24, 9:00 PM ET",
-        "next_run": "Wed Nov 25, 2:00 PM ET"
+        "last_run": "Wed Nov 25, 9:00 AM ET",
+        "next_run": "Wed Nov 25, 9:00 PM ET"
       },
       {
         "name": "Partner-form routine",
@@ -1342,7 +1342,7 @@
         "health": "Scheduled",
         "note": "",
         "last_run": "",
-        "next_run": "Wed Nov 25, 10:15 AM ET"
+        "next_run": "Wed Nov 25, 2:15 PM ET"
       },
       {
         "name": "Outreach check-in",
