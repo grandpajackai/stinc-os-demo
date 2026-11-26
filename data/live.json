@@ -1,6 +1,6 @@
 {
   "schema": "stinc-os.live.v1",
-  "generated_at": "2026-11-25T14:00:07-05:00",
+  "generated_at": "2026-11-25T21:00:07-05:00",
   "sources": {
     "platform": true,
     "tracker": "tracker.csv",
@@ -241,7 +241,7 @@
         "audio": 10.0,
         "chat_hype": 10.0,
         "traction": null,
-        "traction_label": "3,540 views · 67d old · 122m VOD"
+        "traction_label": "3,540 views · 68d old · 122m VOD"
       },
       "thumb": "assets/clip-thumbs/yt-0hvehnsQp_U_C3.jpg"
     },
@@ -336,7 +336,7 @@
         "audio": 10.0,
         "chat_hype": 10.0,
         "traction": null,
-        "traction_label": "3,540 views · 67d old · 122m VOD"
+        "traction_label": "3,540 views · 68d old · 122m VOD"
       }
     },
     {
@@ -376,7 +376,7 @@
         "audio": 10.0,
         "chat_hype": 7.6,
         "traction": null,
-        "traction_label": "2,500 views · 23d old · 137m VOD"
+        "traction_label": "2,500 views · 24d old · 137m VOD"
       }
     },
     {
@@ -396,7 +396,7 @@
         "audio": 10.0,
         "chat_hype": 10.0,
         "traction": null,
-        "traction_label": "2,500 views · 23d old · 137m VOD"
+        "traction_label": "2,500 views · 24d old · 137m VOD"
       }
     },
     {
@@ -416,7 +416,7 @@
         "audio": 10.0,
         "chat_hype": 10.0,
         "traction": null,
-        "traction_label": "3,540 views · 67d old · 122m VOD"
+        "traction_label": "3,540 views · 68d old · 122m VOD"
       }
     },
     {
@@ -456,7 +456,7 @@
         "audio": 10.0,
         "chat_hype": 10.0,
         "traction": null,
-        "traction_label": "2,500 views · 23d old · 137m VOD"
+        "traction_label": "2,500 views · 24d old · 137m VOD"
       }
     },
     {
@@ -476,7 +476,7 @@
         "audio": 10.0,
         "chat_hype": 5.2,
         "traction": null,
-        "traction_label": "2,500 views · 23d old · 137m VOD"
+        "traction_label": "2,500 views · 24d old · 137m VOD"
       }
     },
     {
@@ -596,7 +596,7 @@
         "audio": 7.6,
         "chat_hype": 5.4,
         "traction": null,
-        "traction_label": "3,540 views · 67d old · 122m VOD"
+        "traction_label": "3,540 views · 68d old · 122m VOD"
       }
     },
     {
@@ -636,7 +636,7 @@
         "audio": 10.0,
         "chat_hype": 10.0,
         "traction": null,
-        "traction_label": "3,540 views · 67d old · 122m VOD"
+        "traction_label": "3,540 views · 68d old · 122m VOD"
       }
     },
     {
@@ -656,7 +656,7 @@
         "audio": 10.0,
         "chat_hype": null,
         "traction": null,
-        "traction_label": "2,500 views · 23d old · 137m VOD"
+        "traction_label": "2,500 views · 24d old · 137m VOD"
       }
     },
     {
@@ -964,8 +964,8 @@
   ],
   "activity": [
     {
-      "at": "2026-11-25T14:00:06-05:00",
-      "at_label": "Wed 2:00 PM ET",
+      "at": "2026-11-25T21:00:07-05:00",
+      "at_label": "Wed 9:00 PM ET",
       "label": "Clips scheduled",
       "detail": "20 fan-page posts queued ahead",
       "count": 20
@@ -1189,8 +1189,8 @@
           "live": true,
           "planned": 2,
           "published": 0,
-          "due": 1,
-          "upcoming": 1,
+          "due": 2,
+          "upcoming": 0,
           "slots": [
             "12:00",
             "19:30"
@@ -1209,7 +1209,7 @@
               "time": "7:30 PM ET",
               "at": "2026-11-25T19:30:00-05:00",
               "title": "He didn't lit the bunt, chat. Here's why it's still lit",
-              "state": "upcoming",
+              "state": "due",
               "url": "",
               "kind": "stream"
             }
@@ -1221,8 +1221,8 @@
           "live": true,
           "planned": 2,
           "published": 0,
-          "due": 1,
-          "upcoming": 1,
+          "due": 2,
+          "upcoming": 0,
           "slots": [
             "12:30",
             "20:00"
@@ -1241,7 +1241,7 @@
               "time": "8:00 PM ET",
               "at": "2026-11-25T20:00:00-05:00",
               "title": "Backed off the Mildew. Like I've been saying.",
-              "state": "upcoming",
+              "state": "due",
               "url": "",
               "kind": "stream"
             }
@@ -1295,9 +1295,9 @@
         "what": "Hands finished clips to the scheduler for Instagram and TikTok at the warm-up pace (2 a day per channel) and records each post’s live link.",
         "cadence": "Every 30 minutes",
         "health": "Healthy",
-        "note": "Scheduled posts publish on time. Live-link check resumes Wed Nov 25, 2:21 PM ET.",
-        "last_run": "Wed Nov 25, 1:51 PM ET",
-        "next_run": "Wed Nov 25, 2:21 PM ET"
+        "note": "Scheduled posts publish on time. Live-link check resumes Wed Nov 25, 9:21 PM ET.",
+        "last_run": "Wed Nov 25, 8:51 PM ET",
+        "next_run": "Wed Nov 25, 9:21 PM ET"
       },
       {
         "name": "Posting watchdog",
@@ -1305,8 +1305,8 @@
         "cadence": "Every 60 minutes",
         "health": "Healthy",
         "note": "",
-        "last_run": "Wed Nov 25, 1:21 PM ET",
-        "next_run": "Wed Nov 25, 2:21 PM ET"
+        "last_run": "Wed Nov 25, 8:21 PM ET",
+        "next_run": "Wed Nov 25, 9:21 PM ET"
       },
       {
         "name": "Content engine",
@@ -1314,8 +1314,8 @@
         "cadence": "Daily 11:00 AM, 6:00 PM ET",
         "health": "Healthy",
         "note": "",
-        "last_run": "Wed Nov 25, 11:00 AM ET",
-        "next_run": "Wed Nov 25, 6:00 PM ET"
+        "last_run": "Wed Nov 25, 6:00 PM ET",
+        "next_run": "Thu Nov 26, 11:00 AM ET"
       },
       {
         "name": "Brand email sender",
@@ -1323,8 +1323,8 @@
         "cadence": "Weekdays 10:30 AM, 12:45 PM, 3:00 PM ET",
         "health": "Healthy",
         "note": "",
-        "last_run": "Wed Nov 25, 12:56 PM ET",
-        "next_run": "Wed Nov 25, 3:00 PM ET"
+        "last_run": "Wed Nov 25, 3:03 PM ET",
+        "next_run": "Thu Nov 26, 10:30 AM ET"
       },
       {
         "name": "Public snapshot refresh",
@@ -1332,8 +1332,8 @@
         "cadence": "Daily 9:00 AM, 2:00 PM, 9:00 PM ET",
         "health": "Healthy",
         "note": "",
-        "last_run": "Wed Nov 25, 9:00 AM ET",
-        "next_run": "Wed Nov 25, 9:00 PM ET"
+        "last_run": "Wed Nov 25, 2:00 PM ET",
+        "next_run": "Thu Nov 26, 9:00 AM ET"
       },
       {
         "name": "Partner-form routine",
@@ -1342,7 +1342,7 @@
         "health": "Scheduled",
         "note": "",
         "last_run": "",
-        "next_run": "Wed Nov 25, 2:15 PM ET"
+        "next_run": "Thu Nov 26, 10:15 AM ET"
       },
       {
         "name": "Outreach check-in",
@@ -1351,7 +1351,7 @@
         "health": "Scheduled",
         "note": "",
         "last_run": "",
-        "next_run": "Wed Nov 25, 3:30 PM ET"
+        "next_run": "Thu Nov 26, 3:30 PM ET"
       },
       {
         "name": "Warm-up ramp review",
