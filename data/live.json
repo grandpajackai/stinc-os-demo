@@ -1,6 +1,6 @@
 {
   "schema": "stinc-os.live.v1",
-  "generated_at": "2026-11-27T14:00:06-05:00",
+  "generated_at": "2026-11-27T21:00:06-05:00",
   "sources": {
     "platform": true,
     "tracker": "tracker.csv",
@@ -241,7 +241,7 @@
         "audio": 10.0,
         "chat_hype": 10.0,
         "traction": null,
-        "traction_label": "3,540 views · 69d old · 122m VOD"
+        "traction_label": "3,540 views · 70d old · 122m VOD"
       },
       "thumb": "assets/clip-thumbs/yt-0hvehnsQp_U_C3.jpg"
     },
@@ -336,7 +336,7 @@
         "audio": 10.0,
         "chat_hype": 10.0,
         "traction": null,
-        "traction_label": "3,540 views · 69d old · 122m VOD"
+        "traction_label": "3,540 views · 70d old · 122m VOD"
       }
     },
     {
@@ -376,7 +376,7 @@
         "audio": 10.0,
         "chat_hype": 7.6,
         "traction": null,
-        "traction_label": "2,500 views · 25d old · 137m VOD"
+        "traction_label": "2,500 views · 26d old · 137m VOD"
       }
     },
     {
@@ -396,7 +396,7 @@
         "audio": 10.0,
         "chat_hype": 10.0,
         "traction": null,
-        "traction_label": "2,500 views · 25d old · 137m VOD"
+        "traction_label": "2,500 views · 26d old · 137m VOD"
       }
     },
     {
@@ -416,7 +416,7 @@
         "audio": 10.0,
         "chat_hype": 10.0,
         "traction": null,
-        "traction_label": "3,540 views · 69d old · 122m VOD"
+        "traction_label": "3,540 views · 70d old · 122m VOD"
       }
     },
     {
@@ -456,27 +456,7 @@
         "audio": 10.0,
         "chat_hype": 10.0,
         "traction": null,
-        "traction_label": "2,500 views · 25d old · 137m VOD"
-      }
-    },
-    {
-      "id": "yt-gEQumoX0cZ8_C4",
-      "title": "Wait, what the fuck?  Watch this",
-      "hook": "Wait, what the fuck?  Watch this",
-      "viral": 8.1,
-      "score": 9.0,
-      "duration_s": 19.9,
-      "kind": "stream",
-      "status": "Needs review",
-      "watch_url": "https://www.youtube.com/watch?v=gEQumoX0cZ8",
-      "source_label": "YouTube · public VOD",
-      "breakdown": {
-        "story": 9.0,
-        "hook": 7.0,
-        "audio": 10.0,
-        "chat_hype": 5.2,
-        "traction": null,
-        "traction_label": "2,500 views · 25d old · 137m VOD"
+        "traction_label": "2,500 views · 26d old · 137m VOD"
       }
     },
     {
@@ -540,6 +520,26 @@
       }
     },
     {
+      "id": "yt-gEQumoX0cZ8_C4",
+      "title": "Wait, what the fuck?  Watch this",
+      "hook": "Wait, what the fuck?  Watch this",
+      "viral": 8.0,
+      "score": 9.0,
+      "duration_s": 19.9,
+      "kind": "stream",
+      "status": "Needs review",
+      "watch_url": "https://www.youtube.com/watch?v=gEQumoX0cZ8",
+      "source_label": "YouTube · public VOD",
+      "breakdown": {
+        "story": 9.0,
+        "hook": 7.0,
+        "audio": 10.0,
+        "chat_hype": 5.2,
+        "traction": null,
+        "traction_label": "2,500 views · 26d old · 137m VOD"
+      }
+    },
+    {
       "id": "yt-BDP2C6ihc00_C5",
       "title": "I backed off the Mildew / He's 8'2 and 485 pounds",
       "hook": "I backed off the Mildew / He's 8'2 and 485 pounds",
@@ -596,7 +596,7 @@
         "audio": 7.6,
         "chat_hype": 5.4,
         "traction": null,
-        "traction_label": "3,540 views · 69d old · 122m VOD"
+        "traction_label": "3,540 views · 70d old · 122m VOD"
       }
     },
     {
@@ -636,7 +636,7 @@
         "audio": 10.0,
         "chat_hype": 10.0,
         "traction": null,
-        "traction_label": "3,540 views · 69d old · 122m VOD"
+        "traction_label": "3,540 views · 70d old · 122m VOD"
       }
     },
     {
@@ -656,7 +656,7 @@
         "audio": 10.0,
         "chat_hype": null,
         "traction": null,
-        "traction_label": "2,500 views · 25d old · 137m VOD"
+        "traction_label": "2,500 views · 26d old · 137m VOD"
       }
     },
     {
@@ -964,8 +964,8 @@
   ],
   "activity": [
     {
-      "at": "2026-11-27T14:00:05-05:00",
-      "at_label": "Fri 2:00 PM ET",
+      "at": "2026-11-27T21:00:06-05:00",
+      "at_label": "Fri 9:00 PM ET",
       "label": "Clips scheduled",
       "detail": "20 fan-page posts queued ahead",
       "count": 20
@@ -1189,8 +1189,8 @@
           "live": true,
           "planned": 2,
           "published": 0,
-          "due": 1,
-          "upcoming": 1,
+          "due": 2,
+          "upcoming": 0,
           "slots": [
             "12:00",
             "19:30"
@@ -1209,7 +1209,7 @@
               "time": "7:30 PM ET",
               "at": "2026-11-27T19:30:00-05:00",
               "title": "Dude that was fucking insane. Here's why",
-              "state": "upcoming",
+              "state": "due",
               "url": "",
               "kind": "stream"
             }
@@ -1221,8 +1221,8 @@
           "live": true,
           "planned": 2,
           "published": 0,
-          "due": 1,
-          "upcoming": 1,
+          "due": 2,
+          "upcoming": 0,
           "slots": [
             "12:30",
             "20:00"
@@ -1241,7 +1241,7 @@
               "time": "8:00 PM ET",
               "at": "2026-11-27T20:00:00-05:00",
               "title": "You 5dB, CHAT 7.6, BARS You got to…",
-              "state": "upcoming",
+              "state": "due",
               "url": "",
               "kind": "stream"
             }
@@ -1295,9 +1295,9 @@
         "what": "Hands finished clips to the scheduler for Instagram and TikTok at the warm-up pace (2 a day per channel) and records each post’s live link.",
         "cadence": "Every 30 minutes",
         "health": "Healthy",
-        "note": "Scheduled posts publish on time. Live-link check resumes Fri Nov 27, 2:22 PM ET.",
-        "last_run": "Fri Nov 27, 1:52 PM ET",
-        "next_run": "Fri Nov 27, 2:22 PM ET"
+        "note": "Scheduled posts publish on time. Live-link check resumes Fri Nov 27, 9:22 PM ET.",
+        "last_run": "Fri Nov 27, 8:52 PM ET",
+        "next_run": "Fri Nov 27, 9:22 PM ET"
       },
       {
         "name": "Posting watchdog",
@@ -1305,8 +1305,8 @@
         "cadence": "Every 60 minutes",
         "health": "Healthy",
         "note": "",
-        "last_run": "Fri Nov 27, 1:21 PM ET",
-        "next_run": "Fri Nov 27, 2:21 PM ET"
+        "last_run": "Fri Nov 27, 8:21 PM ET",
+        "next_run": "Fri Nov 27, 9:21 PM ET"
       },
       {
         "name": "Content engine",
@@ -1314,8 +1314,8 @@
         "cadence": "Daily 11:00 AM, 6:00 PM ET",
         "health": "Healthy",
         "note": "",
-        "last_run": "Fri Nov 27, 11:00 AM ET",
-        "next_run": "Fri Nov 27, 6:00 PM ET"
+        "last_run": "Fri Nov 27, 6:00 PM ET",
+        "next_run": "Sat Nov 28, 11:00 AM ET"
       },
       {
         "name": "Brand email sender",
@@ -1323,8 +1323,8 @@
         "cadence": "Weekdays 10:30 AM, 12:45 PM, 3:00 PM ET",
         "health": "Healthy",
         "note": "",
-        "last_run": "Fri Nov 27, 12:48 PM ET",
-        "next_run": "Fri Nov 27, 3:00 PM ET"
+        "last_run": "Fri Nov 27, 3:04 PM ET",
+        "next_run": "Mon Nov 30, 10:30 AM ET"
       },
       {
         "name": "Public snapshot refresh",
@@ -1332,8 +1332,8 @@
         "cadence": "Daily 9:00 AM, 2:00 PM, 9:00 PM ET",
         "health": "Healthy",
         "note": "",
-        "last_run": "Fri Nov 27, 9:00 AM ET",
-        "next_run": "Fri Nov 27, 9:00 PM ET"
+        "last_run": "Fri Nov 27, 2:00 PM ET",
+        "next_run": "Sat Nov 28, 9:00 AM ET"
       },
       {
         "name": "Partner-form routine",
@@ -1342,7 +1342,7 @@
         "health": "Scheduled",
         "note": "",
         "last_run": "",
-        "next_run": "Fri Nov 27, 2:15 PM ET"
+        "next_run": "Mon Nov 30, 10:15 AM ET"
       },
       {
         "name": "Outreach check-in",
@@ -1351,7 +1351,7 @@
         "health": "Scheduled",
         "note": "",
         "last_run": "",
-        "next_run": "Fri Nov 27, 3:30 PM ET"
+        "next_run": "Mon Nov 30, 3:30 PM ET"
       },
       {
         "name": "Warm-up ramp review",
